@@ -96,4 +96,64 @@ Kode di atas program Go yang digunakan untuk menghitung luas dan keliling sebuah
 
 ## III. UNGUIDED
 
-### 1. 
+### 1. Minggu ini, mahasiswa Fakultas Informatika mendapatkan tugas dari mata kuliah matematika diskrit untuk mempelajari kombinasi dan permutasi. Jonas, salah seorang mahasiswa, iseng untuk mengimplementasikannya ke dalam suatu program. Oleh karena itu bersediakah kalian membantu Jonas? (tidak tentunya ya :p) <br/> Masukan terdiri dari empat buah bilangan asli a, b, c, dan d yang dipisahkan oleh spasi, dengan syarat a ≥ c dan b ≥ d. <br/> Keluaran terdiri dari dua baris. Baris pertama adalah hasil permutasi dan kombinasi a terhadap c, sedangkan baris kedua adalah hasil permutasi dan kombinasi b terhadap d. <br/> Catatan: permutasi (P) dan kombinasi (C) dari n terhadap r (n ≥ r) dapat dihitung dengan menggunakan persamaan berikut!<br/> ![image](https://github.com/user-attachments/assets/c5b20217-7f5f-4d3a-bdcc-09dcfe46b89f) <br/> 
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+// Fungsi untuk menghitung faktorial
+func factorial(n int) int {
+	if n == 0 {
+		return 1
+	}
+	result := 1
+	for i := 1; i <= n; i++ {
+		result *= i
+	}
+	return result
+}
+
+// Fungsi untuk menghitung permutasi
+func permutation(n, r int) int {
+	return factorial(n) / factorial(n-r)
+}
+
+// Fungsi untuk menghitung kombinasi
+func combination(n, r int) int {
+	return factorial(n) / (factorial(r) * factorial(n-r))
+}
+
+func main() {
+	// Input empat bilangan: a, b, c, d
+	var a, b, c, d int
+	fmt.Print("Masukkan 4 bilangan: ")
+	fmt.Scan(&a, &b, &c, &d)
+
+	// Baris pertama: permutasi dan kombinasi a terhadap c
+	p1 := permutation(a, c)
+	c1 := combination(a, c)
+	fmt.Printf("%d %d\n", p1, c1)
+
+	// Baris kedua: permutasi dan kombinasi b terhadap d
+	p2 := permutation(b, d)
+	c2 := combination(b, d)
+	fmt.Printf("%d %d\n", p2, c2)
+}
+```
+
+## Output: ![image](https://github.com/user-attachments/assets/d49c1caa-89c0-4df2-959b-14d42d03ae4d) 
+![image](https://github.com/user-attachments/assets/87df1016-0855-4158-a42e-e832e26f6430)
+
+
+
+
+
+
+
+
+
+
