@@ -1,0 +1,26 @@
+package main
+import "fmt"
+
+func f(x int) int {
+	fungsi_f:= x * x
+	return fungsi_f
+}
+
+func g(x int) int {
+	fungsi_g:= x - 2
+	return fungsi_g
+}
+
+func h(x int) int {
+	fungsi_h:= x + 1
+	return fungsi_h
+}
+
+func main(){
+	var a, b, c int
+	fmt.Print("Masukkan bilangan: ")
+	fmt.Scan(&a, &b, &c)
+	fmt.Println("Hasil fungsi fogoh dari bilangan pertama adalah ", f(g(h(a))))
+	fmt.Println("Hasil fungsi gohof dari bilangan pertama adalah ", g(h(f(b))))
+	fmt.Println("Hasil fungsi gohof dari bilangan pertama adalah ", h(f(g(c))))
+}
