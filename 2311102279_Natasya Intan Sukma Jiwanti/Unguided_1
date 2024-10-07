@@ -1,0 +1,32 @@
+package main
+import "fmt"
+
+func faktorial (n int) int{
+	var hasil int = 1
+	var i int
+	for i = 1; i <= n; i++{
+		hasil = hasil * i
+	}
+	return hasil
+}
+
+func permutasi(n, r int) int{
+	return faktorial(n) / faktorial (n-r)
+}
+
+func kombinasi (n, r int) int{
+	return faktorial(n) / (faktorial(r) * faktorial(n-r))
+}
+
+func main(){
+	var a,b,c,d int
+	fmt.Print("Masukkan bilangan: ",)
+	fmt.Scan(&a, &b, &c, &d)
+	if a>= c && b>=d{
+		fmt.Println("Hasil permutasi a ke c adalah ", permutasi(a, c), "dan Hasil Permutasi b ke d adalah ", permutasi(b, d))
+		fmt.Println("Hasil Kombinasi a ke c adalah ", kombinasi(a, c), "dan Hasil Kombinasi b ke d adalah ", kombinasi(b, d))
+	}else{
+		fmt.Println("Masukkan tidak memenuhi kondisi")
+	}
+
+}
