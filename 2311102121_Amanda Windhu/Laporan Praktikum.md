@@ -211,6 +211,11 @@ Kode di atas dirancang untuk menghitung komposisi dari tiga fungsi matematika ya
 diimplementasikan sebagai fungsi terpisah dalam kode: `f(x)` mengkuadratkan input, `g(x)` mengurangi input dengan 2, dan `h(x)` menambah 1 pada input. Selain itu, terdapat tiga fungsi komposisi yang menghitung kombinasi dari ketiga fungsi tersebut. Fungsi `fogoh(x)` menghitung
 f(g(h(x))), `gohof(x)` menghitung g(h(f(x))), dan `hofog(x)` menghitung h(f(g(x))). Program menerima tiga bilangan bulat a, b, dan sebagai masukan dari pengguna. Setelah itu, program menghitung dan menampilkan hasil dari masing-masing komposisi fungsi tersebut untuk nilai a, b, dan c sesuai urutan yang diminta.
 
+### 3. [Lingkaran] Suatu lingkaran didefinisikan dengan koordinat titik pusat (cx, cy) dengan radius r. Apabila diberikan dua buah lingkaran, maka tentukan posisi sebuah titik sembarang (x, y) berdasarkan dua lingkaran tersebut. <br/> Masukan terdiri dari beberapa tiga baris. Baris pertama dan kedua adalah koordinat titik pusat dan radius dari lingkaran 1 dan lingkaran 2, sedangkan baris ketiga adalah koordinat titik sembarang. Asumsi sumbu x dan y dari semua titik dan juga radius direpresentasikan dengan bilangan bulat. <br/> Keluaran berupa string yang menyatakan posisi titik "Titik di dalam lingkaran 1 dan 2", "Titik di dalam lingkaran 1", "Titik di dalam lingkaran 2", atau "Titik di luar lingkaran 1 dan 2". <br/> Contoh
+![image](https://github.com/user-attachments/assets/e131d1dc-24f9-45a3-9638-b5e739e78b4b) ![image](https://github.com/user-attachments/assets/274a0809-2122-4c21-9867-ca8e5a134723)
+
+
+
 
 
 
