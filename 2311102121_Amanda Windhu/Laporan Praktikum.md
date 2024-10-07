@@ -212,7 +212,9 @@ diimplementasikan sebagai fungsi terpisah dalam kode: `f(x)` mengkuadratkan inpu
 f(g(h(x))), `gohof(x)` menghitung g(h(f(x))), dan `hofog(x)` menghitung h(f(g(x))). Program menerima tiga bilangan bulat a, b, dan sebagai masukan dari pengguna. Setelah itu, program menghitung dan menampilkan hasil dari masing-masing komposisi fungsi tersebut untuk nilai a, b, dan c sesuai urutan yang diminta.
 
 ### 3. [Lingkaran] Suatu lingkaran didefinisikan dengan koordinat titik pusat (cx, cy) dengan radius r. Apabila diberikan dua buah lingkaran, maka tentukan posisi sebuah titik sembarang (x, y) berdasarkan dua lingkaran tersebut. <br/> Masukan terdiri dari beberapa tiga baris. Baris pertama dan kedua adalah koordinat titik pusat dan radius dari lingkaran 1 dan lingkaran 2, sedangkan baris ketiga adalah koordinat titik sembarang. Asumsi sumbu x dan y dari semua titik dan juga radius direpresentasikan dengan bilangan bulat. <br/> Keluaran berupa string yang menyatakan posisi titik "Titik di dalam lingkaran 1 dan 2", "Titik di dalam lingkaran 1", "Titik di dalam lingkaran 2", atau "Titik di luar lingkaran 1 dan 2". <br/> Contoh
-![image](https://github.com/user-attachments/assets/e131d1dc-24f9-45a3-9638-b5e739e78b4b) ![image](https://github.com/user-attachments/assets/274a0809-2122-4c21-9867-ca8e5a134723)
+![image](https://github.com/user-attachments/assets/e131d1dc-24f9-45a3-9638-b5e739e78b4b) ![image](https://github.com/user-attachments/assets/274a0809-2122-4c21-9867-ca8e5a134723) 
+# Fungsi untuk menghitung jarak titik (a, b) dan (c, d) dimana rumus jarak adalah: ![image](https://github.com/user-attachments/assets/bc6ecd19-694e-4b66-adb1-96380a1368b1) dan juga fungsi untuk menentukan posisi sebuah titik sembarang berada di dalam suatu lingkaran atau tidak.
+
 
 
 
