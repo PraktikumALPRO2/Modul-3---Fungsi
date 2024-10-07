@@ -1,0 +1,39 @@
+package main
+import(
+	"fmt"
+	"math"
+)
+
+func hitungjarak (a, b, c, d float64) float64{
+	jarak := math.Sqrt(math.Pow(a-c, 2) + math.Pow(b-d, 2))
+	return jarak
+}
+
+func lokasititik (cx, cy, r, x, y float64) bool{
+	return hitungjarak(cx, cy, x, y) <= r
+}
+
+func main(){
+	var cx1, cx2, cy1, cy2, x, y, r1, r2 float64
+	fmt.Print("Masukkan Titik Pusat Lingkaran 1: ")
+	fmt.Scan(&cx1, &cy1)
+	fmt.Print("Masukkan Radius Lingkaran 1: ")
+	fmt.Scan(&r1)
+	fmt.Print("Masukkan Titik Pusat Lingkaran 2: ")
+	fmt.Scan(&cx2, &cy2)
+	fmt.Print("Masukkan Radius Lingkaran 2: ")
+	fmt.Scan(&r2)
+	fmt.Print("Masukkan Koordinat Titik: ")
+	fmt.Scan(&x, &y)
+
+	//percabangan menentukan titik berada di lingkaran yang mana
+	if lokasititik(cx1, cy1, r1, x, y){
+		fmt.Println("Titik berada di Lingkaran 1.")
+	}else if lokasititik(cx2, cy2, r2, x, y){
+		fmt.Println("Titik berada di Lingkaran 2.")
+	}else if lokasititik(cx1, cy1, r1, x, y) && lokasititik(cx2, cy2, r2, x, y){
+		fmt.Println("Titik berada di Lingkaran 1 dan 2.")
+	}else{
+		fmt.Println("Titik berada di luar lingkaran")
+	}
+}
