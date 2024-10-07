@@ -501,7 +501,9 @@ func tampilkanHasil(a, b, c, d int) {
 
 **Output yang akan ditampilkan adalah :**
 
-![image](https://github.com/user-attachments/assets/2273ecc7-2a49-40ea-bab1-60388191d030)
+![Screenshot 2024-10-07 230026](https://github.com/user-attachments/assets/1d37c7e2-01bb-49a7-bb9c-5a6593033b01)
+
+![Screenshot 2024-10-07 230048](https://github.com/user-attachments/assets/4b3377cf-5e44-44d1-9415-9dbf8c453078)
 
 ### Full code Screenshot :
 ![carbon (3)](https://github.com/user-attachments/assets/28b44224-8124-4e71-8348-b1d30a388994)
@@ -612,7 +614,12 @@ func main() {
 
 **Output yang akan ditampilkan adalah :**
 
-![image](https://github.com/user-attachments/assets/5a63d7b3-eb2d-4838-aa28-785e3530c6b3)
+![Screenshot 2024-10-07 230240](https://github.com/user-attachments/assets/df71122e-eae9-4ab3-b8f1-b484d9752e02)
+
+![Screenshot 2024-10-07 230311](https://github.com/user-attachments/assets/304a7875-8862-41e5-9be6-601094385b1c)
+
+![Screenshot 2024-10-07 230347](https://github.com/user-attachments/assets/918be0cf-e7c8-4c3c-ad38-29f3fe99e655)
+
 
 ### Full code Screenshot :
 ![carbon (4)](https://github.com/user-attachments/assets/6e1446b5-3f59-4bf7-8baf-75aecfb833b0)
