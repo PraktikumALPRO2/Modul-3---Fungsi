@@ -148,7 +148,9 @@ func main() {
 ## Output: ![image](https://github.com/user-attachments/assets/d49c1caa-89c0-4df2-959b-14d42d03ae4d) 
 ![image](https://github.com/user-attachments/assets/87df1016-0855-4158-a42e-e832e26f6430)
 
-Kode di atas
+Kode di atas merupakan implementasi dalam bahasa Go yang bertujuan untuk menghitung permutasi dan kombinasi dari dua pasang bilangan. Program ini menggunakan tiga fungsi utama: `factorial(n)` untuk menghitung faktorial dari bilangan bulat 𝑛, `permutation(n, r)` untuk menghitung permutasi 𝑃(𝑛,𝑟) menggunakan rumus 𝑃(𝑛,𝑟) = 𝑛!/(𝑛−𝑟)!, dan `combination(n, r)` untuk menghitung kombinasi 𝐶(𝑛,𝑟) menggunakan rumus 𝐶(𝑛,𝑟) = 𝑛!/r!(𝑛−𝑟)!<br/>
+Pada bagian utama `(main())`, program meminta pengguna untuk memasukkan empat bilangan bulat: 
+𝑎, b, c, dan 𝑑. Setelah itu, program menghitung dan menampilkan hasil permutasi dan kombinasi untuk dua pasang bilangan: pertama, 𝑎 terhadap 𝑐 dan kedua, 𝑏 terhadap 𝑑. Hasil dari perhitungan permutasi dan kombinasi untuk setiap pasangan bilangan tersebut ditampilkan pada dua baris terpisah. Baris pertama mencetak hasil untuk 𝑎 dan 𝑐, sedangkan baris kedua mencetak hasil untuk 𝑏 dan d.
 
 ### 2. Diberikan tiga buah fungsi matematika yaitu f(x) = x², g(x) = x - 2 dan h(x) = x + 1. Fungsi komposisi (fogoh)(x) artinya adalah f(g(h(x))). Tuliskan f(x), g(x) dan h(x) dalam bentuk function.<br/> Masukan terdiri dari sebuah bilangan bulat a, b dan c yang dipisahkan oleh spasi. Keluaran terdiri dari tiga baris. Baris pertama adalah (fogoh)(a), baris kedua (gohof)(b), dan baris ketiga adalah (hofog)(c)!<br/> Contoh
 ![image](https://github.com/user-attachments/assets/ceaf99df-bba0-4106-85d4-84f072ad8c99)
