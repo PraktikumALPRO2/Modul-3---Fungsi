@@ -148,6 +148,68 @@ func main() {
 ## Output: ![image](https://github.com/user-attachments/assets/d49c1caa-89c0-4df2-959b-14d42d03ae4d) 
 ![image](https://github.com/user-attachments/assets/87df1016-0855-4158-a42e-e832e26f6430)
 
+Kode di atas
+
+### 2. Diberikan tiga buah fungsi matematika yaitu f(x) = x², g(x) = x - 2 dan h(x) = x + 1. Fungsi komposisi (fogoh)(x) artinya adalah f(g(h(x))). Tuliskan f(x), g(x) dan h(x) dalam bentuk function.<br/> Masukan terdiri dari sebuah bilangan bulat a, b dan c yang dipisahkan oleh spasi. Keluaran terdiri dari tiga baris. Baris pertama adalah (fogoh)(a), baris kedua (gohof)(b), dan baris ketiga adalah (hofog)(c)!<br/> Contoh
+![image](https://github.com/user-attachments/assets/ceaf99df-bba0-4106-85d4-84f072ad8c99)
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+// Definisi fungsi f(x) = x^2
+func f(x int) int {
+	return x * x
+}
+
+// Definisi fungsi g(x) = x - 2
+func g(x int) int {
+	return x - 2
+}
+
+// Definisi fungsi h(x) = x + 1
+func h(x int) int {
+	return x + 1
+}
+
+// Komposisi f(g(h(x)))
+func fogoh(x int) int {
+	return f(g(h(x)))
+}
+
+// Komposisi g(h(f(x)))
+func gohof(x int) int {
+	return g(h(f(x)))
+}
+
+// Komposisi h(f(g(x)))
+func hofog(x int) int {
+	return h(f(g(x)))
+}
+
+func main() {
+	// Input tiga bilangan: a, b, c
+	var a, b, c int
+	fmt.Print("Masukkan 3 bilangan: ")
+	fmt.Scan(&a, &b, &c)
+
+	// Output komposisi fungsi sesuai instruksi
+	fmt.Println(fogoh(a))
+	fmt.Println(gohof(b))
+	fmt.Println(hofog(c))
+}
+```
+
+## Output: ![image](https://github.com/user-attachments/assets/8f15405f-390d-4cc1-af61-8e17e6675519) ![image](https://github.com/user-attachments/assets/6f26976c-9048-4cf1-a90c-65be0a68cc37)
+
+Kode di atas dirancang untuk menghitung komposisi dari tiga fungsi matematika yang diberikan, yaitu <p>Fungsi f(x) = x<sup>2</sup></p>, g(x)=x−2, dan h(x)=x+1. Setiap fungsi
+diimplementasikan sebagai fungsi terpisah dalam kode: `f(x)` mengkuadratkan input, `g(x)` mengurangi input dengan 2, dan `h(x)` menambah 1 pada input. Selain itu, terdapat tiga fungsi komposisi yang menghitung kombinasi dari ketiga fungsi tersebut. Fungsi `fogoh(x)` menghitung
+f(g(h(x))), `gohof(x)` menghitung g(h(f(x))), dan `hofog(x)` menghitung h(f(g(x))). Program menerima tiga bilangan bulat a, b, dan sebagai masukan dari pengguna. Setelah itu, program menghitung dan menampilkan hasil dari masing-masing komposisi fungsi tersebut untuk nilai a, b, dan c sesuai urutan yang diminta.
+
+
 
 
 
