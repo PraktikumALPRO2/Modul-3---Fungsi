@@ -205,7 +205,7 @@ func main() {
 
 ## Output: ![image](https://github.com/user-attachments/assets/8f15405f-390d-4cc1-af61-8e17e6675519) ![image](https://github.com/user-attachments/assets/6f26976c-9048-4cf1-a90c-65be0a68cc37)
 
-Kode di atas dirancang untuk menghitung komposisi dari tiga fungsi matematika yang diberikan, yaitu <p>Fungsi f(x) = x<sup>2</sup></p>, g(x)=x−2, dan h(x)=x+1. Setiap fungsi
+Kode di atas dirancang untuk menghitung komposisi dari tiga fungsi matematika yang diberikan, yaitu Fungsi f(x) = x², g(x)=x−2, dan h(x)=x+1. Setiap fungsi
 diimplementasikan sebagai fungsi terpisah dalam kode: `f(x)` mengkuadratkan input, `g(x)` mengurangi input dengan 2, dan `h(x)` menambah 1 pada input. Selain itu, terdapat tiga fungsi komposisi yang menghitung kombinasi dari ketiga fungsi tersebut. Fungsi `fogoh(x)` menghitung
 f(g(h(x))), `gohof(x)` menghitung g(h(f(x))), dan `hofog(x)` menghitung h(f(g(x))). Program menerima tiga bilangan bulat a, b, dan sebagai masukan dari pengguna. Setelah itu, program menghitung dan menampilkan hasil dari masing-masing komposisi fungsi tersebut untuk nilai a, b, dan c sesuai urutan yang diminta.
 
