@@ -404,9 +404,31 @@ func main() {
 Program ini dirancang untuk menghitung dan memeriksa apakah sebuah titik terletak di dalam dua lingkaran yang ditentukan oleh pusat dan radiusnya. Jika titik tersebut berada di dalam salah satu atau kedua lingkaran, program akan menampilkan hasilnya.
 
 ### Algoritma Program
-
+1. Input Data:
+   - Menerima koordinat pusat dan radius dari dua lingkaran.
+   - Menerima koordinat dari titik yang akan dianalisis.
+2. Hitung Jarak:
+   - Menggunakan rumus jarak Euclidean untuk menghitung jarak antara pusat lingkaran dan titik.
+   - Jarak dihitung dengan formula:
+     
+     ![Screenshot 2024-10-09 210151](https://github.com/user-attachments/assets/4afa833b-82eb-4ea1-877b-cb0ee102a723)
+	
+3. Cek Posisi Titik:
+   - Memeriksa apakah jarak dari titik ke pusat lingkaran kurang dari atau sama dengan radius lingkaran.
+   - Proses ini dilakukan untuk kedua lingkaran.
+4. Output Hasil:
+   - Menghasilkan output berdasarkan posisi titik relatif terhadap salah satu atau kedua lingkaran.
+     
 ### Cara Kerja Program
-
+1. Pengguna diminta untuk memasukkan koordinat pusat dan radius dari dua lingkaran serta koordinat titik.
+2. Program menghitung jarak titik dari pusat kedua lingkaran menggunakan fungsi hitungJarak.
+3. Fungsi cekdiDalamLingkaran digunakan untuk menentukan apakah titik berada dalam masing-masing lingkaran.
+4. Program mencetak hasil yang menjelaskan posisi titik terhadap kedua lingkaran:
+   - Jika titik berada di dalam kedua lingkaran, akan ditampilkan "Titik di dalam lingkaran 1 dan 2."
+   - Jika titik hanya berada di dalam lingkaran pertama, akan muncul "Titik di dalam lingkaran 1."
+   - Jika titik hanya berada di dalam lingkaran kedua, akan tampil "Titik di dalam lingkaran 2."
+   - Jika titik berada di luar kedua lingkaran, program akan mencetak "Titik di luar lingkaran 1 dan 2."
+     
 ## Kesimpulan 
 
 ## Daftar Pustaka
