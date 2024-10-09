@@ -305,7 +305,7 @@ func main() {
 	// Menampilkan hasil
 	fmt.Printf("\nHasil komposisi (fogoh)(%d): %d\n", a, hasilFogoh)
 	fmt.Printf("Hasil komposisi (gohof)(%d): %d\n", b, hasilGohof)
-	fmt.Printf("Hasil komposisi (hofog)(%d): %d\n", c, hasilHofog)
+	fmt.Printf("Hasil komposisi (hofog)(%d): %d\n", c, hasilHofog) 
 }
 
 ```
@@ -421,8 +421,8 @@ Program ini dirancang untuk menghitung dan memeriksa apakah sebuah titik terleta
      
 ### Cara Kerja Program
 1. Pengguna diminta untuk memasukkan koordinat pusat dan radius dari dua lingkaran serta koordinat titik.
-2. Program menghitung jarak titik dari pusat kedua lingkaran menggunakan fungsi hitungJarak.
-3. Fungsi cekdiDalamLingkaran digunakan untuk menentukan apakah titik berada dalam masing-masing lingkaran.
+2. Program menghitung jarak titik dari pusat kedua lingkaran menggunakan fungsi `hitungJarak`.
+3. Fungsi `cekdiDalamLingkaran` digunakan untuk menentukan apakah titik berada dalam masing-masing lingkaran.
 4. Program mencetak hasil yang menjelaskan posisi titik terhadap kedua lingkaran:
    - Jika titik berada di dalam kedua lingkaran, akan ditampilkan "Titik di dalam lingkaran 1 dan 2."
    - Jika titik hanya berada di dalam lingkaran pertama, akan muncul "Titik di dalam lingkaran 1."
