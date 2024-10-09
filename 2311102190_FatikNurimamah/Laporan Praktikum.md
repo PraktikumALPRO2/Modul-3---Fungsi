@@ -91,6 +91,7 @@ func permutasi(n, r int) int {
 ![Screenshot 2024-10-09 085622](https://github.com/user-attachments/assets/335d5a58-0c57-4007-babe-9345028dd8d6)
 
 ### Deskripsi Program : 
+Program meminta dua bilangan sebagai masukan, kemudian menghitung permutasi dengan memilih nilai terbesar sebagai jumlah total objek (n) dan nilai terkecil sebagai jumlah objek yang diambil (r). Program menggunakan fungsi faktorial untuk membantu perhitungan nilai permutasi tersebut.
 
 ### Algoritma Program
 
