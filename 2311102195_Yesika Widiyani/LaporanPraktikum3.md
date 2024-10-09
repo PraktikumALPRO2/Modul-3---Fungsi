@@ -1,4 +1,4 @@
-![unguided4](https://github.com/user-attachments/assets/b413a444-070d-419f-a26b-7e27a66ef3f3)<h2 align="center"><strong>LAPORAN PRAKTIKUM</strong></h2>
+<h2 align="center"><strong>LAPORAN PRAKTIKUM</strong></h2>
 <h2 align="center"><strong>ALGORITMA DAN PEMROGRAMAN 2</strong></h2>
 <h2 align="center"><strong>MODUL II</strong></h2>
 <h2 align="center"><strong> FUNGSI </strong></h2>
