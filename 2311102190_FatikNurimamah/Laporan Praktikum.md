@@ -316,6 +316,7 @@ func main() {
 ![Screenshot 2024-10-09 092919](https://github.com/user-attachments/assets/93c480b6-37e9-452e-ad79-969708b37ebb)
 
 ### Deskripsi Program : 
+Program ini menghitung hasil dari tiga komposisi fungsi matematika: (fogoh)(x), (gohof)(x), dan (hofog)(x), di mana setiap fungsi memiliki rumus yang berbeda. Program meminta pengguna memasukkan tiga angka, masing-masing akan diproses melalui salah satu dari tiga komposisi fungsi: fogoh, gohof, dan hofog. Hasil dari perhitungan komposisi fungsi tersebut kemudian ditampilkan.
 
 ### Algoritma Program
 
