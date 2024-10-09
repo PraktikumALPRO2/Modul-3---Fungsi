@@ -432,6 +432,6 @@ Program ini dirancang untuk menghitung dan memeriksa apakah sebuah titik terleta
 ## Kesimpulan 
 
 ## Daftar Pustaka
-[1] 
+[1] Agung, N. (n.d.). "A.18 Fungsi". Retrieved from Dasar Pemrograman Golang: https://dasarpemrogramangolang.novalagung.com/A-fungsi.html
 
 
