@@ -510,6 +510,9 @@ Program ini dirancang untuk menghitung dan memeriksa apakah sebuah titik terleta
    - Jika titik berada di luar kedua lingkaran, program akan mencetak "Titik di luar lingkaran 1 dan 2."
      
 ## Kesimpulan 
+1. Pengertian dan Keuntungan Fungsi: Fungsi merupakan sekumpulan kode yang terstruktur dengan nama tertentu, yang memungkinkan penulisan kode yang lebih terorganisir dan efisien. Dengan menerapkan prinsip DRY (Don't Repeat Yourself), fungsi membantu mengurangi pengulangan kode dan meningkatkan keterbacaan.
+2. Implementasi dan Parameter Fungsi: Fungsi utama dalam program Go adalah main(), sementara fungsi tambahan dapat didefinisikan menggunakan kata kunci func. Fungsi dapat memiliki parameter opsional yang digunakan untuk menerima argumen saat dipanggil, memberikan fleksibilitas dalam memproses data.
+3. Nilai Balik dalam Fungsi: Fungsi dapat mengembalikan nilai dengan menggunakan kata kunci return, yang harus dideklarasikan dengan tipe data yang sesuai. Fungsi yang tidak mengembalikan nilai disebut void function, sedangkan fungsi yang memiliki return value memberikan hasil yang dapat digunakan lebih lanjut dalam program.
 
 ## Daftar Pustaka
 [1] Agung, N. (n.d.). "A.18 Fungsi". Retrieved from Dasar Pemrograman Golang: https://dasarpemrogramangolang.novalagung.com/A-fungsi.html
