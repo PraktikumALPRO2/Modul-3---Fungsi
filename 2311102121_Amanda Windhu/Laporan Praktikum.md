@@ -27,7 +27,7 @@ I. Fungsi adalah kumpulan blok kode yang diberi nama untuk mempermudah penggunaa
   1. Ada deklarasi tipe nilai yang dikembalikan.<br/>
   2. Terdapat kata kunci return dalam badan subprogram.<br/>
   Maka fungsi digunakan jika suatu nilai biasanya diperlukan, seperti:<br/>
-  - Assignment nilai ike suatu variabel.<br/>
+  - Assignment nilai ke suatu variabel.<br/>
   - Bagian dari ekspresi<br/>
   - Bagian dari argumen suatu subprogram, dsb.<br/>
 II. Deklasari Function<br/>
