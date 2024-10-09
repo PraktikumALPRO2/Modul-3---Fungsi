@@ -198,7 +198,8 @@ Masukan terdiri dari empat buah bilangan asli 𝑎, 𝑏, 𝑐, dan 𝑑 yang di
 
 Catatan: permutasi (𝑃) dan kombinasi (𝐶) dari 𝑛 terhadap 𝑟 (𝑛 ≥ 𝑟) dapat dihitung dengan menggunakan persamaan berikut!
 ![Cuplikan layar 2024-10-09 092504](https://github.com/user-attachments/assets/04069b4d-c3a6-403a-8f92-735d834a7605)
-![Uploading Cuplikan layar 2024-10-09 092732.png…]()
+![Cuplikan layar 2024-10-09 092732](https://github.com/user-attachments/assets/1343ac89-a62b-4b2d-91f9-0c7446c6ab66)
+
 #### Source Code :
 ```go
 package main
@@ -348,3 +349,5 @@ func main() {
 
 
 #### Deskripsi Program
+Program ini ditulis dalam bahasa Go untuk menghitung hasil dari beberapa komposisi fungsi matematika. Terdapat tiga fungsi dasar: `f(x)` yang mengkuadratkan `x`, `g(x)` yang mengurangi `x` dengan dua, dan `h(x)` yang menambahkan satu pada `x`. Program meminta pengguna untuk memasukkan tiga bilangan bulat, kemudian menghitung dan menampilkan hasil dari komposisi fungsi `f(g(h(x)))`, `g(h(f(x)))`, dan `h(f(g(x)))` untuk input tersebut. Hasil dari setiap komposisi ditampilkan secara terpisah.
+#### Algoritma Program
