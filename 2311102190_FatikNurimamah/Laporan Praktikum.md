@@ -26,7 +26,7 @@
 
 <p align="center">
   <strong>Dosen Pengampu:</strong><br>
-  Arif Amrulloh
+  Arif Amrulloh,S.Kom.,M.Kom.
 </p>
 
 <br>
@@ -97,7 +97,7 @@ func permutasi(n, r int) int {
 
 ### Cara Kerja Program:
 
-### 2. Program untyk menghitung luas persegi dan keliling persegi
+### 2. Program untuk menghitung luas persegi dan keliling persegi
 
 ### Source Code :
 ```go
@@ -221,7 +221,8 @@ func main() {
 ### Cara Kerja Program
 
 
-### 2. ![Screenshot 2024-10-09 091205](https://github.com/user-attachments/assets/0613877e-afcf-448f-a46a-3fff064d9891)
+### 2.  
+![Screenshot 2024-10-09 091205](https://github.com/user-attachments/assets/0613877e-afcf-448f-a46a-3fff064d9891)
 
 ### Source Code :
 ```go
