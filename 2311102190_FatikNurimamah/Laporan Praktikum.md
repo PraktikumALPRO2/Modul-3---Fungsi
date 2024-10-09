@@ -51,6 +51,13 @@
 
 ## Dasar Teori
 
+**1. Definsi Fungsi**
+
+Dalam pemrograman, fungsi adalah sekelompok kode yang memiliki nama tertentu. Penggunaan fungsi dengan baik membuat kode lebih modular dan mengikuti prinsip **DRY** (Don't Repeat Yourself), artinya kita tidak perlu menulis ulang kode yang sama berkali-kali[1]. Cukup dengan mendeklarasikan blok kode sebagai fungsi, kita bisa memanggilnya kapan pun dibutuhkan, sehingga kode lebih efisien dan mudah dikelola[1].
+
+**2. Penerapan Fungsi**
+
+
 
 ## Guided 
 
