@@ -139,9 +139,13 @@ func main() {
 ![Screenshot 2024-10-09 090155](https://github.com/user-attachments/assets/e53d16c7-1380-47ac-8145-62cdea270e15)
 
 ### Deskripsi Program : 
+Program ini digunakan untuk menghitung luas dan keliling dari sebuah persegi berdasarkan panjang sisi yang dimasukkan oleh pengguna. Program meminta pengguna memasukkan panjang sisi persegi, kemudian menghitung luas dan kelilingnya. Hasil dari kedua perhitungan tersebut kemudian ditampilkan sebagai output.
 
 ### Algoritma Program
-
+1. Program meminta input panjang sisi persegi (panjangSisi) dari pengguna.
+2. Menggunakan rumus untuk menghitung luas persegi, yaitu panjang sisi dikalikan dengan panjang sisi: LuasPersegi = panjangSisi * panjangSisi.
+3. Menggunakan rumus untuk menghitung keliling persegi, yaitu panjang sisi dikalikan dengan 4: KelilingPersegi = 4 * panjangSisi.
+4. Program menampilkan hasil perhitungan luas dan keliling persegi.
 
 ### Cara Kerja Program
 
