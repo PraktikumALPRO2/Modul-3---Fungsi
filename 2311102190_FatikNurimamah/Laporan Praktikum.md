@@ -57,6 +57,79 @@ Dalam pemrograman, fungsi adalah sekelompok kode yang memiliki nama tertentu. Pe
 
 **2. Penerapan Fungsi**
 
+Fungsi `main()` adalah fungsi utama di program Go yang akan dieksekusi ketika program dijalankan[1]. Selain `main()`, kita dapat membuat fungsi lain dengan cara sederhana: tuliskan kata kunci `func`, diikuti nama fungsi, parameter opsional dalam tanda kurung `()`, dan blok kode di dalam kurung kurawal `{}`[1]. Parameter adalah variabel yang digunakan saat memanggil fungsi, dan data yang diberikan disebut argumen[1]. Fungsi bisa memiliki nol, satu, atau lebih parameter tergantung kebutuhan[1].
+
+contoh implementasi fungsi adalah sebagai berikut :
+
+```go
+package main
+
+import "fmt"
+import "strings"
+
+func main() {
+    var names = []string{"John", "Wick"}
+    printMessage("halo", names)
+}
+
+func printMessage(message string, arr []string) {
+    var nameString = strings.Join(arr, " ")
+    fmt.Println(message, nameString)
+}
+```
+
+Dalam kode di atas, sebuah fungsi baru bernama `printMessage()` diciptakan dengan dua parameter: `string message` dan `slice string arr`[1]. Fungsi ini dipanggil dalam fungsi `main()`, di mana dua argumen diberikan saat pemanggilan[1]. 
+
+1. Argumen pertama adalah string "halo", yang disimpan dalam parameter `message`, sementara
+2. Argumen kedua adalah slice string `names`, yang nilainya disimpan dalam parameter `arr`[1]. 
+
+Di dalam fungsi `printMessage()`, nilai `arr`, yang merupakan slice string, digabungkan menjadi satu string dengan menggunakan spasi sebagai pemisah[1]. Penggabungan slice ini dilakukan dengan memanfaatkan fungsi `strings.Join()`, yang tersedia dalam package `strings`[1].
+
+**3. Fungsi Dengan Return Value / Nilai Balik**
+
+Selain parameter, fungsi bisa memiliki attribute return value atau nilai balik[1]. Fungsi yang memiliki return value, saat deklarasinya harus ditentukan terlebih dahulu tipe data dari nilai baliknya[1]. Fungsi yang tidak mengembalikan nilai apapun (contohnya seperti fungsi `main()` dan `printMessage()`) biasa disebut dengan `void function`[1].
+
+Program berikut merupakan contoh penerapan fungsi yang memiliki return value:
+
+```go
+package main
+
+import (
+    "fmt"
+    "math/rand"
+    "time"
+)
+
+var randomizer = rand.New(rand.NewSource(time.Now().Unix()))
+
+func main() {
+    var randomValue int
+
+    randomValue = randomWithRange(2, 10)
+    fmt.Println("random number:", randomValue)
+
+    randomValue = randomWithRange(2, 10)
+    fmt.Println("random number:", randomValue)
+
+    randomValue = randomWithRange(2, 10)
+    fmt.Println("random number:", randomValue)
+}
+
+func randomWithRange(min, max int) int {
+    var value = randomizer.Int()%(max-min+1) + min
+    return value
+}
+
+```
+
+Fungsi `randomWithRange()` didesain untuk generate angka acak sesuai dengan range yang ditentukan lewat parameter, yang kemudian angka tersebut dijadikan nilai balik fungsi[1]. Cara menentukan tipe data nilai balik fungsi adalah dengan menuliskan tipe data yang diinginkan setelah kurung parameter. Bisa dilihat pada kode di atas, bahwa `int` merupakan tipe data nilai balik fungsi `randomWithRange()`[1]. 
+
+```go
+func randomWithRange(min, max int) int
+
+```
+
+Untuk mengembalikan nilai, gunakan keyword return diikuti oleh data yang ingin dikembalikan. Dalam contoh di atas, nilai dari variabel value akan menjadi hasil dari fungsi tersebut[1]. Saat keyword return dieksekusi, proses di dalam blok fungsi akan berhenti segera. Semua pernyataan setelah keyword tersebut tidak akan dijalankan[1].
 
 
 ## Guided 
