@@ -94,10 +94,17 @@ func permutasi(n, r int) int {
 Program meminta dua bilangan sebagai masukan, kemudian menghitung permutasi dengan memilih nilai terbesar sebagai jumlah total objek (n) dan nilai terkecil sebagai jumlah objek yang diambil (r). Program menggunakan fungsi faktorial untuk membantu perhitungan nilai permutasi tersebut.
 
 ### Algoritma Program
-
+1. Program menerima dua angka bulat, a dan b, sebagai input.
+2. Program kemudian membandingkan kedua angka tersebut untuk menentukan nilai terbesar sebagai n dan nilai terkecil sebagai r.
+3. Fungsi permutasi(n, r) digunakan untuk menghitung nilai permutasi menggunakan rumus n!/(n - r)!, dengan ! sebagai operasi faktorial.
+4. Fungsi faktorial dipanggil untuk menghitung faktorial dari n dan n - r.
+5. Hasil perhitungan permutasi ditampilkan sebagai output.
 
 ### Cara Kerja Program:
-
+1. Fungsi faktorial menerima bilangan bulat dan mengalikan semua angka dari 1 hingga angka tersebut untuk menghitung faktorialnya.
+2. Fungsi permutasi kemudian menggunakan nilai faktorial yang diperoleh untuk menghitung permutasi sesuai rumus.
+3. Program akhirnya menampilkan hasil perhitungan permutasi setelah membagi hasil faktorial dari n dengan faktorial dari n - r.
+   
 ### 2. Program untuk menghitung luas persegi dan keliling persegi
 
 ### Source Code :
