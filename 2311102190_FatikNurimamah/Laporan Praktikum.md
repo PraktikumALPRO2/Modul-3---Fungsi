@@ -230,11 +230,20 @@ func main() {
 ![Screenshot 2024-10-09 090935](https://github.com/user-attachments/assets/ac54511f-5101-446f-8952-fe9dab2635d3)
 
 ### Deskripsi Program : 
+Program ini digunakan untuk menghitung nilai permutasi dan kombinasi dari dua pasang angka yang dimasukkan oleh pengguna. Fungsi HitungPermutasi berfungsi untuk menghitung jumlah pengurutan objek, sementara HitungKombinasi menghitung cara memilih objek tanpa memperhatikan urutan. Program meminta pengguna untuk memasukkan empat angka: a, b, c, dan d. Setelah itu, program menghitung permutasi dan kombinasi untuk pasangan (a, c) dan (b, d), lalu menampilkan hasilnya.
 
 ### Algoritma Program
-
+1. Program meminta pengguna untuk menginput empat angka: a, b, c, dan d.
+2. Fungsi HitungPermutasi digunakan untuk menghitung permutasi dengan rumus n!/(n - r)!.
+3. Fungsi HitungKombinasi digunakan untuk menghitung kombinasi dengan rumus n!/r! (n - r)!.
+4. Program menghitung permutasi dan kombinasi untuk pasangan (a, c) dan (b, d).
+5. Hasil perhitungan permutasi dan kombinasi untuk kedua pasangan tersebut ditampilkan sebagai output.
+   
 ### Cara Kerja Program
-
+1. Program menerima input nilai a, b, c, dan d.
+2. Untuk setiap pasangan (n, r), fungsi HitungPermutasi dipanggil untuk mendapatkan nilai permutasi dengan menghitung faktorial n dan n - r.
+3. Fungsi HitungKombinasi juga dipanggil untuk setiap pasangan (n, r) menggunakan hasil faktorial untuk menghitung kombinasi.
+4. Program kemudian menampilkan hasil permutasi dan kombinasi untuk pasangan (a, c) dan (b, d) di layar.
 
 ### 2.  
 ![Screenshot 2024-10-09 091205](https://github.com/user-attachments/assets/0613877e-afcf-448f-a46a-3fff064d9891)
