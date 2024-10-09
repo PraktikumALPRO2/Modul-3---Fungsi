@@ -96,13 +96,13 @@ Program meminta dua bilangan sebagai masukan, kemudian menghitung permutasi deng
 ### Algoritma Program
 1. Program menerima dua angka bulat, a dan b, sebagai input.
 2. Program kemudian membandingkan kedua angka tersebut untuk menentukan nilai terbesar sebagai n dan nilai terkecil sebagai r.
-3. Fungsi permutasi(n, r) digunakan untuk menghitung nilai permutasi menggunakan rumus n!/(n - r)!, dengan ! sebagai operasi faktorial.
-4. Fungsi faktorial dipanggil untuk menghitung faktorial dari n dan n - r.
+3. Fungsi `permutasi(n, r)` digunakan untuk menghitung nilai permutasi menggunakan rumus `n!/(n - r)!`, dengan ! sebagai operasi faktorial.
+4. Fungsi `faktorial` dipanggil untuk menghitung faktorial dari `n` dan `n - r`.
 5. Hasil perhitungan permutasi ditampilkan sebagai output.
 
 ### Cara Kerja Program:
-1. Fungsi faktorial menerima bilangan bulat dan mengalikan semua angka dari 1 hingga angka tersebut untuk menghitung faktorialnya.
-2. Fungsi permutasi kemudian menggunakan nilai faktorial yang diperoleh untuk menghitung permutasi sesuai rumus.
+1. Fungsi `faktorial` menerima bilangan bulat dan mengalikan semua angka dari 1 hingga angka tersebut untuk menghitung faktorialnya.
+2. Fungsi `permutasi` kemudian menggunakan nilai faktorial yang diperoleh untuk menghitung permutasi sesuai rumus.
 3. Program akhirnya menampilkan hasil perhitungan permutasi setelah membagi hasil faktorial dari n dengan faktorial dari n - r.
    
 ### 2. Program untuk menghitung luas persegi dan keliling persegi
@@ -142,15 +142,15 @@ func main() {
 Program ini digunakan untuk menghitung luas dan keliling dari sebuah persegi berdasarkan panjang sisi yang dimasukkan oleh pengguna. Program meminta pengguna memasukkan panjang sisi persegi, kemudian menghitung luas dan kelilingnya. Hasil dari kedua perhitungan tersebut kemudian ditampilkan sebagai output.
 
 ### Algoritma Program
-1. Program meminta input panjang sisi persegi (panjangSisi) dari pengguna.
-2. Menggunakan rumus untuk menghitung luas persegi, yaitu panjang sisi dikalikan dengan panjang sisi: LuasPersegi = panjangSisi * panjangSisi.
-3. Menggunakan rumus untuk menghitung keliling persegi, yaitu panjang sisi dikalikan dengan 4: KelilingPersegi = 4 * panjangSisi.
+1. Program meminta input panjang sisi persegi `(panjangSisi)` dari pengguna.
+2. Menggunakan rumus untuk menghitung luas persegi, yaitu panjang sisi dikalikan dengan panjang sisi: `LuasPersegi = panjangSisi * panjangSisi`.
+3. Menggunakan rumus untuk menghitung keliling persegi, yaitu panjang sisi dikalikan dengan 4: `KelilingPersegi = 4 * panjangSisi`.
 4. Program menampilkan hasil perhitungan luas dan keliling persegi.
 
 ### Cara Kerja Program
-1. Program menerima input panjang sisi persegi dan menyimpannya dalam variabel panjangSisi.
-2. Luas persegi dihitung dengan mengalikan panjangSisi dengan dirinya sendiri.
-3. Keliling persegi dihitung dengan mengalikan panjangSisi dengan 4.
+1. Program menerima input panjang sisi persegi dan menyimpannya dalam variabel `panjangSisi`.
+2. Luas persegi dihitung dengan mengalikan `panjangSisi` dengan dirinya sendiri.
+3. Keliling persegi dihitung dengan mengalikan `panjangSisi` dengan 4.
 4. Program kemudian menampilkan hasil luas dan keliling kepada pengguna.
 
 ## Unguided 
@@ -230,19 +230,19 @@ func main() {
 ![Screenshot 2024-10-09 090935](https://github.com/user-attachments/assets/ac54511f-5101-446f-8952-fe9dab2635d3)
 
 ### Deskripsi Program : 
-Program ini digunakan untuk menghitung nilai permutasi dan kombinasi dari dua pasang angka yang dimasukkan oleh pengguna. Fungsi HitungPermutasi berfungsi untuk menghitung jumlah pengurutan objek, sementara HitungKombinasi menghitung cara memilih objek tanpa memperhatikan urutan. Program meminta pengguna untuk memasukkan empat angka: a, b, c, dan d. Setelah itu, program menghitung permutasi dan kombinasi untuk pasangan (a, c) dan (b, d), lalu menampilkan hasilnya.
+Program ini digunakan untuk menghitung nilai permutasi dan kombinasi dari dua pasang angka yang dimasukkan oleh pengguna. Fungsi `HitungPermutasi` berfungsi untuk menghitung jumlah pengurutan objek, sementara `HitungKombinasi` menghitung cara memilih objek tanpa memperhatikan urutan. Program meminta pengguna untuk memasukkan empat angka: a, b, c, dan d. Setelah itu, program menghitung permutasi dan kombinasi untuk pasangan (a, c) dan (b, d), lalu menampilkan hasilnya.
 
 ### Algoritma Program
 1. Program meminta pengguna untuk menginput empat angka: a, b, c, dan d.
-2. Fungsi HitungPermutasi digunakan untuk menghitung permutasi dengan rumus n!/(n - r)!.
-3. Fungsi HitungKombinasi digunakan untuk menghitung kombinasi dengan rumus n!/r! (n - r)!.
+2. Fungsi HitungPermutasi digunakan untuk menghitung permutasi dengan rumus `n!/(n - r)!`.
+3. Fungsi HitungKombinasi digunakan untuk menghitung kombinasi dengan rumus `n!/r! (n - r)!`.
 4. Program menghitung permutasi dan kombinasi untuk pasangan (a, c) dan (b, d).
 5. Hasil perhitungan permutasi dan kombinasi untuk kedua pasangan tersebut ditampilkan sebagai output.
    
 ### Cara Kerja Program
 1. Program menerima input nilai a, b, c, dan d.
-2. Untuk setiap pasangan (n, r), fungsi HitungPermutasi dipanggil untuk mendapatkan nilai permutasi dengan menghitung faktorial n dan n-r.
-3. Fungsi HitungKombinasi juga dipanggil untuk setiap pasangan (n, r) menggunakan hasil faktorial untuk menghitung kombinasi.
+2. Untuk setiap pasangan (n, r), fungsi `HitungPermutasi` dipanggil untuk mendapatkan nilai permutasi dengan menghitung faktorial n dan n-r.
+3. Fungsi `HitungKombinasi` juga dipanggil untuk setiap pasangan (n, r) menggunakan hasil faktorial untuk menghitung kombinasi.
 4. Program kemudian menampilkan hasil permutasi dan kombinasi untuk pasangan (a, c) dan (b, d) di layar.
 
 ### 2.  
@@ -316,26 +316,26 @@ func main() {
 ![Screenshot 2024-10-09 092919](https://github.com/user-attachments/assets/93c480b6-37e9-452e-ad79-969708b37ebb)
 
 ### Deskripsi Program : 
-Program ini menghitung hasil dari tiga komposisi fungsi matematika: (fogoh)(x), (gohof)(x), dan (hofog)(x), di mana setiap fungsi memiliki rumus yang berbeda. Program meminta pengguna memasukkan tiga angka, masing-masing akan diproses melalui salah satu dari tiga komposisi fungsi: fogoh, gohof, dan hofog. Hasil dari perhitungan komposisi fungsi tersebut kemudian ditampilkan.
+Program ini menghitung hasil dari tiga komposisi fungsi matematika: (fogoh)(x), (gohof)(x), dan (hofog)(x), di mana setiap fungsi memiliki rumus yang berbeda. Program meminta pengguna memasukkan tiga angka, masing-masing akan diproses melalui salah satu dari tiga komposisi fungsi: `fogoh`, `gohof`, dan `hofog`. Hasil dari perhitungan komposisi fungsi tersebut kemudian ditampilkan.
 
 ### Algoritma Program
 1. Program mendefinisikan tiga fungsi dasar:
-   - fungsiKuadrat(x): mengembalikan nilai (x^2).
-   - fungsiKurang(x): mengembalikan nilai (x - 2).
-   - fungsiTambah(x): mengembalikan nilai (x + 1).
+   - `fungsiKuadrat(x)`: mengembalikan nilai `(x^2)`.
+   - `fungsiKurang(x)`: mengembalikan nilai `(x - 2)`.
+   - `fungsiTambah(x)`: mengembalikan nilai `(x + 1)`.
 2. Program kemudian mendefinisikan tiga fungsi komposisi:
-   - komposisiFogoh(x): menghitung f(g(h(x))).
-   - komposisiGohof(x): menghitung g(h(f(x))).
-   - komposisiHofog(x): menghitung h(f(g(x))).
-3. Program meminta pengguna memasukkan nilai untuk a, b, dan c.
-4. Program menghitung komposisi fogoh menggunakan nilai a, gohof menggunakan nilai b, dan hofog menggunakan nilai c.
+   - `komposisiFogoh(x)`: menghitung `f(g(h(x)))`.
+   - `komposisiGohof(x)`: menghitung `g(h(f(x)))`.
+   - `komposisiHofog(x)`: menghitung `h(f(g(x)))`.
+3. Program meminta pengguna memasukkan nilai untuk `a`, `b`, dan `c`.
+4. Program menghitung komposisi `fogoh` menggunakan nilai `a`, `gohof` menggunakan nilai `b`, dan `hofog` menggunakan nilai `c`.
 5. Hasil dari masing-masing komposisi fungsi ditampilkan kepada pengguna.
 
 ### Cara Kerja Program
-1. Program menerima masukan untuk a, b, dan c.
-2. Untuk nilai a, program menghitung fogoh dengan memasukkan nilai ke dalam fungsiTambah, lalu ke fungsiKurang, dan terakhir ke fungsiKuadrat.
-3. Untuk nilai b, program menghitung gohof dengan urutan fungsiKuadrat, kemudian fungsiTambah, dan diakhiri dengan fungsiKurang.
-4. Untuk nilai c, program menghitung hofog dengan urutan fungsiKurang, kemudian fungsiKuadrat, dan diakhiri dengan fungsiTambah.
+1. Program menerima masukan untuk `a`, `b`, dan `c`.
+2. Untuk nilai `a`, program menghitung `fogoh` dengan memasukkan nilai ke dalam `fungsiTambah`, lalu ke `fungsiKurang`, dan terakhir ke `fungsiKuadrat`.
+3. Untuk nilai `b`, program menghitung `gohof` dengan urutan `fungsiKuadrat`, kemudian `fungsiTambah`, dan diakhiri dengan `fungsiKurang`.
+4. Untuk nilai `c`, program menghitung `hofog` dengan urutan `fungsiKurang`, kemudian `fungsiKuadrat`, dan diakhiri dengan `fungsiTambah`.
 5. Program akhirnya menampilkan hasil dari setiap komposisi fungsi kepada pengguna.
    
 ### 3. Suatu lingkaran didefinisikan dengan koordinat titik pusat (𝑐𝑥, 𝑐𝑦) dengan radius 𝑟. Apabila diberikan dua buah lingkaran, maka tentukan posisi sebuah titik sembarang (𝑥, 𝑦) berdasarkan dua lingkaran tersebut.
