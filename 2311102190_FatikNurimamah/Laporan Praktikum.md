@@ -319,9 +319,25 @@ func main() {
 Program ini menghitung hasil dari tiga komposisi fungsi matematika: (fogoh)(x), (gohof)(x), dan (hofog)(x), di mana setiap fungsi memiliki rumus yang berbeda. Program meminta pengguna memasukkan tiga angka, masing-masing akan diproses melalui salah satu dari tiga komposisi fungsi: fogoh, gohof, dan hofog. Hasil dari perhitungan komposisi fungsi tersebut kemudian ditampilkan.
 
 ### Algoritma Program
+1. Program mendefinisikan tiga fungsi dasar:
+   - fungsiKuadrat(x): mengembalikan nilai (x^2).
+   - fungsiKurang(x): mengembalikan nilai (x - 2).
+   - fungsiTambah(x): mengembalikan nilai (x + 1).
+2. Program kemudian mendefinisikan tiga fungsi komposisi:
+   - komposisiFogoh(x): menghitung f(g(h(x))).
+   - komposisiGohof(x): menghitung g(h(f(x))).
+   - komposisiHofog(x): menghitung h(f(g(x))).
+3. Program meminta pengguna memasukkan nilai untuk a, b, dan c.
+4. Program menghitung komposisi fogoh menggunakan nilai a, gohof menggunakan nilai b, dan hofog menggunakan nilai c.
+5. Hasil dari masing-masing komposisi fungsi ditampilkan kepada pengguna.
 
 ### Cara Kerja Program
-
+1. Program menerima masukan untuk a, b, dan c.
+2. Untuk nilai a, program menghitung fogoh dengan memasukkan nilai ke dalam fungsiTambah, lalu ke fungsiKurang, dan terakhir ke fungsiKuadrat.
+3. Untuk nilai b, program menghitung gohof dengan urutan fungsiKuadrat, kemudian fungsiTambah, dan diakhiri dengan fungsiKurang.
+4. Untuk nilai c, program menghitung hofog dengan urutan fungsiKurang, kemudian fungsiKuadrat, dan diakhiri dengan fungsiTambah.
+5. Program akhirnya menampilkan hasil dari setiap komposisi fungsi kepada pengguna.
+   
 ### 3. Suatu lingkaran didefinisikan dengan koordinat titik pusat (𝑐𝑥, 𝑐𝑦) dengan radius 𝑟. Apabila diberikan dua buah lingkaran, maka tentukan posisi sebuah titik sembarang (𝑥, 𝑦) berdasarkan dua lingkaran tersebut.
 **Masukan terdiri dari beberapa tiga baris. Baris pertama dan kedua adalah koordinat titik pusat dan radius dari lingkaran 1 dan lingkaran 2, sedangkan baris ketiga adalah koordinat titik sembarang. Asumsi sumbu x dan y dari semua titik dan juga radius direpresentasikan dengan bilangan bulat.
 Keluaran berupa string yang menyatakan posisi titik "Titik di dalam lingkaran 1 dan 2", "Titik di dalam lingkaran 1", "Titik di dalam lingkaran 2", atau "Titik di luar lingkaran 1 dan 2".**
