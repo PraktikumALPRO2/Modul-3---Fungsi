@@ -18,6 +18,52 @@
 
 ## I. DASAR TEORI
 
+I. Fungsi adalah kumpulan blok kode yang diberi nama untuk mempermudah penggunaannya. Dengan
+  menerapkan fungsi dengan baik, kode menjadi lebih modular dan
+  mengikuti prinsip DRY (Don't Repeat Yourself). Artinya, kita tidak perlu menulis ulang kode
+  yang sama berkali-kali, cukup mendefinisikan fungsi tersebut sekali,
+  lalu memanggilnya saat diperlukan.<br/>
+  Suatu subprogram dikatakan fungsi apabila:<br/>
+  1. Ada deklarasi tipe nilai yang dikembalikan.<br/>
+  2. Terdapat kata kunci return dalam badan subprogram.<br/>
+  Maka fungsi digunakan jika suatu nilai biasanya diperlukan, seperti:<br/>
+  - Assignment nilai ike suatu variabel.<br/>
+  - Bagian dari ekspresi<br/>
+  - Bagian dari argumen suatu subprogram, dsb.<br/>
+II. Deklasari Function<br/>
+![image](https://github.com/user-attachments/assets/f271b999-f8f6-4f2d-91ce-e89412adf4cc)
+
+III. Contoh Program dengan Function<br/>
+
+```go
+package main
+
+import "fmt"
+import "strings"
+
+func main() {
+    var names = []string{"Amanda", "Windhu"}
+    printMessage("halo", names)
+}
+
+func printMessage(message string, arr []string) {
+    var nameString = strings.Join(arr, " ")
+    fmt.Println(message, nameString)
+}
+```
+Pada kode di atas, sebuah fungsi baru dibuat dengan nama `printMessage()` memiliki 2 buah parameter yaitu string `message` dan slice string `arr`.<br/>
+- Fungsi tersebut dipanggil dalam `main()`, dalam pemanggilannya disisipkan dua buah argument
+  parameter. <br/>
+  1. Argument parameter pertama adalah string `"halo"` yang ditampung parameter `message`<br/>
+  2. Argument parameter ke-2 adalah slice string `names` yang nilainya ditampung oleh
+     parameter `arr`.<br/>
+  Di dalam `printMessage()`, nilai `arr` yang merupakan slice string digabungkan menjadi sebuah
+  string dengan pembatas adalah karakter spasi. Penggabungan slice dapat dilakukan dengan
+  memanfaatkan fungsi `strings.Join()` (berada di dalam package `strings`).
+  
+  
+  
+
 ## II. GUIDED
 
 ### 1. Contoh Program dengan Function
