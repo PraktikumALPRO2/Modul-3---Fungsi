@@ -148,7 +148,10 @@ Program ini digunakan untuk menghitung luas dan keliling dari sebuah persegi ber
 4. Program menampilkan hasil perhitungan luas dan keliling persegi.
 
 ### Cara Kerja Program
-
+1. Program menerima input panjang sisi persegi dan menyimpannya dalam variabel panjangSisi.
+2. Luas persegi dihitung dengan mengalikan panjangSisi dengan dirinya sendiri.
+3. Keliling persegi dihitung dengan mengalikan panjangSisi dengan 4.
+4. Program kemudian menampilkan hasil luas dan keliling kepada pengguna.
 
 ## Unguided 
 
