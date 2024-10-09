@@ -241,7 +241,7 @@ Program ini digunakan untuk menghitung nilai permutasi dan kombinasi dari dua pa
    
 ### Cara Kerja Program
 1. Program menerima input nilai a, b, c, dan d.
-2. Untuk setiap pasangan (n, r), fungsi HitungPermutasi dipanggil untuk mendapatkan nilai permutasi dengan menghitung faktorial n dan n - r.
+2. Untuk setiap pasangan (n, r), fungsi HitungPermutasi dipanggil untuk mendapatkan nilai permutasi dengan menghitung faktorial n dan n-r.
 3. Fungsi HitungKombinasi juga dipanggil untuk setiap pasangan (n, r) menggunakan hasil faktorial untuk menghitung kombinasi.
 4. Program kemudian menampilkan hasil permutasi dan kombinasi untuk pasangan (a, c) dan (b, d) di layar.
 
