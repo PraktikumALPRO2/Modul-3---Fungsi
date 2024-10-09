@@ -215,15 +215,64 @@ f(g(h(x))), `gohof(x)` menghitung g(h(f(x))), dan `hofog(x)` menghitung h(f(g(x)
 ![image](https://github.com/user-attachments/assets/e131d1dc-24f9-45a3-9638-b5e739e78b4b) ![image](https://github.com/user-attachments/assets/274a0809-2122-4c21-9867-ca8e5a134723) 
 # Fungsi untuk menghitung jarak titik (a, b) dan (c, d) dimana rumus jarak adalah: ![image](https://github.com/user-attachments/assets/bc6ecd19-694e-4b66-adb1-96380a1368b1) dan juga fungsi untuk menentukan posisi sebuah titik sembarang berada di dalam suatu lingkaran atau tidak.
 
+```go
+package main
 
+import (
+	"fmt"
+	"math"
+)
 
+// Fungsi untuk menghitung jarak antara dua titik (a, b) dan (c, d)
+func jarak(a, b, c, d float64) float64 {
+	return math.Sqrt(math.Pow(a-c, 2) + math.Pow(b-d, 2))
+}
 
+// Fungsi untuk menentukan apakah titik (x, y) berada di dalam lingkaran dengan pusat (cx, cy) dan radius r
+func didalam(cx, cy, r, x, y float64) bool {
+	return jarak(cx, cy, x, y) <= r
+}
 
+// Fungsi untuk mengecek posisi titik terhadap dua lingkaran
+func checkPosition(cx1, cy1, r1, cx2, cy2, r2, x, y float64) string {
+	inCircle1 := didalam(cx1, cy1, r1, x, y)
+	inCircle2 := didalam(cx2, cy2, r2, x, y)
 
+	if inCircle1 && inCircle2 {
+		return "Titik di dalam lingkaran 1 dan 2"
+	} else if inCircle1 {
+		return "Titik di dalam lingkaran 1"
+	} else if inCircle2 {
+		return "Titik di dalam lingkaran 2"
+	} else {
+		return "Titik di luar lingkaran 1 dan 2"
+	}
+}
 
+func main() {
+	var cx1, cy1, r1, cx2, cy2, r2, x, y float64
 
+	// Masukkan data sesuai dengan format yang diberikan
+	fmt.Println("Masukkan koordinat pusat dan radius lingkaran 1:")
+	fmt.Scan(&cx1, &cy1, &r1)
 
+	fmt.Println("Masukkan koordinat pusat dan radius lingkaran 2:")
+	fmt.Scan(&cx2, &cy2, &r2)
 
+	fmt.Println("Masukkan koordinat titik sembarang:")
+	fmt.Scan(&x, &y)
+
+	// Cek posisi titik sembarang
+	result := checkPosition(cx1, cy1, r1, cx2, cy2, r2, x, y)
+	fmt.Println(result)
+}
+```
+
+## Output: ![image](https://github.com/user-attachments/assets/4e83351a-b0bb-4ba1-8293-b7b8730b2cf9)
+
+Kode di atas digunakan untuk menentukan posisi sebuah titik sembarang terhadap dua buah lingkaran. Program ini menerima tiga baris masukan. Baris pertama dan kedua berisi koordinat titik pusat dan radius dari dua lingkaran, sedangkan baris ketiga berisi koordinat titik sembarang. Berdasarkan masukan ini, program menghitung apakah titik tersebut berada di dalam lingkaran pertama, di dalam lingkaran kedua, di dalam kedua lingkaran, atau di luar keduanya. <br/>
+Program ini menggunakan dua fungsi utama. Pertama, fungsi `jarak()` yang menghitung jarak Euclidean antara dua titik menggunakan rumus jarak antar titik dalam bidang kartesian. Kedua, fungsi `didalam()` yang memeriksa apakah titik sembarang berada di dalam sebuah lingkaran dengan membandingkan jarak titik ke pusat lingkaran dengan radius lingkaran tersebut. Kemudian, fungsi `checkPosition()` memeriksa apakah titik berada di dalam lingkaran pertama, lingkaran kedua, atau keduanya, dan mengembalikan string yang menjelaskan posisi titik tersebut.<br/>
+Setelah menerima masukan, program akan menampilkan hasil dalam bentuk teks yang menyatakan apakah titik tersebut berada di dalam lingkaran pertama, lingkaran kedua, di dalam kedua lingkaran, atau di luar kedua lingkaran.
 
 
 
