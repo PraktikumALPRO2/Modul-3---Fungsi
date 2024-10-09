@@ -401,6 +401,7 @@ func main() {
 ![Screenshot 2024-10-09 093453](https://github.com/user-attachments/assets/98dd01ae-06f8-4621-9112-183ede33838c)
 
 ### Deskripsi Program : 
+Program ini dirancang untuk menghitung dan memeriksa apakah sebuah titik terletak di dalam dua lingkaran yang ditentukan oleh pusat dan radiusnya. Jika titik tersebut berada di dalam salah satu atau kedua lingkaran, program akan menampilkan hasilnya.
 
 ### Algoritma Program
 
