@@ -279,7 +279,19 @@ h(f(g(c))) - juga disebut sebagai "hofg"
 Program menampilkan hasil ketiga perhitungan tersebut
 
 *Cara Kerja*
+Input:
 
+1. Program meminta pengguna memasukkan tiga bilangan
+Bilangan-bilangan ini disimpan dalam variabel a, b, dan c
+
+
+2. Proses untuk setiap komposisi fungsi:
+- Program menjalankan fungsi-fungsi secara berurutan dari dalam ke luar
+- Hasil dari satu fungsi menjadi input untuk fungsi berikutnya
+
+
+3. Output:
+Program menampilkan hasil ketiga komposisi fungsi
 
 
 ### <h2> UNGUIDED 2 </h2>
@@ -287,23 +299,102 @@ Program menampilkan hasil ketiga perhitungan tersebut
 #### Source Code
 
 ```go
+//Rangga Pradarrell Fathi
+//2311102200
+//IF-11
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func jarak(a, b, c, d float64) float64 {
+	return math.Sqrt(math.Pow(a-c, 2) + math.Pow(b-d, 2))
+}
+
+func didalam(cx, cy, r, x, y float64) bool {
+	return jarak(cx, cy, x, y) <= r
+}
+
+func main() {
+	var cx1, cy1, r1, cx2, cy2, r2, x, y float64
+
+	fmt.Println("Masukkan koordinat titik pusat lingkaran 1 (cx, cy) dan radius (r):")
+	fmt.Scanln(&cx1, &cy1, &r1)
+
+	fmt.Println("Masukkan koordinat titik pusat lingkaran 2 (cx, cy) dan radius (r):")
+	fmt.Scanln(&cx2, &cy2, &r2)
+
+	fmt.Println("Masukkan koordinat titik (x, y):")
+	fmt.Scanln(&x, &y)
+
+	if didalam(cx1, cy1, r1, x, y) && didalam(cx2, cy2, r2, x, y) {
+		fmt.Println("Titik di dalam lingkaran 1 dan 2")
+	} else if didalam(cx1, cy1, r1, x, y) {
+		fmt.Println("Titik di dalam lingkaran 1")
+	} else if didalam(cx2, cy2, r2, x, y) {
+		fmt.Println("Titik di dalam lingkaran 2")
+	} else {
+		fmt.Println("Titik di luar lingkaran ")
+	}
+}
 
 ```
 
 #### Source Code
+![Unguided 2 carbon](https://github.com/user-attachments/assets/0d6da1f4-765b-4ed8-9b39-8ea7c54ed471)
 
 
 #### Output
+![Screenshot 2024-10-10 103140](https://github.com/user-attachments/assets/aec71ebf-875f-4da0-a222-d807c009230f)
+![Screenshot 2024-10-10 103122](https://github.com/user-attachments/assets/278399f3-b9b3-4640-888e-78c7c4231f85)
+![Screenshot 2024-10-10 103059](https://github.com/user-attachments/assets/1013be5a-cb61-41a8-a5e5-f4830014c5d1)
+![Screenshot 2024-10-10 103348](https://github.com/user-attachments/assets/ac9380b6-b184-4d51-8ea6-0c00934e206f)
 
 
 #### Deskripsi Program : 
+Program ini adalah aplikasi Go yang menentukan posisi sebuah titik relatif terhadap dua buah lingkaran. Program meminta input koordinat pusat dan radius untuk dua lingkaran, serta koordinat sebuah titik, kemudian menentukan apakah titik tersebut berada di dalam salah satu, kedua, atau di luar kedua lingkaran.
 
 #### Algoritma dan Cara Kerja Program
 *Algoritma*
+1. Input Data
 
+Minta dan simpan koordinat pusat dan radius lingkaran 1
+Minta dan simpan koordinat pusat dan radius lingkaran 2
+Minta dan simpan koordinat titik yang akan dicek
+
+
+2. Proses Pengecekan
+
+Cek apakah titik berada di dalam lingkaran 1
+Cek apakah titik berada di dalam lingkaran 2
+Tentukan output berdasarkan hasil pengecekan
+
+
+3. Output
+
+Tampilkan hasil pengecekan sesuai kondisi yang terpenuhi
 
 *Cara Kerja*
+1. Perhitungan Jarak
 
+- Program menggunakan teorema Pythagoras untuk menghitung jarak
+- Implementasi dalam fungsi jarak() menggunakan math.Sqrt dan math.Pow
+
+
+2. Penentuan Posisi Titik
+
+- Titik dianggap di dalam lingkaran jika jaraknya ke pusat ≤ radius
+- Fungsi didalam() mengembalikan true jika kondisi ini terpenuhi
+
+
+3. Logika Pengecekan. Program memeriksa 4 kemungkinan:
+
+- Titik di dalam kedua lingkaran
+- Titik hanya di dalam lingkaran 1
+- Titik hanya di dalam lingkaran 2
+- Titik di luar kedua lingkaran
 
 
 
