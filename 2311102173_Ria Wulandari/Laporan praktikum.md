@@ -459,3 +459,47 @@ func main() {
 ```
 #### Output
 ![image](https://github.com/user-attachments/assets/47a2189f-d4fa-4a15-b63b-2b0b7fc432eb)
+#### Deskripsi Program
+Program ini bertujuan untuk menentukan apakah sebuah titik sembarang berada di dalam atau di luar dua lingkaran yang diberikan. Lingkaran-lingkaran tersebut didefinisikan oleh pengguna melalui koordinat pusat dan radiusnya, sedangkan titik sembarang didefinisikan oleh koordinatnya. Program dimulai dengan mendeklarasikan fungsi `jarak` untuk menghitung jarak antara dua titik berdasarkan rumus Euclidean. Fungsi `diDalamLingkaran` kemudian digunakan untuk memeriksa apakah jarak antara titik sembarang dan pusat lingkaran lebih kecil atau sama dengan radius lingkaran, yang menunjukkan bahwa titik tersebut berada di dalam lingkaran. Setelah pengguna memasukkan data lingkaran pertama, lingkaran kedua, dan titik sembarang, program akan mengevaluasi apakah titik tersebut berada di dalam satu atau kedua lingkaran, atau di luar keduanya. Hasilnya akan ditampilkan dalam bentuk pesan yang menyatakan apakah titik berada di dalam lingkaran 1, lingkaran 2, kedua lingkaran, atau di luar keduanya.
+#### Algoritma Program
+1. Program dimulai.
+
+2. Program mendeklarasikan fungsi `jarak(x1, y1, x2, y2)` untuk menghitung jarak antara dua titik berdasarkan rumus Euclidean.
+
+3. Program mendeklarasikan fungsi `diDalamLingkaran(cx, cy, r, x, y)` untuk menentukan apakah titik berada di dalam atau di luar lingkaran berdasarkan jarak ke pusat lingkaran.
+
+4. Program meminta input dari pengguna untuk koordinat pusat `(cx1, cy1)` dan radius `r1` dari lingkaran pertama.
+
+5. Program meminta input dari pengguna untuk koordinat pusat `(cx2, cy2)` dan radius `r2` dari lingkaran kedua.
+
+6. Program meminta input dari pengguna untuk koordinat titik sembarang `(x, y)`.
+
+7. Program menggunakan fungsi `diDalamLingkaran` untuk memeriksa apakah titik berada di dalam lingkaran pertama.
+
+8. Program menggunakan fungsi `diDalamLingkaran` untuk memeriksa apakah titik berada di dalam lingkaran kedua.
+
+9. Program mengecek hasil dari kedua pemeriksaan dan menentukan apakah titik berada di dalam lingkaran 1 dan 2, hanya lingkaran 1, hanya lingkaran 2, atau di luar kedua lingkaran.
+
+10. Program menampilkan hasil sesuai dengan kondisi yang ditemukan.
+
+11. Program selesai.
+#### Cara Kerja Program
+1. Program dimulai dengan mendeklarasikan dua fungsi utama, yaitu `jarak` untuk menghitung jarak antara dua titik, dan `diDalamLingkaran` untuk memeriksa apakah suatu titik berada di dalam lingkaran.
+
+2. Fungsi `jarak(x1, y1, x2, y2)` menghitung jarak Euclidean antara dua titik `(x1, y1)` dan `(x2, y2)` dan mengembalikan nilai jarak sebagai bilangan desimal `(float64)`.
+
+3. Fungsi `diDalamLingkaran(cx, cy, r, x, y)` memeriksa apakah titik `(x, y)` berada di dalam lingkaran yang berpusat di `(cx, cy)` dengan radius `r` menggunakan hasil dari fungsi `jarak`.
+
+4. Program meminta input dari pengguna berupa koordinat pusat `(cx1, cy1)` dan radius `r1` untuk lingkaran pertama.
+
+5. Program meminta input dari pengguna untuk koordinat pusat `(cx2, cy2)` dan radius `r2` untuk lingkaran kedua.
+
+6. Program meminta input dari pengguna untuk koordinat titik sembarang `(x, y)`.
+
+7. Program memanggil fungsi `diDalamLingkaran` untuk memeriksa apakah titik `(x, y)` berada di dalam lingkaran pertama.
+
+8. Program memanggil fungsi `diDalamLingkaran` untuk memeriksa apakah titik `(x, y)` berada di dalam lingkaran kedua.
+
+9. Berdasarkan hasil pemeriksaan, program menentukan apakah titik tersebut berada di dalam lingkaran 1, lingkaran 2, keduanya, atau di luar kedua lingkaran.
+
+10. Program menampilkan hasil pemeriksaan sesuai kondisi yang ditemukan, apakah titik berada di dalam salah satu atau kedua lingkaran, atau di luar keduanya.
