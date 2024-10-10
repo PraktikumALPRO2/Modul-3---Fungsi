@@ -218,4 +218,92 @@ Program di atas merupakan program yang menghitung permutasi dari dua bilangan ya
 6. Output menampilkan nilai luas dan keliling yang sudah dihitung berdasarkan input panjang sisi yang diberikan oleh pengguna.
 
 
+## <strong> Unguided </strong>
+### <h2> UNGUIDED 1 </h2>
+
+#### Source Code
+
+```go
+package main
+
+import "fmt"
+
+func f(x int) int {
+	fungsi_f := x * x
+	return fungsi_f
+}
+
+func g(x int) int {
+	fungsi_g := x - 2
+	return fungsi_g
+}
+
+func h(x int) int {
+	fungsi_h := x + 1
+	return fungsi_h
+}
+
+func main() {
+	fmt.Print("Masukkan bilangan: ")
+
+	var a, b, c int
+	fmt.Scan(&a, &b, &c)
+
+	fmt.Println("Hasil fungsi fogoh dari bilangan pertama adalah ", f(g(h(a))))
+
+	fmt.Println("Hasil fungsi gohof dari bilangan pertama adalah ", g(h(f(b))))
+
+	fmt.Println("Hasil fungsi gohof dari bilangan pertama adalah ", h(f(g(c))))
+}
+```
+
+#### Source Code
+![Unguided1 carbon](https://github.com/user-attachments/assets/c69d6d1e-7c19-4aeb-8c7f-232eb78fabae)
+
+#### Output
+![Screenshot 2024-10-10 102109](https://github.com/user-attachments/assets/d568a814-9508-4796-8e59-5ee16e5d26b0)
+
+
+#### Deskripsi Program : 
+Program ini adalah sebuah aplikasi Go yang mendemonstrasikan konsep komposisi fungsi matematika. Program meminta input tiga bilangan dari pengguna dan menerapkan berbagai kombinasi dari tiga fungsi matematika sederhana pada bilangan-bilangan tersebut.
+
+#### Algoritma dan Cara Kerja Program
+*Algoritma*
+1. Program meminta pengguna memasukkan tiga bilangan (a, b, c)
+2. Program menghitung tiga komposisi fungsi berbeda:
+3. f(g(h(a))) - disebut sebagai "fogoh"
+g(h(f(b))) - disebut sebagai "gohof"
+h(f(g(c))) - juga disebut sebagai "hofg"
+
+
+Program menampilkan hasil ketiga perhitungan tersebut
+
+*Cara Kerja*
+
+
+
+### <h2> UNGUIDED 2 </h2>
+
+#### Source Code
+
+```go
+
+```
+
+#### Source Code
+
+
+#### Output
+
+
+#### Deskripsi Program : 
+
+#### Algoritma dan Cara Kerja Program
+*Algoritma*
+
+
+*Cara Kerja*
+
+
+
 
