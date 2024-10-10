@@ -324,5 +324,5 @@ Setelah menerima masukan, program akan menampilkan hasil dalam bentuk teks yang 
 Setelah mempelajari fungsi dalam bahasa Go, dapat disimpulkan bahwa fungsi membantu membuat kode lebih modular dan mengikuti prinsip DRY (Don't Repeat Yourself), sehingga mengurangi pengulangan kode yang sama. Fungsi dalam Go dapat mengembalikan nilai dengan mendeklarasikan tipe nilai yang dikembalikan serta menggunakan kata kunci return untuk mengembalikannya. Selain itu, fungsi juga bisa memiliki parameter yang memungkinkan kita untuk memasukkan data ke dalamnya dan memproses data tersebut. Pemanggilan fungsi dilakukan dengan memberikan argumen yang sesuai dengan jumlah dan tipe parameter yang telah didefinisikan. Pada contoh yang dipelajari, penggunaan fungsi built-in seperti `strings.Join()` menunjukkan bagaimana fungsi membantu dalam manipulasi data dengan lebih efisien. Secara keseluruhan, penggunaan fungsi dalam Go sangat penting untuk menjaga kode tetap terstruktur, bersih, dan efisien.
 
 ### REFERENSI
-[1] Noval Agung. Dasar Pemrograman Golang, Fungsi.
-[2] Modul Praktikum Algoritma Pemrograman 3
+[1] Noval Agung. Dasar Pemrograman Golang, Fungsi.<br/>
+[2] Modul Praktikum Algoritma Pemrograman 3<br/>
