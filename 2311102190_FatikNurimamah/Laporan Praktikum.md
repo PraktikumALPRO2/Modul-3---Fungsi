@@ -165,7 +165,7 @@ func permutasi(n, r int) int {
 ```
 
 ### Output:
-
+![Screenshot 2024-10-10 135249](https://github.com/user-attachments/assets/052f2b0e-9ed7-416e-99f0-7851db81b074)
 
 ### Full code Screenshot:
 ![Screenshot 2024-10-09 085622](https://github.com/user-attachments/assets/335d5a58-0c57-4007-babe-9345028dd8d6)
@@ -304,7 +304,6 @@ func main() {
 
 ```
 ### Output:
-![Screenshot 2024-10-09 090843](https://github.com/user-attachments/assets/5f071abd-c8a3-4f53-a3d5-1c33eb557bbf)
 
 ### Full code Screenshot:
 ![Screenshot 2024-10-09 090935](https://github.com/user-attachments/assets/ac54511f-5101-446f-8952-fe9dab2635d3)
