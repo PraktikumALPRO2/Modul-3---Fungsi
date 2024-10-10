@@ -320,6 +320,9 @@ Kode di atas digunakan untuk menentukan posisi sebuah titik sembarang terhadap d
 Program ini menggunakan dua fungsi utama. Pertama, fungsi `jarak()` yang menghitung jarak Euclidean antara dua titik menggunakan rumus jarak antar titik dalam bidang kartesian. Kedua, fungsi `didalam()` yang memeriksa apakah titik sembarang berada di dalam sebuah lingkaran dengan membandingkan jarak titik ke pusat lingkaran dengan radius lingkaran tersebut. Kemudian, fungsi `checkPosition()` memeriksa apakah titik berada di dalam lingkaran pertama, lingkaran kedua, atau keduanya, dan mengembalikan string yang menjelaskan posisi titik tersebut.<br/>
 Setelah menerima masukan, program akan menampilkan hasil dalam bentuk teks yang menyatakan apakah titik tersebut berada di dalam lingkaran pertama, lingkaran kedua, di dalam kedua lingkaran, atau di luar kedua lingkaran.
 
+### KESIMPULAN
+Setelah mempelajari fungsi dalam bahasa Go, dapat disimpulkan bahwa fungsi membantu membuat kode lebih modular dan mengikuti prinsip DRY (Don't Repeat Yourself), sehingga mengurangi pengulangan kode yang sama. Fungsi dalam Go dapat mengembalikan nilai dengan mendeklarasikan tipe nilai yang dikembalikan serta menggunakan kata kunci return untuk mengembalikannya. Selain itu, fungsi juga bisa memiliki parameter yang memungkinkan kita untuk memasukkan data ke dalamnya dan memproses data tersebut. Pemanggilan fungsi dilakukan dengan memberikan argumen yang sesuai dengan jumlah dan tipe parameter yang telah didefinisikan. Pada contoh yang dipelajari, penggunaan fungsi built-in seperti `strings.Join()` menunjukkan bagaimana fungsi membantu dalam manipulasi data dengan lebih efisien. Secara keseluruhan, penggunaan fungsi dalam Go sangat penting untuk menjaga kode tetap terstruktur, bersih, dan efisien.
 
-
-
+### REFERENSI
+[1] Noval Agung. Dasar Pemrograman Golang, Fungsi.
+[2] Modul Praktikum Algoritma Pemrograman 3
