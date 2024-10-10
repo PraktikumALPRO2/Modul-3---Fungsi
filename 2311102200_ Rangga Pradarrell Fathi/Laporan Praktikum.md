@@ -129,9 +129,93 @@ func permutasi (n,r int) int {
 }
 ```
 
+#### Source Code
+![Guided1carbon](https://github.com/user-attachments/assets/556ae404-6957-4844-b171-f728259fcb9f)
+
 #### Output
+![Screenshot 2024-10-10 080802](https://github.com/user-attachments/assets/a35ffa17-5ab6-47be-8ef5-bbaefdd28054)
 
 
-Deskripsi Program : 
+#### Deskripsi Program : 
 Program di atas merupakan program yang menghitung permutasi dari dua bilangan yang dimasukkan oleh user.
+
+#### Algoritma dan Cara Kerja Program
+*Algoritma*
+
+1. **Input dari Pengguna:**
+   - Program pertama kali meminta dua bilangan `a` dan `b` dari pengguna.
+   - Jika `a >= b`, program akan menghitung permutasi dengan `a` sebagai `n` dan `b` sebagai `r`. Jika tidak, posisi `a` dan `b` akan ditukar sehingga `b` dianggap sebagai `n` dan `a` sebagai `r`.
+
+2. **Perhitungan Faktorial:**
+   - Fungsi `faktorial(n int) int` menghitung faktorial dari `n`. 
+   - Fungsi ini menggunakan sebuah loop dari 1 hingga `n`, di mana setiap iterasi mengalikan nilai sebelumnya dengan `i` untuk menghitung faktorial.
+
+3. **Perhitungan Permutasi:**
+   - Fungsi `permutasi(n, r int) int` menghitung permutasi menggunakan rumus : Permutasi = faktorial(n)/faktorial(n-r).
+   - Fungsi ini menggunakan nilai faktorial dari `n` dan `n - r`, lalu membaginya untuk mendapatkan hasil permutasi.
+
+4. **Output:**
+   - Hasil dari perhitungan permutasi ditampilkan ke layar menggunakan `fmt.Println`.
+
+*Cara Kerja*
+
+1. Program dimulai dengan mendeklarasikan dua variabel `a` dan `b` sebagai bilangan bulat (`int`).
+2. Program meminta input dua bilangan dari pengguna dengan menggunakan `fmt.Scan(&a, &b)`.
+3. Program mengecek apakah nilai `a` lebih besar atau sama dengan `b`. Jika ya, permutasi dihitung dengan `a` sebagai `n` dan `b` sebagai `r`. Jika tidak, posisi `a` dan `b` ditukar.
+4. Fungsi `permutasi` dipanggil dengan parameter `n` dan `r`, dan hasilnya dihitung dengan membagi faktorial `n` dengan faktorial `(n - r)`.
+5. Setelah hasil permutasi diperoleh, hasil tersebut dicetak ke layar.
+
+### <h2>GUIDED 2</h2>
+
+#### Source Code
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var sisi float64
+	fmt.Print("Masukkan panjang sisi persegi: ")
+	fmt.Scan(&sisi)
+
+	luas := sisi * sisi
+	keliling := 4 * sisi
+
+	fmt.Printf("Luas persegi adalah: %.2f\n", luas)
+	fmt.Printf("Keliling persegi adalah: %.2f\n", keliling)
+}
+```
+
+#### Source Code
+![Guided2carbon](https://github.com/user-attachments/assets/38105dcd-cf9b-4ba8-96d7-21df79513e6c)
+
+
+#### Output
+![Screenshot 2024-10-10 084550](https://github.com/user-attachments/assets/d3962c46-49ae-43a0-81dc-ce4e6d69712b)
+
+
+#### Deskripsi Program : 
+Program di atas merupakan program yang menghitung permutasi dari dua bilangan yang dimasukkan oleh user.
+
+#### Algoritma dan Cara Kerja Program
+*Algoritma*
+1. Program pertama-tama meminta input dari pengguna berupa panjang sisi persegi. Input ini disimpan dalam variabel `sisi` yang bertipe `float64` untuk mendukung angka desimal.
+2. Setelah input diterima, program menghitung **luas** persegi dengan rumus:
+   Luas = sisi x sisi
+3. Kemudian, program menghitung **keliling** persegi dengan rumus:
+  Keliling = 4 x sisi
+4. Setelah perhitungan selesai, hasil **luas** dan **keliling** ditampilkan ke layar dengan format dua angka desimal menggunakan fungsi `fmt.Printf`.
+
+
+*Cara Kerja*
+
+1. Program dimulai dengan mendeklarasikan variabel `sisi` yang akan menyimpan input dari pengguna. 
+2. Program menampilkan pesan "Masukkan panjang sisi persegi:" untuk meminta pengguna memasukkan nilai panjang sisi persegi. Fungsi `fmt.Scan(&sisi)` digunakan untuk membaca input dari pengguna.
+3. Setelah nilai sisi dimasukkan, program menghitung luas persegi dengan mengalikan nilai `sisi` dengan dirinya sendiri (sisi * sisi). Hasil perhitungan ini disimpan dalam variabel `luas`.
+4. Program juga menghitung keliling persegi dengan mengalikan nilai `sisi` dengan 4 (4 * sisi). Hasilnya disimpan dalam variabel `keliling`.
+5. Setelah perhitungan selesai, program menampilkan hasil perhitungan luas dan keliling menggunakan fungsi `fmt.Printf` untuk memformat hasil ke dua angka di belakang koma.
+6. Output menampilkan nilai luas dan keliling yang sudah dihitung berdasarkan input panjang sisi yang diberikan oleh pengguna.
+
+
 
