@@ -50,7 +50,7 @@ Arif Amrulloh,S.Kom.,M.Kom.
 
 
 ## Guided
-### 1. 
+### 1. Program fungsi yang digunakan untuk menghitung nilai faktorial dan permutasi.
 #### Source Code :
 ```go
 package main
@@ -80,13 +80,16 @@ func permutasi(n, r int) int {
 ```
 #### Out Put :
 
+#### Full Code Screenshot :
+![image](https://github.com/user-attachments/assets/04a456f8-34f6-46c6-8715-f063cc15397c)
+
 #### Deskripsi Program :
 
 #### Algoritma Program
 
 #### Cara Kerja Program
 
-### 2. 
+### 2. Program untuk menghitung luas persegi dan keliling persegi.
 #### Source Code :
 ```go
 package main
@@ -111,6 +114,10 @@ func main() {
 }
 ```
 #### Output :
+![image](https://github.com/user-attachments/assets/6869e337-0427-45c2-8071-5412cf428b54)
+
+#### Full Code Screenshot
+![image](https://github.com/user-attachments/assets/f704df68-de88-40c7-99a6-c428373cebfb)
 
 #### Deskripsi Program
 
