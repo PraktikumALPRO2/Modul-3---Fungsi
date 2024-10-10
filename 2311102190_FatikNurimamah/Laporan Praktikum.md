@@ -304,6 +304,9 @@ func main() {
 
 ```
 ### Output:
+![Screenshot 2024-10-10 163540](https://github.com/user-attachments/assets/f53646d3-1520-408c-b2f6-38f5405b8e16)
+
+![Screenshot 2024-10-10 163428](https://github.com/user-attachments/assets/5fae34e4-662b-4712-a2bc-d5781139d150)
 
 ### Full code Screenshot:
 ![Screenshot 2024-10-09 090935](https://github.com/user-attachments/assets/ac54511f-5101-446f-8952-fe9dab2635d3)
