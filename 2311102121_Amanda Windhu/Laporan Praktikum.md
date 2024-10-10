@@ -33,6 +33,8 @@ I. Fungsi adalah kumpulan blok kode yang diberi nama untuk mempermudah penggunaa
 
 II. Deklasari Function<br/>
 ![image](https://github.com/user-attachments/assets/f271b999-f8f6-4f2d-91ce-e89412adf4cc)
+Pada bagian deklarasi fungsi, setelah parameter, terdapat tipe data dari nilai yang dikembalikan. Sedangkan pada bagian badan fungsi, terdapat kata kunci return diikuti dengan nilai yang akan dikembalikan. Berikut adalah contoh fungsi untuk menghitung volume tabung apabila jari-jari alas dan tinggi tabung diketahui:<br/>
+![image](https://github.com/user-attachments/assets/103a6f1a-62b9-43e6-ad8c-fabea3b2df8b)
 
 III. Contoh Program dengan Function<br/>
 
@@ -61,9 +63,6 @@ Pada kode di atas, sebuah fungsi baru dibuat dengan nama `printMessage()` memili
   Di dalam `printMessage()`, nilai `arr` yang merupakan slice string digabungkan menjadi sebuah
   string dengan pembatas adalah karakter spasi. Penggabungan slice dapat dilakukan dengan
   memanfaatkan fungsi `strings.Join()` (berada di dalam package `strings`).
-  
-  
-  
 
 ## II. GUIDED
 
