@@ -27,7 +27,7 @@
 
 <p align="center">
   <strong>Dosen Pengampu:</strong><br>
-  Arif Amrulloh
+  Arif Amrulloh,S.Kom.,M.Kom.
 </p>
 
 <br>
@@ -107,6 +107,7 @@ func permutasi(n, r int) int {
 }
 ```
 #### Output
+![image](https://github.com/user-attachments/assets/8e11926f-6892-4723-9fb9-f75fd32cf60b)
 
 
 #### Deskripsi Program
@@ -158,6 +159,7 @@ func main() {
 }
 ```
 #### Output
+![image](https://github.com/user-attachments/assets/2ddb474f-8031-4c4d-9e57-c30635cea247)
 
 
 #### Deskripsi Program
@@ -256,6 +258,7 @@ func main() {
 }
 ```
 #### Output
+![image](https://github.com/user-attachments/assets/b6556acc-04a8-4f86-9c03-1c11b75d8c86)
 
 
 #### Deskripsi Program
@@ -281,7 +284,7 @@ Program ini dirancang untuk menghitung permutasi dan kombinasi dari empat angka 
 
 2. Fungsi `factorial` didefinisikan untuk menghitung faktorial dari bilangan yang diberikan. Fungsi ini mengembalikan `1` jika nilai yang dimasukkan adalah `0` atau `1`, dan menghitung faktorial dengan menggunakan loop untuk nilai lebih besar dari `1``.
 
-3. Fungsi permutation` didefinisikan untuk menghitung permutasi, di mana fungsi ini akan memanggil fungsi `factorial` untuk menghitung nilai faktorial `n` dan `n-r`, kemudian membagi hasilnya untuk mendapatkan nilai permutasi.
+3. Fungsi `permutation` didefinisikan untuk menghitung permutasi, di mana fungsi ini akan memanggil fungsi `factorial` untuk menghitung nilai faktorial `n` dan `n-r`, kemudian membagi hasilnya untuk mendapatkan nilai permutasi.
 
 4. Fungsi `combination` didefinisikan untuk menghitung kombinasi. Fungsi ini juga memanggil fungsi `factorial` untuk menghitung faktorial dari `n`, `r`, dan `n-r`, kemudian membagi hasilnya sesuai dengan rumus kombinasi.
 
@@ -346,8 +349,113 @@ func main() {
 }
 ```
 #### Output
+![image](https://github.com/user-attachments/assets/03409a5d-c8bb-4f2d-90d0-703e24f4b27f)
 
 
 #### Deskripsi Program
 Program ini ditulis dalam bahasa Go untuk menghitung hasil dari beberapa komposisi fungsi matematika. Terdapat tiga fungsi dasar: `f(x)` yang mengkuadratkan `x`, `g(x)` yang mengurangi `x` dengan dua, dan `h(x)` yang menambahkan satu pada `x`. Program meminta pengguna untuk memasukkan tiga bilangan bulat, kemudian menghitung dan menampilkan hasil dari komposisi fungsi `f(g(h(x)))`, `g(h(f(x)))`, dan `h(f(g(x)))` untuk input tersebut. Hasil dari setiap komposisi ditampilkan secara terpisah.
 #### Algoritma Program
+1. Program dimulai.
+
+2. Program mendeklarasikan tiga fungsi matematika: fungsi `f(x)` untuk menghitung kuadrat dari x, fungsi `g(x)` untuk mengurangi x dengan 2, dan fungsi `h(x)` untuk menambah x dengan 1.
+
+3. Program mendeklarasikan tiga fungsi komposisi:
+
+- `fogoh(x)` yang menghitung komposisi fungsi `f(g(h(x)))`.
+- `gohof(x)` yang menghitung komposisi fungsi `g(h(f(x)))`.
+- `hofog(x)` yang menghitung komposisi fungsi `h(f(g(x)))`.
+
+4. Program meminta input dari pengguna untuk tiga bilangan bulat yang akan disimpan dalam variabel `a`, `b`, dan `c`.
+
+5. Program menghitung hasil dari komposisi fungsi `fogoh(a)`, yaitu `f(g(h(a)))`.
+
+6. Program menghitung hasil dari komposisi fungsi `gohof(b)`, yaitu `g(h(f(b)))`.
+
+7. Program menghitung hasil dari komposisi fungsi `hofog(c)`, yaitu `h(f(g(c)))`.
+
+8. Program menampilkan hasil dari `fogoh(a)` pada baris pertama.
+
+9. Program menampilkan hasil dari `gohof(b)` pada baris kedua.
+
+10. Program menampilkan hasil dari `hofog(c)` pada baris ketiga.
+
+11. Program selesai.
+#### Cara Kerja Program
+1. Program mendeklarasikan tiga fungsi matematika:`f(x)` untuk menghitung kuadrat, `g(x)` untuk mengurangi nilai dengan 2, dan `h(x)` untuk menambah nilai dengan 1.
+
+2. Program mendefinisikan tiga fungsi komposisi, yaitu `fogoh(x)` yang menghitung `f(g(h(x)))`, `gohof(x)` yang menghitung `g(h(f(x)))`, dan `hofog(x)` yang menghitung `h(f(g(x)))`.
+
+3. Program meminta input dari pengguna berupa tiga bilangan bulat yang disimpan dalam variabel `a`, `b`, dan `c`.
+
+4. Program menghitung hasil dari komposisi fungsi `fogoh(a)`, yaitu menerapkan fungsi `h` pada `a`, kemudian menerapkan fungsi `g` pada hasil tersebut, dan terakhir menerapkan fungsi `f` pada hasil dari `g`.
+
+5. Program menghitung hasil dari komposisi fungsi `gohof(b)`, yaitu menerapkan fungsi `f` pada `b`, lalu fungsi `h` pada hasil tersebut, dan terakhir fungsi `g`.
+
+6. Program menghitung hasil dari komposisi fungsi `hofog(c)`, yaitu menerapkan fungsi `g` pada `c`, kemudian fungsi `f` pada hasil tersebut, dan terakhir fungsi `h`.
+
+7. Program menampilkan hasil dari `fogoh(a)` sebagai output pertama.
+
+8. Program menampilkan hasil dari `gohof(b)` sebagai output kedua.
+
+9. Program menampilkan hasil dari `hofog(c)` sebagai output ketiga.
+
+10. Program selesai dijalankan.
+
+### 3. Suatu lingkaran didefinisikan dengan koordinat titik pusat (𝑐𝑥, 𝑐𝑦) dengan radius 𝑟. Apabila diberikan dua buah lingkaran, maka tentukan posisi sebuah titik sembarang (𝑥, 𝑦) berdasarkan dua lingkaran tersebut.
+Masukan terdiri dari beberapa tiga baris. Baris pertama dan kedua adalah koordinat titik pusat dan radius dari lingkaran 1 dan lingkaran 2, sedangkan baris ketiga adalah koordinat titik sembarang. Asumsi sumbu x dan y dari semua titik dan juga radius direpresentasikan dengan bilangan bulat. Keluaran berupa string yang menyatakan posisi titik "Titik di dalam lingkaran 1 dan 2", "Titik di dalam lingkaran 1", "Titik di dalam lingkaran 2", atau "Titik di luar lingkaran 1 dan 2".
+![Cuplikan layar 2024-10-10 135215](https://github.com/user-attachments/assets/9b921d6b-79bf-4dc0-b8b7-0fefb916f31f)
+![Cuplikan layar 2024-10-10 135233](https://github.com/user-attachments/assets/47418b31-16c0-4cb1-ad2a-8b3efe995f23)
+#### Source Code :
+```go
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+// Fungsi untuk menghitung jarak antara dua titik
+func jarak(x1, y1, x2, y2 int) float64 {
+	return math.Sqrt(math.Pow(float64(x2-x1), 2) + math.Pow(float64(y2-y1), 2))
+}
+
+// Fungsi untuk menentukan apakah titik berada di dalam lingkaran
+func diDalamLingkaran(cx, cy, r, x, y int) bool {
+	return jarak(cx, cy, x, y) <= float64(r)
+}
+
+func main() {
+	var cx1, cy1, r1 int
+	var cx2, cy2, r2 int
+	var x, y int
+
+	// Input untuk lingkaran 1
+	fmt.Println("Masukkan koordinat pusat (cx, cy) dan radius r lingkaran 1:")
+	fmt.Scan(&cx1, &cy1, &r1)
+
+	// Input untuk lingkaran 2
+	fmt.Println("Masukkan koordinat pusat (cx, cy) dan radius r lingkaran 2:")
+	fmt.Scan(&cx2, &cy2, &r2)
+
+	// Input untuk titik sembarang
+	fmt.Println("Masukkan koordinat titik sembarang (x, y):")
+	fmt.Scan(&x, &y)
+
+	// Mengecek posisi titik terhadap lingkaran 1 dan lingkaran 2
+	dalamLingkaran1 := diDalamLingkaran(cx1, cy1, r1, x, y)
+	dalamLingkaran2 := diDalamLingkaran(cx2, cy2, r2, x, y)
+
+	// Menentukan keluaran berdasarkan posisi titik
+	if dalamLingkaran1 && dalamLingkaran2 {
+		fmt.Println("Titik di dalam lingkaran 1 dan 2")
+	} else if dalamLingkaran1 {
+		fmt.Println("Titik di dalam lingkaran 1")
+	} else if dalamLingkaran2 {
+		fmt.Println("Titik di dalam lingkaran 2")
+	} else {
+		fmt.Println("Titik di luar lingkaran 1 dan 2")
+	}
+}
+```
+#### Output
+![image](https://github.com/user-attachments/assets/47a2189f-d4fa-4a15-b63b-2b0b7fc432eb)
