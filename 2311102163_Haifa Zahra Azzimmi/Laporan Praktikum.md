@@ -338,10 +338,40 @@ func main() {
 ### Full code Screenshot :
 ![image](https://github.com/user-attachments/assets/24aa283f-4b91-4301-8a4a-8f754ac5cbd8)
 
+### Deskripsi Program :
+Program ini mendefinisikan tiga fungsi matematika: f(x), g(x), dan h(x). Fungsi-fungsi ini digunakan untuk menghitung nilai dari komposisi fungsi fogoh(x), gohof(x), dan hofog(x). Program ini meminta pengguna untuk memasukkan tiga nilai integer, yaitu a, b, dan c, dan kemudian menghitung serta menampilkan hasil dari ketiga komposisi fungsi tersebut untuk masing-masing nilai yang dimasukkan.
+
 ### Algoritma Program :
-
+1. Mulai
+2. Definisikan fungsi
+   - `f(x)`: \( f(x) = x^2 \)
+   - `g(x)`: \( g(x) = x - 2 \)
+   - `h(x)`: \( h(x) = x + 1 \)
+3. Definisikan fungsi komposisi
+   - `fogoh(x)`: \( f(g(h(x))) \)
+   - `gohof(x)`: \( g(h(f(x))) \)
+   - `hofog(x)`: \( h(f(g(x))) \)
+4. Input: Minta pengguna memasukkan nilai `a`, `b`, `c`.
+5. Proses
+   - Hitung dan simpan hasil:
+     - `hasil1 = fogoh(a)`
+     - `hasil2 = gohof(b)`
+     - `hasil3 = hofog(c)`
+6. Output Tampilkan `hasil1`, `hasil2`, dan `hasil3`.
+7. Selesai
+    
 ### Cara Kerja Program :
+Program ini bekerja dengan meminta pengguna untuk memasukkan tiga nilai integer: a, b, dan c. Setelah itu, program menghitung dan menampilkan hasil dari tiga komposisi fungsi matematika: fogoh(x), gohof(x), dan hofog(x).
 
+Untuk setiap nilai yang dimasukkan, program:
+
+1. Menghitung nilai fogoh(a), yang merupakan komposisi fungsi dari f(g(h(a))).
+
+2. Menghitung nilai gohof(b), yang merupakan komposisi fungsi dari g(h(f(b))).
+
+3. Menghitung nilai hofog(c), yang merupakan komposisi fungsi dari h(f(g(c))).
+
+Hasil perhitungan ini kemudian ditampilkan di layar dengan deskripsi yang sesuai. Jadi intinya: program minta input, menghitung komposisi fungsi, dan menampilkan hasilnya.
 
 
 ### 3. 
@@ -406,7 +436,39 @@ func main() {
 ![image](https://github.com/user-attachments/assets/6e412987-98c1-46e1-8970-b8668e7b2363)
 
 ### Deskripsi Program :
+Program ini bertujuan untuk memeriksa apakah suatu titik berada di dalam satu atau dua lingkaran yang diberikan. Program menerima koordinat dan radius dari dua lingkaran serta koordinat dari sebuah titik, kemudian menentukan apakah titik tersebut berada di dalam salah satu, kedua, atau tidak berada di dalam lingkaran manapun.
 
 ### Algoritma Program :
+1. Mulai:
+   
+   - Definisikan fungsi hitungJarak untuk menghitung jarak antara dua titik.
+   - Definisikan fungsi cekdiDalamLingkaran untuk memeriksa apakah titik berada di dalam lingkaran berdasarkan jarak.
+
+3. Input Pengguna:
+   
+   - Minta pengguna memasukkan koordinat dan radius untuk dua lingkaran.
+   - Minta pengguna memasukkan koordinat titik yang akan diperiksa.
+
+4. Periksa Posisi Titik:
+   
+   - Hitung apakah titik berada di dalam lingkaran pertama.
+   - Hitung apakah titik berada di dalam lingkaran kedua.
+
+5. Output Hasil:
+   
+   - Jika titik berada di dalam kedua lingkaran, tampilkan pesan "Titik berada di dalam kedua lingkaran".
+   - Jika titik berada di dalam lingkaran pertama saja, tampilkan pesan "Titik berada di dalam lingkaran pertama saja".
+   - Jika titik berada di dalam lingkaran kedua saja, tampilkan pesan "Titik berada di dalam lingkaran kedua saja".
+   - Jika titik tidak berada di dalam kedua lingkaran, tampilkan pesan "Titik tidak berada di dalam kedua lingkaran".
+
+5. Selesai.
 
 ### Cara Kerja Program :
+1. Input Nilai: Pengguna memasukkan koordinat dan radius untuk dua lingkaran, serta koordinat untuk satu titik.
+
+2. Hitung Jarak: Program menghitung jarak titik ke pusat lingkaran menggunakan rumus jarak Euclidean.
+
+3. Cek Posisi Titik: Program memeriksa apakah titik tersebut berada di dalam salah satu atau kedua lingkaran berdasarkan jarak yang dihitung.
+
+4. Output Hasil: Program menampilkan pesan yang menunjukkan apakah titik berada di dalam satu, kedua, atau tidak ada di dalam lingkaran manapun.
+
