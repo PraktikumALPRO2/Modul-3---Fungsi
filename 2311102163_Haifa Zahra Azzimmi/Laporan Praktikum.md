@@ -47,8 +47,42 @@ Arif Amrulloh,S.Kom.,M.Kom.
 3. [Unguided](#unguided)
 
 ## Dasar Teori
+**1. Definsi Fungsi**
 
+   Definisi fungsi dalam mata kuliah algoritma pemrograman adalah sekumpulan instruksi yang dikelompokkan bersama untuk melakukan tugas tertentu dan dapat dipanggil dari berbagai bagian 
+   dalam program. Fungsi membantu dalam pengorganisasian kode, membuatnya lebih modular dan dapat digunakan kembali, sehingga memudahkan pemeliharaan dan pengembangan program.
 
+**2. Penerapan Fungsi**
+
+   Penerapan fungsi dalam pemrograman adalah tentang bagaimana kita menggunakan fungsi-fungsi untuk menyederhanakan, mengorganisir, dan memecah program besar menjadi bagian-bagian yang 
+   lebih kecil dan dapat dikelola.
+   
+**3. Deklarasi Fungsi**
+
+   Deklarasi fungsi adalah proses dalam pemrograman di mana kita mendefinisikan nama fungsi, tipe parameter yang akan diterima, dan tipe data yang akan dikembalikan. Deklarasi ini 
+   penting untuk memberi tahu kompiler tentang keberadaan fungsi tersebut dan bagaimana fungsi itu akan berinteraksi dengan bagian lain dari program.
+   
+   Contoh deklarasi fungsi dalam bahasa Go adalah sebagai berikut:
+   ```go
+   // Deklarasi fungsi untuk menghitung faktorial
+	func faktorial(n int) int {
+    // Implementasi fungsi di sini
+	}
+   ```
+   Dalam deklarasi ini, faktorial adalah nama fungsi, n int menunjukkan bahwa fungsi ini menerima satu parameter bernama n dengan tipe data integer, dan int setelah tanda kurung 
+   menandakan bahwa fungsi ini akan mengembalikan nilai bertipe integer.
+   
+**4. Pemanggilan Fungsi**
+
+   Pemanggilan fungsi adalah cara kita menggunakan atau menjalankan fungsi yang telah kita deklarasikan sebelumnya di dalam program kita. Ini dilakukan dengan menuliskan nama fungsi dan 
+   memberikan argumen yang sesuai jika diperlukan.
+
+   Contohnya, jika kita memiliki fungsi faktorial yang kita deklarasikan sebelumnya, kita dapat memanggilnya seperti ini:
+   ```go
+   // Memanggil fungsi faktorial dengan argumen 5
+   hasil := faktorial(5)
+   fmt.Println("Hasil faktorial dari 5 adalah:", hasil)
+   ```
 
 ## Guided
 ### 1. Program fungsi yang digunakan untuk menghitung nilai faktorial dan permutasi.
@@ -156,8 +190,9 @@ Program ini digunakan untuk menghitung luas dan keliling persegi berdasarkan pan
 2. Program menghitung luas dengan rumus Luas
 3. Menghitung Keliling: Program menghitung keliling menggunakan rumus Keliling
 4. Hasil luas dan keliling ditampilkan di layar menggunakan fmt.Printf().
+5. 
 
-
+## Unguided
 ### 1. Program untuk menghitung Faktorial, Permutasi dan Kombinasi
 ![image](https://github.com/user-attachments/assets/c4cbd2b7-d81e-430d-9b8a-a85ad0ea5fb8)
 ### Source Code :
@@ -371,6 +406,7 @@ func main() {
 ![image](https://github.com/user-attachments/assets/6e412987-98c1-46e1-8970-b8668e7b2363)
 
 ### Deskripsi Program :
+
 ### Algoritma Program :
 
 ### Cara Kerja Program :
