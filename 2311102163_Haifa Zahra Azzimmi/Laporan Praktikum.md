@@ -157,31 +157,93 @@ Program ini digunakan untuk menghitung luas dan keliling persegi berdasarkan pan
 4. Hasil luas dan keliling ditampilkan di layar menggunakan fmt.Printf().
 
 
-## Unguided
 ### 1. Program untuk menghitung Faktorial, Permutasi dan Kombinasi
+![image](https://github.com/user-attachments/assets/c4cbd2b7-d81e-430d-9b8a-a85ad0ea5fb8)
 ### Source Code :
+```go
+package main
+
+import (
+	"fmt"
+)
+
+// Fungsi untuk menghitung faktorial
+func faktorial(n int) int {
+	if n == 0 {
+		return 1
+	}
+	hasil := 1
+	for i := 1; i <= n; i++ {
+		hasil *= i
+	}
+	return hasil
+}
+
+// Fungsi untuk menghitung permutasi
+func permutasi(n, r int) int {
+	if n < r {
+		return 0 // Tidak valid
+	}
+	return faktorial(n) / faktorial(n-r)
+}
+
+// Fungsi untuk menghitung kombinasi
+func kombinasi(n, r int) int {
+	if n < r {
+		return 0 // Tidak valid
+	}
+	return faktorial(n) / (faktorial(r) * faktorial(n-r))
+}
+
+func main() {
+	var a, b, c, d int
+	fmt.Print("Masukkan nilai a dan b (dengan a >= c dan b >= d): ")
+	fmt.Scan(&a, &b)
+	fmt.Print("Masukkan nilai c dan d: ")
+	fmt.Scan(&c, &d)
+
+	if a >= c && b >= d {
+		// Baris pertama: Hasil permutasi dan kombinasi a terhadap c
+		fmt.Printf("Permutasi P(%d, %d) = %d\n", a, c, permutasi(a, c))
+		fmt.Printf("Kombinasi C(%d, %d) = %d\n", a, c, kombinasi(a, c))
+
+		// Baris kedua: Hasil permutasi dan kombinasi b terhadap d
+		fmt.Printf("Permutasi P(%d, %d) = %d\n", b, d, permutasi(b, d))
+		fmt.Printf("Kombinasi C(%d, %d) = %d\n", b, d, kombinasi(b, d))
+	} else {
+		fmt.Println("Pastikan bahwa a >= c dan b >= d.")
+	}
+}
+
+```
 
 ### Output :
+![image](https://github.com/user-attachments/assets/3fe41467-2bc5-40b9-8464-c79560f2ab48)
+![image](https://github.com/user-attachments/assets/c8532484-4d5c-4e60-b736-bb244ec38c2c)
 
 ### Full code Screenshot :
+![image](https://github.com/user-attachments/assets/155aec83-363f-49fc-b5c9-1e5c18b20f96)
+
+#### Deskripsi Program	:
+Program ini meminta pengguna untuk memasukkan nilai a, b, c, dan d. Setelah itu, program menghitung dan menampilkan hasil permutasi dan kombinasi dari a terhadap c, serta b terhadap d, dengan menggunakan fungsi faktorial, permutasi, dan kombinasi. Jika a tidak lebih besar atau sama dengan c, atau b tidak lebih besar atau sama dengan d, program akan memberikan pesan error dan meminta pengguna untuk memastikan bahwa a >= c dan b >= d.
 
 ### Algoritma Program :
+1. Mulai
+2. Meminta pengguna untuk memasukkan nilai a dan b.
+3. Meminta pengguna untuk memasukkan nilai c dan d.
+4. Memeriksa apakah a lebih besar atau sama dengan c dan b lebih besar atau sama dengan d.
+5. Menghitung permutasi a terhadap c menggunakan fungsi permutasi.
+6. Menghitung kombinasi a terhadap c menggunakan fungsi kombinasi.
+7. Menampilkan hasil permutasi dan kombinasi a terhadap c.
+8. Menghitung permutasi b terhadap d menggunakan fungsi permutasi.
+9. Menghitung kombinasi b terhadap d menggunakan fungsi kombinasi.
+10. Menampilkan hasil permutasi dan kombinasi b terhadap d.
 
 ### Cara Kerja Program :
-
-
-
-### 2. Program untuk menghitung Faktorial, Permutasi dan Kombinasi
-### Source Code :
-
-### Output :
-
-### Full code Screenshot :
-
-### Algoritma Program :
-
-### Cara Kerja Program :
-
+1. Algoritma dimulai dengan mendefinisikan fungsi-fungsi yang diperlukan untuk menghitung faktorial, permutasi, dan kombinasi.
+2. Di dalam fungsi main, program meminta input dari pengguna untuk dua pasang angka.
+3. Setelah memvalidasi bahwa input memenuhi syarat, program menghitung dan menampilkan hasil permutasi dan kombinasi.
+4. Jika syarat tidak terpenuhi, program akan memberikan pesan peringatan kepada pengguna.
 
 
 ### 3. Program untuk menghitung Faktorial, Permutasi dan Kombinasi
