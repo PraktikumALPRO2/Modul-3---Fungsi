@@ -79,13 +79,13 @@ func permutasi(n, r int) int {
 }
 ```
 #### Out Put :
-![image](https://github.com/user-attachments/assets/a8147157-3fc8-4c27-8e11-5dc7e7167479)
+![image](https://github.com/user-attachments/assets/ecd2009f-4cf7-4de1-93d0-1a3cc8a298ee)
 
 #### Full Code Screenshot :
 ![image](https://github.com/user-attachments/assets/04a456f8-34f6-46c6-8715-f063cc15397c)
 
 #### Deskripsi Program :
-Program ini digunakan untuk menghitung permutasi dari dua angka yang diinputksn oleh pengguna. Setelah dua angka dimasukkan dan disimpan dalam variabel a dan b, program memeriksa mana yang lebih besar. Jika a lebih besar atau sama dengan b, maka program akan menghitung permutasi P(a, b), tetapi jika b lebih besar dari a, permutasi yang dihitung adalah P(b, a).
+Program ini digunakan untuk menghitung permutasi dari dua angka yang diinputksn oleh pengguna. Setelah dua angka dimasukkan dan disimpan dalam variabel a dan b, program memeriksa mana yang lebih besar. Jika a lebih besar atau sama dengan b, maka program akan menghitung permutasi P (a, b), tetapi jika b lebih besar dari a, permutasi yang dihitung adalah P (b, a).
 
 Program ini memungkinkan pengguna untuk menghitung berapa banyak cara elemen-elemen dapat disusun dalam jumlah tertentu dari total elemen yang tersedia.
 
@@ -93,12 +93,17 @@ Program ini memungkinkan pengguna untuk menghitung berapa banyak cara elemen-ele
 1. Mulai
 2. Input dua angka a dan b.
 3. Jika b lebih besar dari a, tukar nilainya.
-4. Panggil fungsi permutasi(a, b) yang menghitung P(a, b) dengan:
+4. Panggil fungsi permutasi (a, b) yang menghitung P (a, b) dengan:
    - Menggunakan fungsi faktorial untuk menghitung faktorial a dan (a - b).
    - Bagikan hasil faktorial a dengan faktorial (a - b).
 5. Tampilkan hasil permutasi.
 6. Selesai
+7. 
 #### Cara Kerja Program
+1. Fungsi faktorial menerima sebuah bilangan bulat dan menghitung faktorialnya dengan mengalikan semua angka dari 1 hingga bilangan tersebut.
+2. Hasil faktorial ini kemudian digunakan oleh fungsi permutasi untuk menghitung nilai permutasi berdasarkan rumus yang sesuai.
+3. Program akan menampilkan hasil akhir dengan membagi faktorial dari `n` dengan faktorial dari `n - r` untuk mendapatkan nilai permutasi.
+
 
 ### 2. Program untuk menghitung luas persegi dan keliling persegi.
 #### Source Code :
@@ -130,12 +135,64 @@ func main() {
 #### Full Code Screenshot
 ![image](https://github.com/user-attachments/assets/f704df68-de88-40c7-99a6-c428373cebfb)
 
-#### Deskripsi Program
+#### Deskripsi Program	:
+Program ini digunakan untuk menghitung luas dan keliling persegi berdasarkan panjang sisi yang dimasukkan oleh pengguna. Setelah menerima input, luas dihitung dengan mengalikan panjang sisi dengan dirinya sendiri, sementara keliling dihitung dengan mengalikan panjang sisi dengan 4. Hasilnya ditampilkan menggunakan `fmt.Printf()`. Program ini sederhana dan efektif untuk memberikan informasi tentang persegi.
 
 #### Algoritma Program :
+1. Mulai
+2. Deklarasikan variabel panjangSisi dengan tipe float64.
+3. Tampilkan instruksi kepada pengguna untuk memasukkan panjang sisi persegi.
+4. Ambil input dari pengguna dan simpan dalam panjangSisi.
+5. Hitung luas persegi:
+   - LuasPersegi = panjangSisi * panjangSisi
+6. Hitung keliling persegi:
+   - Keliling Persegi = 4 * panjangSisi
+7. Tampilkan hasil perhitungan luas dan keliling di layar.
+8. Selesai
+
+#### Cara Kerja Program	:
+1. Program meminta pengguna untuk memasukkan panjang sisi persegi dan menyimpannya dalam variabel panjang sisi.
+2. Program menghitung luas dengan rumus Luas
+3. Menghitung Keliling: Program menghitung keliling menggunakan rumus Keliling
+4. Hasil luas dan keliling ditampilkan di layar menggunakan fmt.Printf().
 
 
-#### Cara Kerja Program
+## Unguided
+### 1. Program untuk menghitung Faktorial, Permutasi dan Kombinasi
+### Source Code :
+
+### Output :
+
+### Full code Screenshot :
+
+### Algoritma Program :
+
+### Cara Kerja Program :
 
 
+
+### 2. Program untuk menghitung Faktorial, Permutasi dan Kombinasi
+### Source Code :
+
+### Output :
+
+### Full code Screenshot :
+
+### Algoritma Program :
+
+### Cara Kerja Program :
+
+
+
+### 3. Program untuk menghitung Faktorial, Permutasi dan Kombinasi
+### Source Code :
+
+### Output :
+
+
+### Full code Screenshot :
+
+### Algoritma Program :
+
+### Cara Kerja Program :
 
