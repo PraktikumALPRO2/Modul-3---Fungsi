@@ -79,14 +79,25 @@ func permutasi(n, r int) int {
 }
 ```
 #### Out Put :
+![image](https://github.com/user-attachments/assets/a8147157-3fc8-4c27-8e11-5dc7e7167479)
 
 #### Full Code Screenshot :
 ![image](https://github.com/user-attachments/assets/04a456f8-34f6-46c6-8715-f063cc15397c)
 
 #### Deskripsi Program :
+Program ini digunakan untuk menghitung permutasi dari dua angka yang diinputksn oleh pengguna. Setelah dua angka dimasukkan dan disimpan dalam variabel a dan b, program memeriksa mana yang lebih besar. Jika a lebih besar atau sama dengan b, maka program akan menghitung permutasi P(a, b), tetapi jika b lebih besar dari a, permutasi yang dihitung adalah P(b, a).
+
+Program ini memungkinkan pengguna untuk menghitung berapa banyak cara elemen-elemen dapat disusun dalam jumlah tertentu dari total elemen yang tersedia.
 
 #### Algoritma Program
-
+1. Mulai
+2. Input dua angka a dan b.
+3. Jika b lebih besar dari a, tukar nilainya.
+4. Panggil fungsi permutasi(a, b) yang menghitung P(a, b) dengan:
+   - Menggunakan fungsi faktorial untuk menghitung faktorial a dan (a - b).
+   - Bagikan hasil faktorial a dengan faktorial (a - b).
+5. Tampilkan hasil permutasi.
+6. Selesai
 #### Cara Kerja Program
 
 ### 2. Program untuk menghitung luas persegi dan keliling persegi.
