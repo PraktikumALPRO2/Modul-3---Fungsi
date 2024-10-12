@@ -49,6 +49,7 @@ Arif Amrulloh,S.Kom.,M.Kom.
 ## Dasar Teori
 
 
+
 ## Guided
 ### 1. Program fungsi yang digunakan untuk menghitung nilai faktorial dan permutasi.
 #### Source Code :
@@ -246,7 +247,8 @@ Program ini meminta pengguna untuk memasukkan nilai a, b, c, dan d. Setelah itu,
 4. Jika syarat tidak terpenuhi, program akan memberikan pesan peringatan kepada pengguna.
 
 
-### 2. ![image](https://github.com/user-attachments/assets/afb8ecf4-9901-4764-90ef-56658510ffa3)
+### 2. 
+![image](https://github.com/user-attachments/assets/afb8ecf4-9901-4764-90ef-56658510ffa3)
 
 ### Source Code :
 ```go
@@ -307,7 +309,8 @@ func main() {
 
 
 
-### 3. ![image](https://github.com/user-attachments/assets/1a98819f-2087-4af4-9d6f-986e9b30323e)
+### 3. 
+![image](https://github.com/user-attachments/assets/1a98819f-2087-4af4-9d6f-986e9b30323e)
 
 ### Source Code :
 ```go
@@ -315,53 +318,59 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
-// Definisikan fungsi f(x), g(x), h(x)
-func f(x int) int {
-	return x * x
+// Fungsi untuk menghitung jarak antara dua titik
+func hitungJarak(x1, y1, x2, y2 int) float64 {
+	return math.Sqrt(float64((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2)))
 }
 
-func g(x int) int {
-	return x - 2
-}
-
-func h(x int) int {
-	return x + 1
-}
-
-// Fungsi komposisi untuk fogoh(x), gohof(x), dan hofog(x)
-func fogoh(x int) int {
-	return f(g(h(x)))
-}
-
-func gohof(x int) int {
-	return g(h(f(x)))
-}
-
-func hofog(x int) int {
-	return h(f(g(x)))
+// Fungsi untuk mengecek apakah suatu titik (x, y) berada di dalam lingkaran
+func cekdiDalamLingkaran(pusatX, pusatY, radius, titikX, titikY int) bool {
+	return hitungJarak(pusatX, pusatY, titikX, titikY) <= float64(radius)
 }
 
 func main() {
-	var a, b, c int
+	// Membaca input
+	var pusatX1, pusatY1, radius1 int // Koordinat dan radius lingkaran 1
+	var pusatX2, pusatY2, radius2 int // Koordinat dan radius lingkaran 2
+	var titikX, titikY int            // Koordinat titik sembarang
 
-	// Input bilangan bulat a, b, c
-	fmt.Print("Masukkan nilai a, b, c (dipisahkan dengan spasi): ")
-	fmt.Scanf("%d %d %d", &a, &b, &c)
+	fmt.Print("Masukkan koordinat dan radius lingkaran 1: ")
+	fmt.Scanln(&pusatX1, &pusatY1, &radius1)
 
-	// Output dengan keterangan
-	fmt.Printf("Hasil fogoh(%d) = %d\n", a, fogoh(a))    // fogoh(a)
-	fmt.Printf("Hasil gohof(%d) = %d\n", b, gohof(b))    // gohof(b)
-	fmt.Printf("Hasil hofog(%d) = %d\n", c, hofog(c))    // hofog(c)
+	fmt.Print("Masukkan koordinat dan radius lingkaran 2: ")
+	fmt.Scanln(&pusatX2, &pusatY2, &radius2)
+
+	fmt.Print("Masukkan koordinat titik: ")
+	fmt.Scanln(&titikX, &titikY)
+
+	// Mengecek posisi titik (titikX, titikY) terhadap lingkaran 1 dan lingkaran 2
+	diLingkaran1 := cekdiDalamLingkaran(pusatX1, pusatY1, radius1, titikX, titikY)
+	diLingkaran2 := cekdiDalamLingkaran(pusatX2, pusatY2, radius2, titikX, titikY)
+
+	// Menentukan output berdasarkan posisi titik
+	if diLingkaran1 && diLingkaran2 {
+		fmt.Println("\nTitik tersebut berada di dalam kedua lingkaran")
+	} else if diLingkaran1 {
+		fmt.Println("\nTitik tersebut berada di dalam lingkaran pertama saja")
+	} else if diLingkaran2 {
+		fmt.Println("\nTitik tersebut berada di dalam lingkaran kedua saja")
+	} else {
+		fmt.Println("\nTitik tersebut tidak berada di dalam kedua lingkaran")
+	}
 }
+
+
 ```
 ### Output :
-![image](https://github.com/user-attachments/assets/40e06e72-264d-4dfe-bc7e-55c08d3d95b3)
+![image](https://github.com/user-attachments/assets/4058dd66-7afd-4086-9e38-130393fd08c1)
 
 ### Full code Screenshot :
-![image](https://github.com/user-attachments/assets/24aa283f-4b91-4301-8a4a-8f754ac5cbd8)
+![image](https://github.com/user-attachments/assets/6e412987-98c1-46e1-8970-b8668e7b2363)
 
+### Deskripsi Program :
 ### Algoritma Program :
 
 ### Cara Kerja Program :
