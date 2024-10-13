@@ -21,6 +21,6 @@ func main(){
 	fmt.Print("Masukkan bilangan: ")
 	fmt.Scan(&a, &b, &c)
 	fmt.Println("Hasil fungsi fogoh dari bilangan pertama adalah ", f(g(h(a))))
-	fmt.Println("Hasil fungsi gohof dari bilangan pertama adalah ", g(h(f(b))))
+	fmt.Println("Hasil fungsi hofog dari bilangan pertama adalah ", g(h(f(b))))
 	fmt.Println("Hasil fungsi gohof dari bilangan pertama adalah ", h(f(g(c))))
 }
