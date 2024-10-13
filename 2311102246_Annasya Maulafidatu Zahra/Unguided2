@@ -1,0 +1,34 @@
+package main
+
+import (
+    "fmt"
+)
+
+func f(angka int) int {
+    return angka * angka
+}
+func g(angka int) int {
+    return angka - 2
+}
+func h(angka int) int {
+    return angka + 1
+}
+func fogoh(angka int) int {
+    return f(g(h(angka)))
+}
+func gohof(angka int) int {
+    return g(h(f(angka)))
+}
+func hofog(angka int) int {
+    return h(f(g(angka)))
+}
+func main() {
+    var bil1, bil2, bil3 int
+    fmt.Print("Masukkan tiga bilangan bulat (bil1, bil2, bil3): ")
+    fmt.Scan(&bil1, &bil2, &bil3)
+    fmt.Println("Hasil (fogoh)(bil1):", fogoh(bil1))
+    fmt.Println("Hasil (gohof)(bil2):", gohof(bil2))
+    fmt.Println("Hasil (hofog)(bil3):", hofog(bil3))
+}
+
+
