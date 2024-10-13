@@ -221,6 +221,11 @@ Program di atas merupakan program yang menghitung permutasi dari dua bilangan ya
 ## <strong> Unguided </strong>
 ### <h2> UNGUIDED 1 </h2>
 
+Diberikan tiga buah fungsi matematika yaitu 𝑓 (𝑥) = 𝑥2 , 𝑔 (𝑥) = 𝑥 − 2 dan ℎ (𝑥) = 𝑥 + 1. Fungsi komposisi (𝑓𝑜𝑔𝑜ℎ)(𝑥) artinya adalah 𝑓(𝑔Gℎ(𝑥)H). Tuliskan 𝑓(𝑥), 𝑔(𝑥) dan ℎ(𝑥) dalam bentuk function.
+Masukan terdiri dari sebuah bilangan bulat 𝑎, 𝑏 dan 𝑐 yang dipisahkan oleh spasi.
+
+Keluaran terdiri dari tiga baris. Baris pertama adalah (𝑓𝑜𝑔𝑜ℎ)(𝑎), baris kedua (𝑔𝑜ℎ𝑜𝑓)(𝑏), dan baris ketiga adalah (ℎ𝑜𝑓𝑜𝑔)(𝑐)!
+
 #### Source Code
 
 ```go
@@ -295,6 +300,17 @@ Program menampilkan hasil ketiga komposisi fungsi
 
 
 ### <h2> UNGUIDED 2 </h2>
+
+Suatu lingkaran didefinisikan dengan koordinat titik pusat (𝑐𝑥, 𝑐𝑦) dengan radius
+𝑟. Apabila diberikan dua buah lingkaran, maka tentukan posisi sebuah titik sembarang (𝑥, 𝑦)
+berdasarkan dua lingkaran tersebut.
+
+Masukan terdiri dari beberapa tiga baris. Baris pertama dan kedua adalah koordinat titik pusat dan radius dari lingkaran 1 dan lingkaran 2, sedangkan baris ketiga adalah koordinat titik sembarang. Asumsi sumbu x dan y dari semua titik dan juga radius direpresentasikan dengan bilangan bulat.
+Keluaran berupa string yang menyatakan posisi titik "Titik di dalam lingkaran 1 dan 2", "Titik di dalam lingkaran 1", "Titik di dalam lingkaran 2", atau "Titik di luar lingkaran 1 dan 2".
+
+Fungsi untuk menghitung jarak titik (a, b) dan (c, d) dimana rumus jarak adalah:
+
+![soalun3](https://github.com/user-attachments/assets/4e55ec18-1092-433e-91b6-83e4153fb9d8)
 
 #### Source Code
 
