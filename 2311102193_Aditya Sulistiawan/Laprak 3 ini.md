@@ -295,44 +295,72 @@ Program ini ditulis dalam bahasa pemrograman Go (Golang) dan berfungsi untuk men
 #### Source Code
 
 ```go
+// Aditya Sulistiawan
+// 2311102193
+// 11-05
+
 package main
 
 import "fmt"
 
-func f(x int) int {
-	fungsi_f := x * x
-	return fungsi_f
-}
-
-func g(x int) int {
-	fungsi_g := x - 2
-	return fungsi_g
-}
-
-func h(x int) int {
-	fungsi_h := x + 1
-	return fungsi_h
-}
-
 func main() {
-	fmt.Print("Masukkan bilangan: ")
+	var a, b, c, d int
+5
+	// fungsi untuk menginput bilangan a, b, c, dan d
+	fmt.Print("Bilangan a: ")
+	fmt.Scan(&a)
 
-	var a, b, c int
-	fmt.Scan(&a, &b, &c)
+	fmt.Print("Bilangan b: ")
+	fmt.Scan(&b)
 
-	fmt.Println("Hasil fungsi fogoh dari bilangan pertama adalah ", f(g(h(a))))
+	fmt.Print("Bilangan c: ")
+	fmt.Scan(&c)
 
-	fmt.Println("Hasil fungsi gohof dari bilangan pertama adalah ", g(h(f(b))))
+	fmt.Print("Bilangan d: ")
+	fmt.Scan(&d)
 
-	fmt.Println("Hasil fungsi gohof dari bilangan pertama adalah ", h(f(g(c))))
+	// Untuk menjelaskan syarat bahwa a>= c dan b>=d
+	if a >= c && b >= d {
+		// Untuk menampilkan hasil permutasi dan kombinasi dari bilangan a dan c
+		fmt.Printf("\nPermutasi (a, c): %d\n", permutasi(a, c))
+		fmt.Printf("Kombinasi (a, c): %d\n", kombinasi(a, c))
+
+		// Untuk menampilkan hasil permutasi dan kombinasi dari bilangan b dan d
+		fmt.Printf("\nPermutasi (b, d): %d\n", permutasi(b, d))
+		fmt.Printf("Kombinasi (b, d): %d\n", kombinasi(b, d))
+	} else {
+		// Untuk yang tidak memenuhi syarat
+		fmt.Println("Input tidak sesuai dengan syarat yang ada")
+	}
+}
+
+// Fungsi untuk menghitung faktorial
+func faktorial(n int) int {
+	var hasil int = 1
+	for i := 1; i <= n; i++ {
+		hasil *= i
+	}
+	return hasil
+}
+
+// Fungsi untuk menghitung permutasi
+func permutasi(n, r int) int {
+	return faktorial(n) / faktorial(n-r)
+}
+
+// Fungsi untuk menghitung kombinasi
+func kombinasi(n, r int) int {
+	return faktorial(n) / (faktorial(r) * faktorial(n-r))
 }
 ```
 
 #### Source Code
-![Unguided1 carbon](https://github.com/user-attachments/assets/c69d6d1e-7c19-4aeb-8c7f-232eb78fabae)
+![SC](https://github.com/user-attachments/assets/31374b8d-770c-4190-bfa5-231d1488d8ae)
+
 
 #### Output
-![Screenshot 2024-10-10 102109](https://github.com/user-attachments/assets/d568a814-9508-4796-8e59-5ee16e5d26b0)
+![Ungui1](https://github.com/user-attachments/assets/d202d887-911b-4643-adf0-b761ef7962db)
+
 
 
 #### Deskripsi Program : 
