@@ -197,12 +197,50 @@ Program meminta pengguna untuk memasukkan tiga bilangan, kemudian menghitung nil
 
 ##### 3. [Lingkaran] Suatu lingkaran didefinisikan dengan koordinat titik pusat (cx, cy) dengan radius r. Apabila diberikan dua buah lingkaran, maka tentukan posisi sebuah titik sembarang (x, y) berdasarkan dua lingkaran tersebut. Masukan terdiri dari beberapa tiga baris. Baris pertama dan kedua adalah koordinat titik pusat dan radius dari lingkaran 1 dan lingkaran 2, sedangkan baris ketiga adalah koordinat titik sembarang. Asumsi sumbu x dan y dari semua titik dan juga radius direpresentasikan dengan bilangan bulat. Keluaran berupa string yang menyatakan posisi titik "Titik di dalam lingkaran 1 dan 2", "Titik di dalam lingkaran 1", "Titik di dalam lingkaran 2", atau "Titik di luar lingkaran 1 dan 2".
 ```go
+package main
 
+import (
+	"fmt"
+	"math"
+)
+
+func jarak(a, b, c, d float64) float64 {
+	return (math.Sqrt((a-c)*(a-c) + (b-d)*(b-d)))
+}
+
+func didalam(cx, cy, r, x, y float64) bool {
+	return jarak(cx, cy, x, y) <= r
+}
+
+func main() {
+	var cx1, cy1, cx2, cy2, x, y, r1, r2 float64
+
+	fmt.Println("Masukkan Koordinat Lingkaran dan Radius Lingkaran 1 :")
+	fmt.Println("cx cy r")
+	fmt.Scanln(&cx1, &cy1, &r1)
+	fmt.Println("Masukkan Koordin at Lingkaran dan Radius Lingkaran 2 :")
+	fmt.Println("cx cy r")
+	fmt.Scanln(&cx2, &cy2, &r2)
+	fmt.Println("Masukkan Koordinat Titik Sembarang:")
+	fmt.Println("x y")
+	fmt.Scanln(&x, &y)
+
+	if didalam(cx1, cy1, r1, x, y) && didalam(cx2, cy2, r2, x, y) {
+		fmt.Println("Titik di dalam lingkaran 1 dan 2")
+	} else if didalam(cx1, cy1, r1, x, y) {
+		fmt.Println("Titik di dalam lingkaran 1")
+	} else if didalam(cx2, cy2, r2, x, y) {
+		fmt.Println("Titik di dalam lingkaran 2")
+	} else {
+		fmt.Println("Titik di luar lingkaran 1 dan 2")
+	}
+}
 ```
 ##### Screenshoot Output
+![Screenshot 2024-10-13 212054](https://github.com/user-attachments/assets/38134f2c-b8f7-4b1c-bc21-cb9e64d5e8da)
 
 ##### Deskripsi Program
-
+Program ini akan meminta pengguna untuk memasukkan koordinat titik pusat dan jari-jari dari dua lingkaran, serta koordinat titik sembarang yang ingin diuji posisinya. Kemudian, program akan menghitung jarak antara titik sembarang dengan titik pusat masing-masing lingkaran dan membandingkannya dengan jari-jari lingkaran tersebut. Berdasarkan hasil perbandingan ini, program akan menentukan apakah titik tersebut berada di dalam lingkaran pertama, lingkaran kedua, kedua-duanya, atau di luar kedua lingkaran.
 
 
 ### Referensi
