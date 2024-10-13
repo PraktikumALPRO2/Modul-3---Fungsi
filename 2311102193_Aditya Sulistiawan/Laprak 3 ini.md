@@ -674,3 +674,7 @@ Program ini ditulis dalam bahasa pemrograman Go (Golang) dan bertujuan untuk men
      - Jika titik berada di dalam kedua lingkaran.
      - Jika titik hanya berada di dalam salah satu lingkaran.
      - Jika titik tidak berada di dalam kedua lingkaran.
+
+## Referensi
+[1] https://dasarpemrogramangolang.novalagung.com/
+[2] https://dasarpemrogramangolang.novalagung.com/A-hello-world.html
