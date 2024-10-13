@@ -340,7 +340,7 @@ Program ini bertujuan untuk menghitung nilai dari fungsi f, g, dan h yang sudah 
 
 Fungsi untuk menghitung jarak titik (a, b) dan (c, d) dimana rumus jarak adalah:
 
-$jarak = √((a-c)² + (b-d)²)$
+$jarak = \sqrt√((a-c)² + (b-d)²)$
 
 dan juga fungsi untuk menentukan posisi sebuah titik sembarang berada di dalam suatu lingkaran atau tidak.
 
