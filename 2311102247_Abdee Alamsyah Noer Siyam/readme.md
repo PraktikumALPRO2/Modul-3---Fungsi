@@ -481,10 +481,8 @@ Bahasa pemrograman Go, atau Golang, dikenal dengan sintaksis yang sederhana dan 
 
 ## <strong> Referensi </strong>
 
-#### [1] Web Development. [2021]. Golang : Pengertian, Fungsi & Rekomendasi Tempat Belajarnya. Diakses melalui website https://majapahit.id/blog/2021/10/21/golang-adalah/
+#### [1] Sanjaya, Rizqi Hafian. [2024]. Cara Menggunakan Method dan Function | Tutorial Golang Bahasa Indonesia. Diakses melalui website https://buildwithangga.com/tips/cara-menggunakan-method-dan-function-tutorial-golang-bahasa-indonesia 
 
-#### [2] Yonata, Jefri. [2021]. Golang: Bahasa Pemrograman Fleksibel dari Google. Diakses melalui website https://www.dewaweb.com/blog/apa-itu-golang/
+#### [2] Revou. Apa itu Function dalam Pemrograman?. Diakses melalui website https://revou.co/kosakata/function
 
-#### [3] Farid, Achmad. [2024]. Apa Itu Golang? Panduan Singkat untuk Pemula | Exabytes. Diakses melalui website https://www.exabytes.co.id/blog/apa-itu-golang-adalah/
-
-#### [4] Pasar Trainer Blog. [2024]. Apa itu Golang? Ini Pengertian, Fungsi, dan Keunggulannya. Diakses melalui website https://pasartrainer.com/blog/apa-itu-golang-ini-pengertian-fungsi-dan-keunggulannya 
+#### [3] Yahya, Adin. [2023]. AFunction dan Method Bahasa Pemrograman Golang. Diakses melalui website https://adinyahya.com/function-dan-method-bahasa-pemrograman-golang/
