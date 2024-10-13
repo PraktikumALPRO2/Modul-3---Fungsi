@@ -307,8 +307,8 @@ Program ini dibuat untuk menghitung nilai permutasi dan kombinasi dari empat bil
 2. Proses:
 - Untuk menghitung permutasi dan kombinasi, terlebih dahulu dilakukan perhitungan faktorial dari bilangan-bilangan yang dibutuhkan.
 - Rumus yang digunakan:
--- Permutasi dihitung dengan membagi faktorial n dengan faktorial dari selisih n dan r.
--- Kombinasi dihitung dengan membagi faktorial n dengan hasil perkalian faktorial r dan faktorial dari selisih n dan r.
+- - Permutasi dihitung dengan membagi faktorial n dengan faktorial dari selisih n dan r.
+- - Kombinasi dihitung dengan membagi faktorial n dengan hasil perkalian faktorial r dan faktorial dari selisih n dan r.
 - Permutasi dan kombinasi dihitung untuk pasangan a terhadap c, serta b terhadap d.
 3. Output:
 - Hasil permutasi dan kombinasi dari a terhadap c ditampilkan di baris pertama.
