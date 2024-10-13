@@ -276,7 +276,7 @@ Program ini ditulis dalam bahasa pemrograman Go (Golang) dan berfungsi untuk men
 
 
 
-#### Cara Kerja*
+#### Cara Kerja
 
 
 1. **Input Pengguna**:
@@ -290,7 +290,11 @@ Program ini ditulis dalam bahasa pemrograman Go (Golang) dan berfungsi untuk men
    - Program menampilkan hasil perhitungan luas dan keliling ke layar dengan format yang mudah dibaca, menggunakan dua angka di belakang koma.
      
 ## <strong> Unguided </strong>
+
 ### <h2> UNGUIDED 1 </h2>
+
+#### Study Case
+Minggu Ini, mahasiswa Fakultas Informatika mendapatkan tugas dari mata kullah matematika diskett untuk mempelajari kombinasi dan permutasi. Jonas salah seorang mahasiswa, Iseng untuk mengimplementasikannya ke dalam suatu program. Oleh karena itu bersediakah kallan membantu Jonas? (tidak tentunya ya :p)
 
 #### Source Code
 
@@ -364,36 +368,57 @@ func kombinasi(n, r int) int {
 
 
 #### Deskripsi Program : 
-Program ini adalah sebuah aplikasi Go yang mendemonstrasikan konsep komposisi fungsi matematika. Program meminta input tiga bilangan dari pengguna dan menerapkan berbagai kombinasi dari tiga fungsi matematika sederhana pada bilangan-bilangan tersebut.
+Program ini ditulis dalam bahasa pemrograman Go (Golang) dan bertujuan untuk menghitung permutasi dan kombinasi dari dua pasang bilangan bulat, yaitu `a` dan `c`, serta `b` dan `d`. Program ini juga memeriksa syarat bahwa `a` harus lebih besar atau sama dengan `c`, dan `b` harus lebih besar atau sama dengan `d`. Jika syarat tersebut tidak terpenuhi, program akan memberikan pesan kesalahan
 
 #### Algoritma dan Cara Kerja Program
-*Algoritma*
-1. Program meminta pengguna memasukkan tiga bilangan (a, b, c)
-2. Program menghitung tiga komposisi fungsi berbeda:
-3. f(g(h(a))) - disebut sebagai "fogoh"
-g(h(f(b))) - disebut sebagai "gohof"
-h(f(g(c))) - juga disebut sebagai "hofg"
+1. **Inisialisasi**:
+   - Import paket `fmt` untuk input/output.
+   
+2. **Deklarasi Variabel**:
+   - Deklarasikan empat variabel bertipe `int`: `a`, `b`, `c`, dan `d`.
+
+3. **Input Pengguna**:
+   - Minta pengguna untuk memasukkan nilai untuk bilangan `a`, `b`, `c`, dan `d`.
+
+4. **Pemeriksaan Syarat**:
+   - Periksa apakah `a >= c` dan `b >= d`.
+     - Jika syarat terpenuhi:
+       - Hitung dan tampilkan permutasi dan kombinasi untuk pasangan `(a, c)` dan `(b, d)`.
+     - Jika syarat tidak terpenuhi:
+       - Tampilkan pesan kesalahan.
+
+5. **Fungsi Pendukung**:
+   - **Fungsi `faktorial(n int) int`**: Menghitung faktorial dari bilangan `n`.
+   - **Fungsi `permutasi(n, r int) int`**: Menghitung permutasi menggunakan rumus $$ P(n, r) = \frac{n!}{(n-r)!} $$.
+   - **Fungsi `kombinasi(n, r int) int`**: Menghitung kombinasi menggunakan rumus $$ C(n, r) = \frac{n!}{r!(n-r)!} $$.
 
 
-Program menampilkan hasil ketiga perhitungan tersebut
+#### Cara Kerja
+1. **Input Pengguna**:
+   - Program meminta pengguna untuk memasukkan empat bilangan bulat: `a`, `b`, `c`, dan `d`.
 
-*Cara Kerja*
-Input:
+2. **Pemeriksaan Syarat**:
+   - Setelah menerima input, program memeriksa apakah nilai-nilai yang dimasukkan memenuhi syarat (`a >= c` dan `b >= d`).
+   - Jika syarat tidak terpenuhi, program akan mencetak pesan kesalahan.
 
-1. Program meminta pengguna memasukkan tiga bilangan
-Bilangan-bilangan ini disimpan dalam variabel a, b, dan c
+3. **Perhitungan Permutasi dan Kombinasi**:
+   - Jika syarat terpenuhi, program akan menghitung permutasi dan kombinasi untuk kedua pasangan bilangan:
+     - Untuk pasangan `(a, c)`:
+       - Memanggil fungsi `permutasi(a, c)` untuk menghitung permutasi.
+       - Memanggil fungsi `kombinasi(a, c)` untuk menghitung kombinasi.
+     - Untuk pasangan `(b, d)`:
+       - Memanggil fungsi `permutasi(b, d)` untuk menghitung permutasi.
+       - Memanggil fungsi `kombinasi(b, d)` untuk menghitung kombinasi.
 
+4. **Output Hasil**:
+   - Program menampilkan hasil perhitungan permutasi dan kombinasi ke layar dengan format yang jelas.
 
-2. Proses untuk setiap komposisi fungsi:
-- Program menjalankan fungsi-fungsi secara berurutan dari dalam ke luar
-- Hasil dari satu fungsi menjadi input untuk fungsi berikutnya
-
-
-3. Output:
-Program menampilkan hasil ketiga komposisi fungsi
-
+Dengan struktur yang terorganisir dengan baik, program ini menyediakan cara yang efektif untuk melakukan perhitungan kombinatorial dasar dengan memanfaatkan fungsi-fungsi pendukung untuk faktorial, permutasi, dan kombinasi.
 
 ### <h2> UNGUIDED 2 </h2>
+
+#### Study Case
+
 
 #### Source Code
 
