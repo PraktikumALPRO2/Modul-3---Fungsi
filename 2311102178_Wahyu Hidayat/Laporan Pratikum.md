@@ -431,7 +431,7 @@ Program ini mengimplementasikan tiga fungsi matematika sederhana: fungsi kuadrat
 
 
 
-## 3. Program Penghitung Permutasi dan Kombinasi
+## 3. Menentukan Posisi Titik terhadap Dua Lingkaran
 
 #### Source Code
 ```go
@@ -439,95 +439,102 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
-// Fungsi untuk menghitung faktorial
-func factorial(n int) int {
-	if n == 0 {
-		return 1
-	}
-	result := 1
-	for i := 1; i <= n; i++ {
-		result *= i
-	}
-	return result
+// Fungsi untuk menghitung jarak antara dua titik
+func jarak(a, b, c, d float64) float64 {
+	return math.Sqrt(math.Pow(a-c, 2) + math.Pow(b-d, 2))
 }
 
-// Fungsi untuk menghitung permutasi P(n, r)
-func permutation(n, r int) int {
-	return factorial(n) / factorial(n-r)
-}
-
-// Fungsi untuk menghitung kombinasi C(n, r)
-func combination(n, r int) int {
-	return factorial(n) / (factorial(r) * factorial(n-r))
+// Fungsi untuk memeriksa apakah suatu titik berada di dalam lingkaran
+func didalam(cx, cy, r, x, y float64) bool {
+	return jarak(cx, cy, x, y) <= r
 }
 
 func main() {
-	// Input
-	var a, b, c, d int
-	fmt.Print("Masukkan 4 bilangan a, b, c, d: ")
-	fmt.Scanf("%d %d %d %d", &a, &b, &c, &d)
+	// Input koordinat untuk dua lingkaran dan titik sembarang
+	var cx1, cy1, r1 float64
+	var cx2, cy2, r2 float64
+	var x, y float64
 
-	// Hasil permutasi dan kombinasi untuk a dan c
-	p_ac := permutation(a, c)
-	c_ac := combination(a, c)
+	// Input untuk Lingkaran 1
+	fmt.Print("Masukkan pusat lingkaran 1 (cx1 cy1) dan radius r1: ")
+	fmt.Scan(&cx1, &cy1, &r1)
 
-	// Hasil permutasi dan kombinasi untuk b dan d
-	p_bd := permutation(b, d)
-	c_bd := combination(b, d)
+	// Input untuk Lingkaran 2
+	fmt.Print("Masukkan pusat lingkaran 2 (cx2 cy2) dan radius r2: ")
+	fmt.Scan(&cx2, &cy2, &r2)
 
-	// Output
-	fmt.Printf("%d %d\n", p_ac, c_ac)
-	fmt.Printf("%d %d\n", p_bd, c_bd)
+	// Input untuk Titik Sembarang
+	fmt.Print("Masukkan koordinat titik sembarang (x y): ")
+	fmt.Scan(&x, &y)
+
+	// Cek posisi titik terhadap lingkaran
+	dalamLingkaran1 := didalam(cx1, cy1, r1, x, y)
+	dalamLingkaran2 := didalam(cx2, cy2, r2, x, y)
+
+	if dalamLingkaran1 && dalamLingkaran2 {
+		fmt.Println("Titik di dalam lingkaran 1 dan 2")
+	} else if dalamLingkaran1 {
+		fmt.Println("Titik di dalam lingkaran 1")
+	} else if dalamLingkaran2 {
+		fmt.Println("Titik di dalam lingkaran 2")
+	} else {
+		fmt.Println("Titik di luar lingkaran 1 dan 2")
+	}
 }
 
 ```
 #### Screenshoot Source Code
-![Screenshot 2024-10-13 171753](https://github.com/user-attachments/assets/e441a9a2-e5b2-4917-ad79-d6393e5d4edb)
+![Screenshot 2024-10-13 174426](https://github.com/user-attachments/assets/2f14133f-26bb-41c3-9d7f-5c8626486c07)
 
 
 
 
 #### Screenshoot Output
-![Screenshot 2024-10-13 171736](https://github.com/user-attachments/assets/7fe92782-099e-4ef4-9175-93d7548731c7)
+![Screenshot 2024-10-13 174439](https://github.com/user-attachments/assets/4fd769c7-ba9b-47b5-aec1-fb918fbbc0b1)
+
 
 
 
 
 
 #### Deskripsi Program
-Program ini dibuat untuk menghitung nilai permutasi dan kombinasi dari empat bilangan bulat yang diberikan sebagai input. Pengguna akan memasukkan empat bilangan bulat, yaitu a, b, c, dan d. Program ini kemudian menghitung hasil permutasi dan kombinasi dari a terhadap c, serta b terhadap d, dan menampilkan hasilnya dalam dua baris. Baris pertama menunjukkan hasil perhitungan permutasi dan kombinasi dari a terhadap c, dan baris kedua menunjukkan hasil perhitungan permutasi dan kombinasi dari b terhadap d.
+Program ini berfungsi untuk menentukan apakah sebuah titik sembarang berada di dalam lingkaran pertama, di dalam lingkaran kedua, di dalam kedua lingkaran, atau di luar keduanya. Input yang diperlukan adalah koordinat pusat dan jari-jari dari dua lingkaran serta koordinat titik sembarang. Program kemudian menghitung jarak titik tersebut dari pusat setiap lingkaran dan memeriksa apakah jaraknya lebih kecil atau sama dengan jari-jari lingkaran.
 
 #### Algoritma Program
-1. Input:
-- Program menerima empat bilangan bulat a, b, c, dan d.
-2. Proses:
-- Untuk menghitung permutasi dan kombinasi, terlebih dahulu dilakukan perhitungan faktorial dari bilangan-bilangan yang dibutuhkan.
-- Rumus yang digunakan:
-  - Permutasi dihitung dengan membagi faktorial n dengan faktorial dari selisih n dan r.
-  - Kombinasi dihitung dengan membagi faktorial n dengan hasil perkalian faktorial r dan faktorial dari selisih n dan r.
-- Permutasi dan kombinasi dihitung untuk pasangan a terhadap c, serta b terhadap d.
-3. Output:
-- Hasil permutasi dan kombinasi dari a terhadap c ditampilkan di baris pertama.
-- Hasil permutasi dan kombinasi dari b terhadap d ditampilkan di baris kedua.
+1. Menerima input dari pengguna:
+- Koordinat pusat dan jari-jari lingkaran pertama.
+- Koordinat pusat dan jari-jari lingkaran kedua.
+- Koordinat titik sembarang yang ingin diperiksa.
+2. Menghitung jarak antara titik sembarang dan pusat lingkaran pertama menggunakan rumus jarak Euclidean.
+3. Menghitung jarak antara titik sembarang dan pusat lingkaran kedua.
+4. Membandingkan hasil jarak dengan jari-jari lingkaran:
+- Jika jarak titik ke pusat lingkaran pertama kurang dari atau sama dengan jari-jari lingkaran pertama, maka titik berada di dalam lingkaran pertama.
+- Jika jarak titik ke pusat lingkaran kedua kurang dari atau sama dengan jari-jari lingkaran kedua, maka titik berada di dalam lingkaran kedua.
+- Jika jarak titik ke kedua lingkaran kurang dari atau sama dengan masing-masing jari-jari, maka titik berada di dalam kedua lingkaran.
+- Jika jarak titik ke kedua lingkaran lebih besar dari jari-jari, maka titik berada di luar kedua lingkaran.
+5. Menampilkan hasilnya, apakah titik berada di dalam lingkaran pertama, kedua, keduanya, atau di luar.
 
 #### Cara Kerja
-1. Input Data:
-- Program meminta pengguna memasukkan empat bilangan bulat. Sebagai contoh, jika pengguna memasukkan "5 10 3 10", maka a adalah 5, b adalah 10, c adalah 3, dan d adalah 10.
-2. Menghitung Faktorial:
-- Faktorial adalah hasil perkalian berurutan dari suatu bilangan dengan bilangan yang lebih kecil hingga satu. Misalnya, faktorial dari 5 adalah 5 x 4 x 3 x 2 x 1 = 120.
-- Faktorial dihitung untuk bilangan-bilangan yang relevan dalam menghitung permutasi dan kombinasi.
-3. Menghitung Permutasi dan Kombinasi:
-- Permutasi dihitung dengan membagi faktorial dari a dengan faktorial dari selisih a dan c. Contoh: untuk a = 5 dan c = 3, permutasi dihitung sebagai 5 faktorial dibagi dengan 2 faktorial, yang hasilnya adalah 60.
-- Kombinasi dihitung dengan membagi faktorial dari a dengan hasil kali faktorial dari c dan faktorial dari selisih a dan c.
-4. Menampilkan Hasil:
-- Hasil perhitungan permutasi dan kombinasi dari a terhadap c ditampilkan terlebih dahulu.
-- Kemudian, hasil perhitungan permutasi dan kombinasi dari b terhadap d ditampilkan di baris berikutnya.
+1. Input: Pengguna memasukkan tiga set data:
+- Koordinat dan jari-jari lingkaran pertama.
+- Koordinat dan jari-jari lingkaran kedua.
+- Koordinat titik sembarang.
+2. Penghitungan Jarak: Program menghitung jarak dari titik sembarang ke pusat lingkaran menggunakan rumus jarak Euclidean (akar kuadrat dari jumlah kuadrat selisih koordinat).
+3. Pengecekan Posisi:
+- Jika jarak titik ke pusat lingkaran lebih kecil atau sama dengan jari-jari lingkaran, titik tersebut dianggap berada di dalam lingkaran.
+- Program melakukan hal ini untuk kedua lingkaran.
+4. Hasil: Program menentukan apakah titik tersebut berada di dalam lingkaran pertama, di dalam lingkaran kedua, di dalam keduanya, atau di luar keduanya, lalu mencetak hasilnya.
 
+### Kesimpulan
+Fungsi adalah alat penting dalam pemrograman yang memungkinkan kita untuk membuat kode lebih modular, terorganisir, dan dapat digunakan kembali. Dengan membagi program ke dalam beberapa fungsi, kita dapat menyederhanakan pengembangan dan pemeliharaan kode. Di Go, deklarasi fungsi mencakup nama fungsi, parameter, dan tipe pengembalian, serta pemanggilan fungsi dilakukan dengan menyebutkan nama fungsi beserta argumennya [2][3].
 
 ## Referensi 
 [1] A. A. Demailly, "Efficient Function Calls and Modular Programming in Go," Journal of Software Engineering, vol. 34, no. 2, pp. 145-153, 2022.
+
 [2] R. C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship, Pearson Education, 2009.
+
 [3] A. Donovan and B. W. Kernighan, The Go Programming Language, Addison-Wesley, 2015.
-------
+
