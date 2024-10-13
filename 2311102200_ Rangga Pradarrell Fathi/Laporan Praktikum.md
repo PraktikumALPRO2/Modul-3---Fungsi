@@ -101,6 +101,16 @@ func main() {
 
 ### <h2>GUIDED 1</h2>
 
+Minggu ini, mahasiswa Fakultas Informatika mendapatkan tugas dari mata kuliah matematika diskrit untuk mempelajari kombinasi dan permutasi. Jonas salah seorang mahasiswa, iseng untuk mengimplementasikannya ke dalam suatu program. Oleh karena itu bersediakah kalian membantu Jonas? (tidak tentunya ya :p)
+Masukan terdiri dari empat buah bilangan asli 𝑎, 𝑏, 𝑐, dan 𝑑 yang dipisahkan oleh spasi, dengan syarat 𝑎 ≥ 𝑐 dan 𝑏 ≥ 𝑑.
+Keluaran terdiri dari dua baris. Baris pertama adalah hasil permutasi dan kombinasi 𝒂 terhadap
+𝑐, sedangkan baris kedua adalah hasil permutasi dan kombinasi 𝑏 terhadap 𝑑.
+
+Catatan: permutasi (P) dan kombinasi (C) dari 𝑛 terhadap 𝑟 (𝑛 ≥ 𝑟) dapat dihitung dengan menggunakan persamaan berikut!
+<br>
+![soalgu1](https://github.com/user-attachments/assets/2e18508b-42ec-48f9-888e-0f4d4cc674c4)
+
+
 #### Source Code
 
 ```go
@@ -166,6 +176,8 @@ Program di atas merupakan program yang menghitung permutasi dari dua bilangan ya
 5. Setelah hasil permutasi diperoleh, hasil tersebut dicetak ke layar.
 
 ### <h2>GUIDED 2</h2>
+
+Membuat program dengan bahasa go untuk mencari sebuah Luas dan Keliling Persegi.
 
 #### Source Code
 
