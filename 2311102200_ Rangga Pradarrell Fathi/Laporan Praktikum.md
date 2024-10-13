@@ -56,7 +56,7 @@
 
 <strong><h2>Definisi Fungsi</h2></strong>
 
-Dalam pemrograman, function adalah sekumpulan instruksi yang dikelompokkan untuk melakukan tugas tertentu. Di Golang, fungsi sangat penting karena membantu dalam memecah kode yang kompleks menjadi bagian-bagian yang lebih sederhana dan mudah dikelola. Fungsi juga digunakan untuk menghindari pengulangan kode serta meningkatkan modularitas dan keterbacaan.
+Dalam pemrograman, function adalah sekumpulan instruksi yang dikelompokkan untuk melakukan tugas tertentu. Di Golang, fungsi sangat penting karena membantu dalam memecah kode yang kompleks menjadi bagian-bagian yang lebih sederhana dan mudah dikelola. Fungsi juga digunakan untuk menghindari pengulangan kode serta meningkatkan modularitas dan keterbacaan.[1]
 
 <strong> Deklarasi Fungsi
 </strong>
@@ -76,7 +76,7 @@ func functionName(parameter1 type, parameter2 type, ...) returnType {
 
 <strong> Cara Memanggil Function</strong>
 
-Setelah dideklarasikan, fungsi dapat dipanggil di dalam kode utama program. Pemanggilan fungsi dilakukan dengan menuliskan nama fungsi diikuti oleh tanda kurung `()`. Jika fungsi memiliki parameter, maka argumen yang sesuai harus diberikan di dalam tanda kurung.
+Setelah dideklarasikan, fungsi dapat dipanggil di dalam kode utama program. Pemanggilan fungsi dilakukan dengan menuliskan nama fungsi diikuti oleh tanda kurung `()`. Jika fungsi memiliki parameter, maka argumen yang sesuai harus diberikan di dalam tanda kurung.[2]
 
 *Contoh*
 ```go
@@ -412,5 +412,9 @@ Tampilkan hasil pengecekan sesuai kondisi yang terpenuhi
 - Titik hanya di dalam lingkaran 2
 - Titik di luar kedua lingkaran
 
+## Daftar Pustaka
+[1] A. A. A. Donovan and B. W. Kernighan, *The Go Programming Language*. Boston, MA: Addison-Wesley, 2015.
+
+[2] W. Kennedy, B. Ketelsen, and E. St. Martin, *Go in Action*. Greenwich, CT: Manning Publications, 2016.
 
 
