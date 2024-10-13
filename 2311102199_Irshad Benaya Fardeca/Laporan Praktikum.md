@@ -94,7 +94,7 @@ func main() {
 ![Screenshot 2024-10-13 200124](https://github.com/user-attachments/assets/18792a59-5136-46f3-a251-f91183e70a12)
 
 ##### Deskripsi Program
-Program ini menghitung dan mencetak permutasi dari dua bilangan bulat yang diinput oleh pengguna. Fungsi faktorial menghitung faktorial dari sebuah bilangan bulat dengan menggunakan perulangan for. Fungsi permutasi menghitung permutasi dari dua bilangan bulat menggunakan rumus permutasi: nPr = n! / (n-r)!. Dalam fungsi main, pengguna diminta untuk memasukkan dua bilangan bulat. Kemudian, fungsi permutasi dipanggil dengan argumen yang sesuai untuk menghitung permutasi. Hasil permutasi kemudian dicetak ke layar.
+Program ini menghitung dan mencetak permutasi dari dua bilangan bulat yang diinput oleh pengguna. Fungsi faktorial menghitung faktorial dari sebuah bilangan bulat dengan menggunakan perulangan for. Fungsi permutasi menghitung permutasi dari dua bilangan bulat menggunakan rumus permutasi: nPr = n! / (n-r)!. Dalam fungsi main, pengguna diminta untuk memasukkan dua bilangan bulat. Kemudian, fungsi permutasi dipanggil dengan argumen yang sesuai untuk menghitung permutasi. Hasil permutasi kemudian dicetak.
 
 
 ##### 2. Program menghitung luas dan keliling persegi
