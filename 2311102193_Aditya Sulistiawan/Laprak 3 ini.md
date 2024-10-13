@@ -54,9 +54,48 @@
 
 ## <strong> Dasar Teori </strong>
 
-<strong><h2>Definisi Fungsi</h2></strong>
+Fungsi adalah salah satu konsep fundamental dalam pemrograman yang memungkinkan programmer untuk mengorganisir dan mengelompokkan serangkaian instruksi menjadi unit yang dapat digunakan kembali. Berikut adalah beberapa aspek penting dari fungsi:
 
-Dalam pemrograman, function adalah sekumpulan instruksi yang dikelompokkan untuk melakukan tugas tertentu. Di Golang, fungsi sangat penting karena membantu dalam memecah kode yang kompleks menjadi bagian-bagian yang lebih sederhana dan mudah dikelola. Fungsi juga digunakan untuk menghindari pengulangan kode serta meningkatkan modularitas dan keterbacaan.
+### 1. Definisi:
+   Fungsi adalah blok kode yang dirancang untuk melakukan tugas tertentu. Fungsi hanya akan dijalankan ketika dipanggil dan dapat menerima data (parameter), memprosesnya, dan mengembalikan hasil.
+
+### 2. Tujuan Penggunaan Fungsi:
+   - Meningkatkan modularitas kode
+   - Mengurangi redundansi dengan memungkinkan penggunaan kembali kode
+   - Meningkatkan keterbacaan dengan memecah program menjadi bagian-bagian yang lebih kecil dan terkelola
+   - Mempermudah pemeliharaan dan debugging kode
+
+### 3. Struktur Umum Fungsi:
+   - Nama fungsi: Identifier unik untuk fungsi
+   - Parameter: Data yang diterima fungsi (opsional)
+   - Body: Serangkaian instruksi yang mendefinisikan operasi fungsi
+   - Return value: Nilai yang dikembalikan oleh fungsi (opsional)
+
+### 4. Jenis-jenis Fungsi:
+   - Built-in functions: Fungsi yang sudah tersedia dalam bahasa pemrograman
+   - User-defined functions: Fungsi yang dibuat oleh programmer
+   - Anonymous functions / Lambda functions: Fungsi tanpa nama yang biasanya digunakan untuk operasi singkat
+
+### 5. Konsep Penting dalam Fungsi:
+   - Pemanggilan fungsi (Function call)
+   - Passing parameter
+   - Scope variabel (local dan global)
+   - Rekursi: Fungsi yang memanggil dirinya sendiri
+
+### 6. Manfaat Penggunaan Fungsi:
+   - Abstraksi: Menyembunyikan kompleksitas implementasi
+   - Reusabilitas: Kode dapat digunakan kembali di berbagai bagian program
+   - Testabilitas: Memudahkan pengujian unit kode
+   - Kolaborasi: Memungkinkan pembagian tugas dalam tim pengembangan
+
+### 7. Best Practices dalam Penulisan Fungsi:
+   - Fungsi sebaiknya melakukan satu tugas spesifik (Single Responsibility Principle)
+   - Nama fungsi harus deskriptif dan mencerminkan tujuannya
+   - Batasi jumlah parameter untuk meningkatkan keterbacaan
+   - Dokumentasikan fungsi dengan komentar atau docstrings
+
+Fungsi merupakan komponen penting dalam paradigma pemrograman terstruktur dan berorientasi objek. Pemahaman yang baik tentang fungsi sangat penting untuk mengembangkan kode yang efisien, mudah dipelihara, dan dapat digunakan kembali.
+
 
 <strong> Deklarasi Fungsi
 </strong>
@@ -104,66 +143,77 @@ func main() {
 #### Source Code
 
 ```go
-package main
-import "fmt"
+package main 
 
-func main()  {
-	var a,b int
-	fmt.Scan(&a, &b)
+import "fmt"
+ 
+func main(){
+	var a,b int 
+	fmt.Scan(&a, &b) 
 	if a >= b {
 		fmt.Println(permutasi(a,b))
 	}else{
 		fmt.Println(permutasi(b,a))
 	}
 }
-func faktorial(n int) int{
+func faktorial(n int) int{ 
 	var hasil int = 1
 	var i int
-	for i = 1; i <= n; i++ {
+	for i = 1; i <= n; i++ { 
 		hasil = hasil * i
 	}
+
 	return hasil
 }
-func permutasi (n,r int) int {
-	return faktorial(n) / faktorial (n-r)
+func permutasi(n,r int) int {
+	return faktorial(n) / faktorial(n-r)
 }
 ```
 
-#### Source Code
-![Guided1carbon](https://github.com/user-attachments/assets/556ae404-6957-4844-b171-f728259fcb9f)
+#### Screenshot Source Code
+![SC](https://github.com/user-attachments/assets/e977240d-e959-481f-b9a8-77818f00196c)
+
 
 #### Output
-![Screenshot 2024-10-10 080802](https://github.com/user-attachments/assets/a35ffa17-5ab6-47be-8ef5-bbaefdd28054)
+![Gui1](https://github.com/user-attachments/assets/51f1bee9-d0b0-402a-9aca-fbe34751e7be)
 
 
 #### Deskripsi Program : 
-Program di atas merupakan program yang menghitung permutasi dari dua bilangan yang dimasukkan oleh user.
+Program ini ditulis dalam bahasa Go (Golang) dan berfungsi untuk menghitung permutasi dari dua angka yang diinputkan oleh pengguna.
 
 #### Algoritma dan Cara Kerja Program
-*Algoritma*
 
-1. **Input dari Pengguna:**
-   - Program pertama kali meminta dua bilangan `a` dan `b` dari pengguna.
-   - Jika `a >= b`, program akan menghitung permutasi dengan `a` sebagai `n` dan `b` sebagai `r`. Jika tidak, posisi `a` dan `b` akan ditukar sehingga `b` dianggap sebagai `n` dan `a` sebagai `r`.
+1. Mulai program
+2. Deklarasikan variabel a dan b sebagai integer
+3. Minta input dari pengguna untuk nilai a dan b
+4. Jika a lebih besar atau sama dengan b, maka:
+   - Panggil fungsi permutasi(a, b)
+   - Tampilkan hasil permutasi
+5. Jika tidak (a lebih kecil dari b), maka:
+   - Panggil fungsi permutasi(b, a)
+   - Tampilkan hasil permutasi
+6. Definisikan fungsi faktorial(n):
+   a. Inisialisasi variabel hasil = 1
+   b. Untuk i dari 1 sampai n, lakukan:
+      - hasil = hasil * i
+   c. Kembalikan nilai hasil
+7. Definisikan fungsi permutasi(n, r):
+   a. Hitung faktorial(n)
+   b. Hitung faktorial(n-r)
+   c. Hitung hasil = faktorial(n) / faktorial(n-r)
+   d. Kembalikan nilai hasil
+8. Selesai
 
-2. **Perhitungan Faktorial:**
-   - Fungsi `faktorial(n int) int` menghitung faktorial dari `n`. 
-   - Fungsi ini menggunakan sebuah loop dari 1 hingga `n`, di mana setiap iterasi mengalikan nilai sebelumnya dengan `i` untuk menghitung faktorial.
 
-3. **Perhitungan Permutasi:**
-   - Fungsi `permutasi(n, r int) int` menghitung permutasi menggunakan rumus : Permutasi = faktorial(n)/faktorial(n-r).
-   - Fungsi ini menggunakan nilai faktorial dari `n` dan `n - r`, lalu membaginya untuk mendapatkan hasil permutasi.
+#### Cara Kerja*
 
-4. **Output:**
-   - Hasil dari perhitungan permutasi ditampilkan ke layar menggunakan `fmt.Println`.
+1. Program meminta pengguna memasukkan dua angka.
+2. Program menentukan angka mana yang lebih besar.
+3. Fungsi `permutasi()` dipanggil dengan angka yang lebih besar sebagai `n` dan yang lebih kecil sebagai `r`.
+4. Fungsi `permutasi()` memanggil fungsi `faktorial()` untuk menghitung faktorial yang diperlukan.
+5. Hasil perhitungan permutasi dicetak ke layar.
 
-*Cara Kerja*
-
-1. Program dimulai dengan mendeklarasikan dua variabel `a` dan `b` sebagai bilangan bulat (`int`).
-2. Program meminta input dua bilangan dari pengguna dengan menggunakan `fmt.Scan(&a, &b)`.
-3. Program mengecek apakah nilai `a` lebih besar atau sama dengan `b`. Jika ya, permutasi dihitung dengan `a` sebagai `n` dan `b` sebagai `r`. Jika tidak, posisi `a` dan `b` ditukar.
-4. Fungsi `permutasi` dipanggil dengan parameter `n` dan `r`, dan hasilnya dihitung dengan membagi faktorial `n` dengan faktorial `(n - r)`.
-5. Setelah hasil permutasi diperoleh, hasil tersebut dicetak ke layar.
+Program ini mendemonstrasikan penggunaan fungsi, pengambilan input dari pengguna, pengambilan keputusan dengan `if-else`, dan perhitungan matematika dasar dalam pemrograman Go.
 
 ### <h2>GUIDED 2</h2>
 
@@ -174,13 +224,22 @@ package main
 
 import "fmt"
 
+func hitungLuas(sisi float64) float64 {
+	return sisi * sisi
+}
+
+func hitungKeliling(sisi float64) float64 {
+	return 4 * sisi
+}
+
 func main() {
 	var sisi float64
-	fmt.Print("Masukkan panjang sisi persegi: ")
-	fmt.Scan(&sisi)
 
-	luas := sisi * sisi
-	keliling := 4 * sisi
+	fmt.Print("Masukkan sisi persegi: ")
+	fmt.Scanln(&sisi)
+
+	luas := hitungLuas(sisi)
+	keliling := hitungKeliling(sisi)
 
 	fmt.Printf("Luas persegi adalah: %.2f\n", luas)
 	fmt.Printf("Keliling persegi adalah: %.2f\n", keliling)
@@ -188,36 +247,48 @@ func main() {
 ```
 
 #### Source Code
-![Guided2carbon](https://github.com/user-attachments/assets/38105dcd-cf9b-4ba8-96d7-21df79513e6c)
+![SC](https://github.com/user-attachments/assets/65d918b5-dc30-48a3-b647-9983985d9245)
 
 
 #### Output
-![Screenshot 2024-10-10 084550](https://github.com/user-attachments/assets/d3962c46-49ae-43a0-81dc-ce4e6d69712b)
+![Gui2](https://github.com/user-attachments/assets/d61e062a-ebaa-435e-b3a8-25ec5a2f3b1e)
+
 
 
 #### Deskripsi Program : 
-Program di atas merupakan program yang menghitung permutasi dari dua bilangan yang dimasukkan oleh user.
+Program ini ditulis dalam bahasa pemrograman Go (Golang) dan berfungsi untuk menghitung luas dan keliling dari sebuah persegi berdasarkan panjang sisi yang dimasukkan oleh pengguna. Program ini menggunakan dua fungsi terpisah: satu untuk menghitung luas dan satu lagi untuk menghitung keliling. Setelah pengguna memasukkan nilai sisi, program akan menampilkan hasil perhitungan tersebut dengan format yang rapi.
 
-#### Algoritma dan Cara Kerja Program
-*Algoritma*
-1. Program pertama-tama meminta input dari pengguna berupa panjang sisi persegi. Input ini disimpan dalam variabel `sisi` yang bertipe `float64` untuk mendukung angka desimal.
-2. Setelah input diterima, program menghitung **luas** persegi dengan rumus:
-   Luas = sisi x sisi
-3. Kemudian, program menghitung **keliling** persegi dengan rumus:
-  Keliling = 4 x sisi
-4. Setelah perhitungan selesai, hasil **luas** dan **keliling** ditampilkan ke layar dengan format dua angka desimal menggunakan fungsi `fmt.Printf`.
+#### Algoritma 
+1. **Inisialisasi**:
+   - Import paket `fmt` untuk input/output.
+   
+2. **Definisi Fungsi**:
+   - `hitungLuas(sisi float64)`: Menghitung luas persegi dengan rumus $$ \text{luas} = \text{sisi} \times \text{sisi} $$.
+   - `hitungKeliling(sisi float64)`: Menghitung keliling persegi dengan rumus $$ \text{keliling} = 4 \times \text{sisi} $$.
 
-
-*Cara Kerja*
-
-1. Program dimulai dengan mendeklarasikan variabel `sisi` yang akan menyimpan input dari pengguna. 
-2. Program menampilkan pesan "Masukkan panjang sisi persegi:" untuk meminta pengguna memasukkan nilai panjang sisi persegi. Fungsi `fmt.Scan(&sisi)` digunakan untuk membaca input dari pengguna.
-3. Setelah nilai sisi dimasukkan, program menghitung luas persegi dengan mengalikan nilai `sisi` dengan dirinya sendiri (sisi * sisi). Hasil perhitungan ini disimpan dalam variabel `luas`.
-4. Program juga menghitung keliling persegi dengan mengalikan nilai `sisi` dengan 4 (4 * sisi). Hasilnya disimpan dalam variabel `keliling`.
-5. Setelah perhitungan selesai, program menampilkan hasil perhitungan luas dan keliling menggunakan fungsi `fmt.Printf` untuk memformat hasil ke dua angka di belakang koma.
-6. Output menampilkan nilai luas dan keliling yang sudah dihitung berdasarkan input panjang sisi yang diberikan oleh pengguna.
+3. **Fungsi `main`**:
+   - Deklarasi variabel `sisi` bertipe `float64`.
+   - Mencetak pesan untuk meminta pengguna memasukkan panjang sisi persegi.
+   - Menggunakan `fmt.Scanln(&sisi)` untuk membaca input dari pengguna.
+   - Memanggil fungsi `hitungLuas` dan menyimpan hasilnya dalam variabel `luas`.
+   - Memanggil fungsi `hitungKeliling` dan menyimpan hasilnya dalam variabel `keliling`.
+   - Mencetak hasil luas dan keliling dengan format dua desimal.
 
 
+
+#### Cara Kerja*
+
+
+1. **Input Pengguna**:
+   - Program meminta pengguna untuk memasukkan panjang sisi persegi melalui konsol.
+
+2. **Proses Perhitungan**:
+   - Setelah menerima input, program memanggil fungsi `hitungLuas` untuk menghitung luas berdasarkan sisi yang diberikan.
+   - Selanjutnya, program memanggil fungsi `hitungKeliling` untuk menghitung keliling dari persegi tersebut.
+
+3. **Output Hasil**:
+   - Program menampilkan hasil perhitungan luas dan keliling ke layar dengan format yang mudah dibaca, menggunakan dua angka di belakang koma.
+     
 ## <strong> Unguided </strong>
 ### <h2> UNGUIDED 1 </h2>
 
