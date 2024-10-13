@@ -19,12 +19,41 @@
 <br></br>
 
 #### I. DASAR TEORI
+##### Fungsi
 Dalam konteks pemrograman, fungsi adalah sekumpulan blok kode yang dibungkus dengan nama tertentu. Penerapan fungsi yang tepat akan menjadikan kode lebih modular dan juga dry (singkatan dari don't repeat yourself) yang artinya kita tidak perlu menuliskan banyak kode untuk kegunaan yang sama berulang kali. Cukup deklarasikan sekali saja blok kode sebagai suatu fungsi, lalu panggil sesuai kebutuhan.
 
-Fungsi main() sendiri merupakan fungsi utama pada program Go, yang akan dieksekusi ketika program dijalankan. Selain fungsi main() , kita juga bisa membuat fungsi lainnya. Dan caranya cukup mudah, yaitu dengan menuliskan keyword func kemudian diikuti nama fungsi, lalu kurung () (yang bisa diisi parameter), dan diakhiri dengan kurung kurawal untuk membungkus blok kode. Parameter merupakan variabel yang menempel di fungsi yang nilainya ditentukan saat pemanggilan fungsi tersebut. Parameter sifatnya opsional, suatu fungsi bisa tidak memiliki parameter, atau bisa saja memeliki satu atau banyak parameter (tergantung kebutuhan)
+Fungsi main() sendiri merupakan fungsi utama pada program Go, yang akan dieksekusi ketika program dijalankan. Selain fungsi main() , kita juga bisa membuat fungsi lainnya. Dan caranya cukup mudah, yaitu dengan menuliskan keyword func kemudian diikuti nama fungsi, lalu kurung () (yang bisa diisi parameter), dan diakhiri dengan kurung kurawal untuk membungkus blok kode. Parameter merupakan variabel yang menempel di fungsi yang nilainya ditentukan saat pemanggilan fungsi tersebut. Parameter sifatnya opsional, suatu fungsi bisa tidak memiliki parameter, atau bisa saja memeliki satu atau banyak parameter (tergantung kebutuhan).
 
-Selain parameter, fungsi bisa memiliki attribute return value atau nilai balik. Fungsi yang memiliki return value, saat deklarasinya harus ditentukan terlebih dahulu tipe data dari nilai baliknya
+Deklarasi fungsi: 
+```go
+func name (parameter-list) (result-list) {
+	body
+}
+```
 
+Selain parameter, fungsi bisa memiliki attribute return value atau nilai balik. Fungsi yang memiliki return value, saat deklarasinya harus ditentukan terlebih dahulu tipe data dari nilai baliknya.
+Contoh fungsi yang memiliki attribute return value :
+```go
+func randomWithRange(min, max int) int {
+	var value = randomizer.Int()%(max-min+1) + min
+	return value
+}
+
+```
+
+##### Return Multiple Value
+Sebuah fungsi dapat mengembalikan nilai lebih dari satu.
+Contohnya : 
+```go
+func f() (int, int) {
+  return 5, 6
+}
+
+func main() {
+  x, y := f()
+}
+```
+Multiple value sering diganakan untuk mengembalikan nilai error bersama dengan hasil atau boolean untuk menandakan succes
 
 <br></br>
 
@@ -65,7 +94,7 @@ func main() {
 ![Screenshot 2024-10-13 200124](https://github.com/user-attachments/assets/18792a59-5136-46f3-a251-f91183e70a12)
 
 ##### Deskripsi Program
-Kode Go ini menghitung dan mencetak permutasi dari dua bilangan bulat yang diinput oleh pengguna. Fungsi faktorial menghitung faktorial dari sebuah bilangan bulat dengan menggunakan perulangan for. Fungsi permutasi menghitung permutasi dari dua bilangan bulat menggunakan rumus permutasi: nPr = n! / (n-r)!. Dalam fungsi main, pengguna diminta untuk memasukkan dua bilangan bulat. Kemudian, fungsi permutasi dipanggil dengan argumen yang sesuai untuk menghitung permutasi. Hasil permutasi kemudian dicetak ke layar.
+Program ini menghitung dan mencetak permutasi dari dua bilangan bulat yang diinput oleh pengguna. Fungsi faktorial menghitung faktorial dari sebuah bilangan bulat dengan menggunakan perulangan for. Fungsi permutasi menghitung permutasi dari dua bilangan bulat menggunakan rumus permutasi: nPr = n! / (n-r)!. Dalam fungsi main, pengguna diminta untuk memasukkan dua bilangan bulat. Kemudian, fungsi permutasi dipanggil dengan argumen yang sesuai untuk menghitung permutasi. Hasil permutasi kemudian dicetak ke layar.
 
 
 ##### 2. Program menghitung luas dan keliling persegi
@@ -96,9 +125,7 @@ func main() {
 ![Screenshot 2024-10-13 200511](https://github.com/user-attachments/assets/60c562bf-6294-443f-90de-489c3cba9d42)
 
 ##### Deskripsi Program
-Kode Go ini dirancang untuk menghitung luas dan keliling sebuah persegi. Program dimulai dengan mendefinisikan dua fungsi utama, yaitu Luas dan Keliling. Fungsi Luas menerima panjang sisi persegi sebagai input (dalam variabel s) dan mengembalikan nilai luas persegi yang dihitung dengan rumus sisi * sisi. Fungsi Keliling juga menerima panjang sisi sebagai input dan mengembalikan nilai keliling persegi yang dihitung dengan rumus 4 * sisi.
-
-Di dalam fungsi main, program meminta pengguna untuk memasukkan panjang sisi persegi. Nilai yang dimasukkan pengguna kemudian disimpan dalam variabel s. Setelah itu, program memanggil fungsi Luas dan Keliling dengan nilai s sebagai argumen, lalu mencetak hasil perhitungan luas dan keliling ke layar.
+Program ini dirancang untuk menghitung luas dan keliling sebuah persegi. Program dimulai dengan mendefinisikan dua fungsi utama, yaitu Luas dan Keliling. Fungsi Luas menerima panjang sisi persegi sebagai input (dalam variabel s) dan mengembalikan nilai luas persegi yang dihitung dengan rumus sisi * sisi. Fungsi Keliling juga menerima panjang sisi sebagai input dan mengembalikan nilai keliling persegi yang dihitung dengan rumus 4 * sisi. Di dalam fungsi main, program meminta user untuk memasukkan panjang sisi persegi. Nilai yang dimasukkan user kemudian disimpan dalam variabel s. Setelah itu, program memanggil fungsi Luas dan Keliling dengan nilai s sebagai argumen, lalu mencetak hasil perhitungan luas dan keliling.
 
 <br></br>
 
@@ -145,7 +172,7 @@ func main() {
 ![Screenshot 2024-10-13 200850](https://github.com/user-attachments/assets/1c0cc7ba-4578-4357-8175-bccfe2808d5a)
 
 ##### Deskripsi Program
-Kode ini dirancang untuk menghitung permutasi dan kombinasi dari dua pasang bilangan bulat yang diberikan oleh pengguna. Program akan mengecek terlebih dahulu apakah nilai a lebih besar sama dengan c dan b lebih besar sama dengan d. Jika kondisi ini terpenuhi, maka perhitungan permutasi dan kombinasi akan dilakukan.
+Program ini dirancang untuk menghitung permutasi dan kombinasi dari dua pasang bilangan bulat yang diberikan oleh user. Program akan mengecek terlebih dahulu apakah nilai a lebih besar sama dengan c dan b lebih besar sama dengan d. Jika kondisi ini terpenuhi, maka perhitungan permutasi dan kombinasi akan dilakukan.
 
 ##### 2. Diberikan tiga buah fungsi matematika yaitu f(x) = x ^ 2 g(x) = x - 2 danh h(x) = x + 1 Fungsi komposisi (fogoh) (x) artinya adalah f(g(h(x))) Tuliskan f(x) g(x) dan h(x) dalam bentuk function. Masukan terdiri dari sebuah bilangan bulat a, b dan c yang dipisahkan oleh spasl. Keluaran terdiri dari tiga baris. Baris pertama adalah (fogoh) (a) baris kedua (gohof) (b) , dan baris ketiga adalah (hofog) (c)!
 ```go
@@ -191,9 +218,7 @@ func main() {
 ![Screenshot 2024-10-13 201249](https://github.com/user-attachments/assets/637eb9ba-dace-43eb-bd8f-8b2a34fd1158)
 
 ##### Deskripsi Program
-Kode tersebut merupakan program sederhana yang menghitung nilai dari tiga fungsi komposisi: f(g(h(x))), g(h(f(x))), dan h(f(g(x))). Fungsi-fungsi dasar yang digunakan adalah fx, gx, dan hx yang masing-masing melakukan operasi kuadrat, pengurangan 2, dan penambahan 1 terhadap bilangan yang diberikan.
-
-Program meminta pengguna untuk memasukkan tiga bilangan, kemudian menghitung nilai dari ketiga fungsi komposisi menggunakan bilangan-bilangan tersebut. Hasil perhitungan kemudian ditampilkan ke layar.
+Program ini adalah program untuk menghitung nilai dari tiga fungsi komposisi: f(g(h(x))), g(h(f(x))), dan h(f(g(x))). Fungsi-fungsi dasar yang digunakan adalah fx, gx, dan hx yang masing-masing melakukan operasi kuadrat, pengurangan 2, dan penambahan 1 terhadap bilangan yang diberikan.Program meminta user untuk memasukkan tiga bilangan, kemudian menghitung nilai dari ketiga fungsi komposisi menggunakan bilangan-bilangan tersebut. Hasil perhitungan kemudian ditampilkan.
 
 ##### 3. [Lingkaran] Suatu lingkaran didefinisikan dengan koordinat titik pusat (cx, cy) dengan radius r. Apabila diberikan dua buah lingkaran, maka tentukan posisi sebuah titik sembarang (x, y) berdasarkan dua lingkaran tersebut. Masukan terdiri dari beberapa tiga baris. Baris pertama dan kedua adalah koordinat titik pusat dan radius dari lingkaran 1 dan lingkaran 2, sedangkan baris ketiga adalah koordinat titik sembarang. Asumsi sumbu x dan y dari semua titik dan juga radius direpresentasikan dengan bilangan bulat. Keluaran berupa string yang menyatakan posisi titik "Titik di dalam lingkaran 1 dan 2", "Titik di dalam lingkaran 1", "Titik di dalam lingkaran 2", atau "Titik di luar lingkaran 1 dan 2".
 ```go
@@ -240,8 +265,9 @@ func main() {
 ![Screenshot 2024-10-13 212054](https://github.com/user-attachments/assets/38134f2c-b8f7-4b1c-bc21-cb9e64d5e8da)
 
 ##### Deskripsi Program
-Program ini akan meminta pengguna untuk memasukkan koordinat titik pusat dan jari-jari dari dua lingkaran, serta koordinat titik sembarang yang ingin diuji posisinya. Kemudian, program akan menghitung jarak antara titik sembarang dengan titik pusat masing-masing lingkaran dan membandingkannya dengan jari-jari lingkaran tersebut. Berdasarkan hasil perbandingan ini, program akan menentukan apakah titik tersebut berada di dalam lingkaran pertama, lingkaran kedua, kedua-duanya, atau di luar kedua lingkaran.
+Program ini akan meminta user untuk memasukkan koordinat titik pusat dan jari-jari dari dua lingkaran, serta koordinat titik sembarang yang ingin diuji posisinya. Kemudian, program akan menghitung jarak antara titik sembarang dengan titik pusat masing-masing lingkaran dan membandingkannya dengan jari-jari lingkaran tersebut. Berdasarkan hasil perbandingan ini, program akan menentukan apakah titik tersebut berada di dalam lingkaran pertama, lingkaran kedua, kedua-duanya, atau di luar kedua lingkaran.
 
 
 ### Referensi
-
+[1] Donovan, A., Kernighan, B. (2015). The Go Programming Language. United Kingdom: Pearson Education.
+[2] Agung, Noval (2024, 30 Agustus). Dasar Pemrograman Golang. Diakses pada 13 Oktober 2024, dari https://dasarpemrogramangolang.novalagung.com/
