@@ -49,7 +49,7 @@
 ## Dasar Teori
 
 ### 1. Pengertian Fungsi
-Fungsi dalam Go adalah blok kode yang dapat digunakan kembali untuk melakukan tugas tertentu. Fungsi mempermudah pembagian kode menjadi modul-modul yang lebih kecil, sehingga meningkatkan keterbacaan dan efisiensi.
+Fungsi dalam Go adalah blok kode yang dapat digunakan kembali untuk melakukan tugas tertentu. Fungsi mempermudah pembagian kode menjadi modul-modul yang 	lebih kecil, sehingga meningkatkan keterbacaan dan efisiensi.
 ### 2. Struktur Fungsi di Go
 Fungsi di Go dideklarasikan menggunakan kata kunci `func`, diikuti oleh nama fungsi, parameter, dan tipe kembalian (jika ada). Contoh fungsi sederhana:
 ```go
