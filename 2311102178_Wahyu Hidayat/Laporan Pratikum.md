@@ -180,30 +180,31 @@ Program ini menghitung permutasi dua bilangan bulat positif, yaitu jumlah cara u
 
 #### Source Code
 ```go
-package main 
+package main
 
-import "fmt"
- 
-func main(){
-	var a,b int 
-	fmt.Scan(&a, &b) 
-	if a >= b {
-		fmt.Println(permutasi(a,b))
-	}else{
-		fmt.Println(permutasi(b,a))
-	}
-}
-func faktorial(n int) int{ 
-	var hasil int = 1
-	var i int
-	for i = 1; i <= n; i++ { 
-		hasil = hasil * i
-	}
+import (
+	"fmt"
+)
 
-	return hasil
+func hitungLuas(sisi float64) float64 {
+	return sisi * sisi
 }
-func permutasi(n,r int) int {
-	return faktorial(n) / faktorial(n-r)
+
+func hitungKeliling(sisi float64) float64 {
+	return 4 * sisi
+}
+
+func main() {
+	var sisi float64
+
+	fmt.Print("Sisi Persegi: ")
+	fmt.Scan(&sisi)
+
+	luas := hitungLuas(sisi)
+	keliling := hitungKeliling(sisi)
+
+	fmt.Printf("Luas persegi: %.2f\n", luas)
+	fmt.Printf("Keliling persegi: %.2f\n", keliling)
 }
 ```
 #### Screenshoot Source Code
