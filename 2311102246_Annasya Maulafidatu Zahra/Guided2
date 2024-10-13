@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func main() {
+    var sisi int
+    fmt.Print("Masukkan panjang sisi persegi: ")
+    fmt.Scan(&sisi)
+    luas := luasPersegi(sisi)
+    keliling := kelilingPersegi(sisi)
+    fmt.Printf("Luas persegi: %d\n", luas)
+    fmt.Printf("Keliling persegi: %d\n", keliling)
+}
+func luasPersegi(sisi int) int {
+    return sisi * sisi
+}
+func kelilingPersegi(sisi int) int {
+    return 4 * sisi
+}
+
+
