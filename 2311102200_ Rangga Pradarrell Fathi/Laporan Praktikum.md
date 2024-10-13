@@ -229,36 +229,45 @@ Keluaran terdiri dari tiga baris. Baris pertama adalah (𝑓𝑜𝑔𝑜ℎ)(�
 #### Source Code
 
 ```go
+// Rangga Pradarrell Fathi
+// 2311102200
+// IF-11-05
 package main
 
 import "fmt"
 
+// Fungsi f menerima sebuah integer x dan mengembalikan kuadrat dari x
 func f(x int) int {
-	fungsi_f := x * x
-	return fungsi_f
+    fungsi_f := x * x
+    return fungsi_f
 }
 
+// Fungsi g menerima sebuah integer x dan mengembalikan x dikurangi 2
 func g(x int) int {
-	fungsi_g := x - 2
-	return fungsi_g
+    fungsi_g := x - 2
+    return fungsi_g
 }
 
+// Fungsi h menerima sebuah integer x dan mengembalikan x ditambah 1
 func h(x int) int {
-	fungsi_h := x + 1
-	return fungsi_h
+    fungsi_h := x + 1
+    return fungsi_h
 }
 
 func main() {
-	fmt.Print("Masukkan bilangan: ")
+    // Meminta input dari pengguna
+    fmt.Print("Masukkan bilangan: ")
+    var a, b, c int
+    fmt.Scan(&a, &b, &c)
 
-	var a, b, c int
-	fmt.Scan(&a, &b, &c)
+    // Menghitung dan mencetak hasil komposisi fungsi f(g(h(a)))
+    fmt.Println("Hasil fungsi fogoh dari bilangan pertama adalah ", f(g(h(a))))
 
-	fmt.Println("Hasil fungsi fogoh dari bilangan pertama adalah ", f(g(h(a))))
+    // Menghitung dan mencetak hasil komposisi fungsi g(h(f(b)))
+    fmt.Println("Hasil fungsi gohof dari bilangan kedua adalah ", g(h(f(b))))
 
-	fmt.Println("Hasil fungsi gohof dari bilangan pertama adalah ", g(h(f(b))))
-
-	fmt.Println("Hasil fungsi gohof dari bilangan pertama adalah ", h(f(g(c))))
+    // Menghitung dan mencetak hasil komposisi fungsi h(f(g(c)))
+    fmt.Println("Hasil fungsi hofog dari bilangan ketiga adalah ", h(f(g(c))))
 }
 ```
 
@@ -315,47 +324,56 @@ Fungsi untuk menghitung jarak titik (a, b) dan (c, d) dimana rumus jarak adalah:
 #### Source Code
 
 ```go
-//Rangga Pradarrell Fathi
-//2311102200
-//IF-11
+// Rangga Pradarrell Fathi
+// 2311102200
+// IF-11-05
+
 package main
 
 import (
-	"fmt"
-	"math"
+    "fmt"
+    "math"
 )
 
+// Fungsi jarak menghitung jarak antara dua titik (a,b) dan (c,d) dalam koordinat kartesian
+// menggunakan rumus jarak Euclidean: √((a-c)² + (b-d)²)
 func jarak(a, b, c, d float64) float64 {
-	return math.Sqrt(math.Pow(a-c, 2) + math.Pow(b-d, 2))
+    return math.Sqrt(math.Pow(a-c, 2) + math.Pow(b-d, 2))
 }
 
+// Fungsi didalam memeriksa apakah suatu titik (x,y) berada di dalam lingkaran
+// dengan pusat (cx,cy) dan radius r
 func didalam(cx, cy, r, x, y float64) bool {
-	return jarak(cx, cy, x, y) <= r
+    return jarak(cx, cy, x, y) <= r
 }
 
 func main() {
-	var cx1, cy1, r1, cx2, cy2, r2, x, y float64
+    // Deklarasi variabel untuk koordinat dan radius dua lingkaran, serta titik yang akan diperiksa
+    var cx1, cy1, r1, cx2, cy2, r2, x, y float64
 
-	fmt.Println("Masukkan koordinat titik pusat lingkaran 1 (cx, cy) dan radius (r):")
-	fmt.Scanln(&cx1, &cy1, &r1)
+    // Meminta input dari pengguna untuk lingkaran 1
+    fmt.Println("Masukkan koordinat titik pusat lingkaran 1 (cx, cy) dan radius (r):")
+    fmt.Scanln(&cx1, &cy1, &r1)
 
-	fmt.Println("Masukkan koordinat titik pusat lingkaran 2 (cx, cy) dan radius (r):")
-	fmt.Scanln(&cx2, &cy2, &r2)
+    // Meminta input dari pengguna untuk lingkaran 2
+    fmt.Println("Masukkan koordinat titik pusat lingkaran 2 (cx, cy) dan radius (r):")
+    fmt.Scanln(&cx2, &cy2, &r2)
 
-	fmt.Println("Masukkan koordinat titik (x, y):")
-	fmt.Scanln(&x, &y)
+    // Meminta input koordinat titik yang akan diperiksa
+    fmt.Println("Masukkan koordinat titik (x, y):")
+    fmt.Scanln(&x, &y)
 
-	if didalam(cx1, cy1, r1, x, y) && didalam(cx2, cy2, r2, x, y) {
-		fmt.Println("Titik di dalam lingkaran 1 dan 2")
-	} else if didalam(cx1, cy1, r1, x, y) {
-		fmt.Println("Titik di dalam lingkaran 1")
-	} else if didalam(cx2, cy2, r2, x, y) {
-		fmt.Println("Titik di dalam lingkaran 2")
-	} else {
-		fmt.Println("Titik di luar lingkaran ")
-	}
+    // Memeriksa posisi titik terhadap kedua lingkaran dan mencetak hasilnya
+    if didalam(cx1, cy1, r1, x, y) && didalam(cx2, cy2, r2, x, y) {
+        fmt.Println("Titik di dalam lingkaran 1 dan 2")
+    } else if didalam(cx1, cy1, r1, x, y) {
+        fmt.Println("Titik di dalam lingkaran 1")
+    } else if didalam(cx2, cy2, r2, x, y) {
+        fmt.Println("Titik di dalam lingkaran 2")
+    } else {
+        fmt.Println("Titik di luar lingkaran ")
+    }
 }
-
 ```
 
 #### Source Code
