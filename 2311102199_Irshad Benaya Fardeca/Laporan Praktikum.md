@@ -19,7 +19,7 @@
 <br></br>
 
 #### I. DASAR TEORI
-##### Fungsi
+#### Function
 Dalam konteks pemrograman, fungsi adalah sekumpulan blok kode yang dibungkus dengan nama tertentu. Penerapan fungsi yang tepat akan menjadikan kode lebih modular dan juga dry (singkatan dari don't repeat yourself) yang artinya kita tidak perlu menuliskan banyak kode untuk kegunaan yang sama berulang kali. Cukup deklarasikan sekali saja blok kode sebagai suatu fungsi, lalu panggil sesuai kebutuhan.
 
 Fungsi main() sendiri merupakan fungsi utama pada program Go, yang akan dieksekusi ketika program dijalankan. Selain fungsi main() , kita juga bisa membuat fungsi lainnya. Dan caranya cukup mudah, yaitu dengan menuliskan keyword func kemudian diikuti nama fungsi, lalu kurung () (yang bisa diisi parameter), dan diakhiri dengan kurung kurawal untuk membungkus blok kode. Parameter merupakan variabel yang menempel di fungsi yang nilainya ditentukan saat pemanggilan fungsi tersebut. Parameter sifatnya opsional, suatu fungsi bisa tidak memiliki parameter, atau bisa saja memeliki satu atau banyak parameter (tergantung kebutuhan).
@@ -41,7 +41,7 @@ func randomWithRange(min, max int) int {
 
 ```
 
-##### Return Multiple Value
+#### Return Multiple Value
 Sebuah fungsi dapat mengembalikan nilai lebih dari satu.
 Contohnya : 
 ```go
