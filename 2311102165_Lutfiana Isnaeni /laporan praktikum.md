@@ -48,13 +48,40 @@
 
 ## Dasar Teori
 
+### 1. Pengertian Fungsi
+Fungsi dalam Go adalah blok kode yang dapat digunakan kembali untuk melakukan tugas tertentu. Fungsi mempermudah pembagian kode menjadi modul-modul yang lebih kecil, sehingga meningkatkan keterbacaan dan efisiensi.
+### 2. Struktur Fungsi di Go
+Fungsi di Go dideklarasikan menggunakan kata kunci `func`, diikuti oleh nama fungsi, parameter, dan tipe kembalian (jika ada). Contoh fungsi sederhana:
+```go
+func tambah(a int, b int) int {
+    return a + b
+}
+```
+Fungsi ini menerima dua parameter `a` dan `b`, keduanya bertipe `int`, dan mengembalikan hasil penjumlahan sebagai `int`.
+### 3. Fungsi dengan Banyak Nilai Kembalian
+Go mendukung fungsi yang bisa mengembalikan lebih dari satu nilai, sangat berguna dalam banyak kasus. Contoh:
+```go
+func bagi(a, b int) (int, error) {
+    if b == 0 {
+        return 0, fmt.Errorf("pembagian dengan nol")
+    }
+    return a / b, nil
+}
+```
 
+### 4. Fungsi Anonim
+Fungsi dalam Go juga dapat dibuat tanpa nama (anonim) dan disimpan dalam variabel atau langsung dieksekusi. Contoh fungsi anonim:
+```go
+add := func(a, b int) int {
+    return a + b
+}
+fmt.Println(add(3, 4)) // Output: 7
+```
 
-
-
-
-
-
+### 5. Manfaat Fungsi dalam 
+- Modularitas dan Keterbacaan: Mempermudah pembagian kode menjadi bagian-bagian yang lebih terstruktur.
+- Penggunaan Ulang: Fungsi dapat dipanggil berkali-kali tanpa harus menulis ulang logika yang sama.
+- Dukungan Nilai Kembalian Ganda: Memungkinkan pengembalian hasil dan pesan error dalam satu fungsi.
 
 ## Guided
 
@@ -91,7 +118,7 @@ func permutasi(n, r int) int {
 #### Output
 ![ss output guided1 modul3](https://github.com/user-attachments/assets/fa8fad50-9757-4bc4-a80e-0ff5d5407a66)
 
-### Deskripsi Program
+### Deskripsi Program:
 	Kode di atas digumakan untuk menghitung nilai permutasi dari dua angka yang diinputkan oleh pengguna.
  	Permutasi menghitung berapa banyak cara mengatur objek dari n objek yang berbeda, dengan mempertimbangkan urutannya.
 
@@ -148,7 +175,7 @@ func main() {
 #### Output
 ![ss output guided2](https://github.com/user-attachments/assets/06a31bb1-4382-42fa-b98a-c80fc76800aa)
 
-### Deskripsi Program
+### Deskripsi Program:
 	Program di atas adalah sebuah program yang dibuat untuk menghitung luas dan keliling persegi berdasarkan input panjang sisi dari pengguna.
  	Program ini mengikuti algoritma yang sederhana, yaitu menerima input, melakukan perhitungan luas dan keliling, lalu menampilkan hasilnya.
 
@@ -179,7 +206,8 @@ func main() {
 	Minggu ini, mahasiswa Fakultas Informatika mendapatkan tugas dari mata kuliah matematika diskrit untuk mempelajari kombinasi dan permutasi.
  	Jonas salah seorang mahasiswa, iseng untuk mengimplementasikannya ke dalam suatu program. Oleh karena itu bersediakah kalian membantu Jonas? 
 	Masukan terdiri dari empat buah bilangan asli 𝑎, 𝑏, 𝑐, dan 𝑑 yang dipisahkan oleh spasi, dengan syarat 𝑎 ≥ 𝑐 dan 𝑏 ≥ 𝑑.
-	Keluaran terdiri dari dua baris. Baris pertama adalah hasil permutasi dan kombinasi 𝒂 terhadap 𝑐, sedangkan baris kedua adalah hasil permutasi dan 		kombinasi 𝑏 terhadap 𝑑.
+	Keluaran terdiri dari dua baris. Baris pertama adalah hasil permutasi dan kombinasi 𝒂 terhadap 𝑐, 
+	sedangkan baris kedua adalah hasil permutasi dan kombinasi 𝑏 terhadap 𝑑.
 Catatan: permutasi (𝑃) dan kombinasi (𝐶) dari 𝑛 terhadap 𝑟 (𝑛 ≥ 𝑟) dapat dihitung dengan menggunakan persamaan berikut!
 ![ss soal unguided 1 modul 3](https://github.com/user-attachments/assets/1ac36a6b-4e1b-4916-9f3d-f42d762e3f1a)
 
@@ -244,8 +272,9 @@ func main() {
 #### Output
 ![ss output unguided 1 modul 3](https://github.com/user-attachments/assets/8cf8d7c4-a418-492d-80d0-2b2661c4401c)
 
-### Deskripsi Program
-	Program di atas dibuat untuk menghitung permutasi dan kombinasi dari dua pasang nilai input yang diberikan oleh pengguna. Program menggunakan rumus 		permutasi dan kombinasi dasar dari matematika. 
+### Deskripsi Program:
+	Program di atas dibuat untuk menghitung permutasi dan kombinasi dari dua pasang nilai input yang diberikan oleh pengguna.
+ 	Program menggunakan rumus permutasi dan kombinasi dasar dari matematika. 
  	Program ini menerima empat input: a, b, c, dan d, lalu menghitung:
 	1. Permutasi P (n, r) P (n, r) P (n, r): menghitung permutasi dari a dengan c, dan b dengan d.
 	2. Kombinasi C (n, r) C (n, r) C(n, r): menghitung kombinasi dari a dengan c, dan b dengan d.
@@ -256,10 +285,8 @@ func main() {
 	   P (n, r)= n!/(n − r)!
 	3. Kombinasi C (n, r) C (n, r) C(n, r): menghitung berapa cara memilih r objek dari n objek yang berbeda, tanpa memperhatikan urutan.
 	   C (n, r)= n! / r! × (n−r)!
-
-
-
-### Algoritma Program
+    
+### Algoritma Program:
 	1. Program mendefinisikan fungsi factorial(n) untuk menghitung faktorial dari bilangan nnn.
 	2. Fungsi permutation (n, r) digunakan untuk menghitung permutasi berdasarkan rumus permutasi.
 	3. Fungsi combination (n, r) digunakan untuk menghitung kombinasi berdasarkan rumus kombinasi.
@@ -269,7 +296,7 @@ func main() {
 	   • Permutasi dan kombinasi dari b dan d
 	6. Hasil perhitungan kemudian ditampilkan dalam dua baris output.
 
-### Cara Kerja Program
+### Cara Kerja Program:
 	
 	1. Input: Pengguna diminta untuk memasukkan nilai a, b, c, dan d. Misalnya, pengguna memasukkan nilai a= 5, b= 10,  c= 3, d= 10 
 	2. Proses:
@@ -344,9 +371,49 @@ func main() {
 #### Output
 ![image](https://github.com/user-attachments/assets/acae0b73-b78b-46dc-8e2c-2f8aa4f7ea0b)
 
-### Deskripsi Program
-### Algoritma Program
-### Cara Kerja Program
+### Deskripsi Program:
+	Program di atas bertujuan untuk menghitung komposisi beberapa fungsi matematika sederhana, yaitu fungsi `f(x)`, `g(x)`, dan `h(x)`. 
+ 	Program ini meminta pengguna untuk memasukkan tiga bilangan bulat `a`, `b`, dan `c`, kemudian menghitung hasil dari komposisi fungsi berikut:
+	1. f(g(h(a)))
+	2. g(h(f(b))) 
+	3. h(f(g(c)))
+	Fungsi-fungsi yang digunakan dalam program adalah:
+	- **f(x)**: menghitung f(x) = x^2 
+	- **g(x)**: menghitung g(x) = x - 2 
+	- **h(x)**: menghitung h(x) = x + 1
+### Algoritma Program:
+	1. Deklarasi tiga fungsi matematika: `f(x)`, `g(x)`, dan `h(x)`.
+ 	  - ```f(x)``` menghitung kuadrat dari nilai `x`.
+ 	  - `g(x)` mengurangi 2 dari nilai `x`.
+ 	  - `h(x)` menambahkan 1 ke nilai `x`.
+	2. Terdapat tiga fungsi komposisi yang memanggil fungsi-fungsi di atas:
+	   - `fogoh(x)` menghitung komposisi f(g(h(x))).
+	   - `gohof(x)` menghitung komposisi g(h(f(x))).
+ 	   - `hofog(x)` menghitung komposisi h(f(g(x))).
+	3. Pada fungsi `main`, program meminta input tiga nilai `a`, `b`, dan `c` dari pengguna.
+	4. Program kemudian menampilkan hasil dari komposisi fungsi-fungsi:
+ 	  - `fogoh (a)` menghitung f(g(h(a))) dan menampilkan hasilnya.
+  	  - `gohof (b)` menghitung g(h(f(b))) dan menampilkan hasilnya.
+  	  - `hofog (c)` menghitung h(f(g(c))) dan menampilkan hasilnya.
+     
+### Cara Kerja Program:
+	1. Input: Pengguna diminta untuk memasukkan tiga nilai bilangan bulat a, b, dan c.
+	2. Pemrosesan:
+  	  - Program pertama-tama menghitung hasil dari fogoh(a), yaitu komposisi fungsi f(g(h(a))):
+    	  - Fungsi h(a) dihitung terlebih dahulu, yaitu a + 1.
+    	  - Hasilnya kemudian digunakan sebagai input untuk g(x), yaitu g(h(a)) = (a + 1) – 2.
+       	- Hasil dari g(h(a)) digunakan sebagai input untuk f(x), yaitu f(g(h(a))) = (a - 1)^2.
+   
+ 	  - Selanjutnya program menghitung `gohof(b)`, yaitu komposisi fungsi g(h(f(b))):
+    	  - Fungsi f(b) dihitung terlebih dahulu, yaitu b^2.
+   	  - Hasil dari f(b) digunakan sebagai input untuk h(x), yaitu h(f(b)) = b^2 +1.
+    	  - Hasil dari h(f(b)) digunakan sebagai input untuk g(x), yaitu g(h(f(b))) = (b^2 + 1) – 2.
+     	  - Terakhir program menghitung `hofog(c), yaitu komposisi fungsi h(f(g(c))):
+	  - Fungsi g(c) dihitung terlebih dahulu, yaitu  c - 2 .
+    	  - Hasil dari g(c) digunakan sebagai input untuk f(x), yaitu f(g(c)) = (c - 2)^2.
+       	  - Hasil dari f(g(c)) digunakan sebagai input untuk h(x), yaitu h(f(g(c))) = (c - 2)^2 + 1.
+	3. Output: Setelah setiap komposisi fungsi dihitung, hasilnya dicetak ke layar.
+
 
 ### Soal Nomor 3
 	Suatu lingkaran didefinisikan dengan koordinat titik pusat (𝑐𝑥, 𝑐𝑦) dengan radius 𝑟.
@@ -414,8 +481,37 @@ func main() {
 #### Output
 ![image](https://github.com/user-attachments/assets/0559490b-ee1f-4b60-b86d-cda9d18d60c4)
 ### Deskripsi Program:
+	Program ini digunakan untuk menentukan apakah sebuah titik berada di dalam dua lingkaran atau di luar lingkaran.
+ 	Program akan meminta input dari pengguna berupa koordinat pusat dan radius dari dua lingkaran, serta koordinat sebuah titik sembarang.
+  	Selanjutnya, program akan mengecek apakah titik tersebut berada di dalam salah satu atau kedua lingkaran, atau berada di luar keduanya.
 ### Algoritma Program:
+	1. Program mendeklarasikan fungsi jarak(x1, y1, x2, y2) untuk menghitung jarak antara dua titik menggunakan rumus jarak Euclidean
+	2. Fungsi diDalam(cx, cy, r, x, y) digunakan untuk menentukan apakah suatu titik (x,y) berada di dalam lingkaran dengan pusat
+ 	(cx,cy) dan radius r.Jika jarak antara pusat lingkaran dan titik lebih kecil atau sama dengan radius lingkaran, titik dianggap berada di dalam lingkaran.
+	3. Dalam fungsi main:
+	• Program menerima input dari pengguna berupa:
+	• cx1, cy1, r1: koordinat pusat dan radius lingkaran pertama.
+	• cx2, cy2, r2: koordinat pusat dan radius lingkaran kedua.
+	• x, y koordinat titik sembarang yang ingin diuji.
+	4. Program mengecek apakah titik (x,y) berada di dalam lingkaran 1 atau lingkaran 2:
+	• Menggunakan fungsi di dalam untuk mengecek apakah titik berada di dalam lingkaran pertama dan kedua.
+	5. Berdasarkan hasil pengecekan, program menampilkan salah satu dari empat kemungkinan:
+	• "Titik di dalam lingkaran 1 dan 2" jika titik berada di dalam kedua lingkaran.
+	• "Titik di dalam lingkaran 1" jika titik hanya berada di dalam lingkaran pertama.
+	• "Titik di dalam lingkaran 2" jika titik hanya berada di dalam lingkaran kedua.
+	• "Titik di luar lingkaran 1 dan 2" jika titik berada di luar kedua lingkaran
+
 ### Cara Kerja Program:
+	1. Input:
+	• Pengguna memasukkan koordinat pusat dan radius untuk dua lingkaran, serta koordinat titik sembarang yang ingin diperiksa.
+	2. Pemrosesan:
+	• Program menghitung jarak antara titik sembarang dengan pusat lingkaran pertama menggunakan fungsi jarak,
+ 	kemudian membandingkan jarak tersebut dengan radius lingkaran pertama untuk menentukan apakah titik berada di dalam lingkaran.
+	• Langkah yang sama dilakukan untuk lingkaran kedua.
+	3. Output:
+	• Program menampilkan hasil sesuai dengan posisi titik terhadap kedua lingkaran, 
+ 	apakah di dalam kedua lingkaran, di salah satu lingkaran, atau di luar keduanya.
+
 
 
 
