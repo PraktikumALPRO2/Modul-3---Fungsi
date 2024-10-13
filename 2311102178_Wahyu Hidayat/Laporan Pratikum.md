@@ -315,10 +315,17 @@ Program ini dibuat untuk menghitung nilai permutasi dan kombinasi dari empat bil
 - Hasil permutasi dan kombinasi dari b terhadap d ditampilkan di baris kedua.
 
 #### Cara Kerja
-- Fungsi hitungLuas(sisi float64): Fungsi ini menghitung luas persegi dengan mengalikan panjang sisi dengan dirinya sendiri.
-- Fungsi hitungKeliling(sisi float64): Fungsi ini menghitung keliling persegi dengan mengalikan panjang sisi dengan 4.
-- Proses Input: Pengguna diminta untuk memasukkan nilai panjang sisi persegi.
-- Proses Output: Program menampilkan hasil perhitungan luas dan keliling persegi dengan dua angka desimal untuk lebih presisi.
+1. Input Data:
+- Program meminta pengguna memasukkan empat bilangan bulat. Sebagai contoh, jika pengguna memasukkan "5 10 3 10", maka a adalah 5, b adalah 10, c adalah 3, dan d adalah 10.
+2. Menghitung Faktorial:
+- Faktorial adalah hasil perkalian berurutan dari suatu bilangan dengan bilangan yang lebih kecil hingga satu. Misalnya, faktorial dari 5 adalah 5 x 4 x 3 x 2 x 1 = 120.
+- Faktorial dihitung untuk bilangan-bilangan yang relevan dalam menghitung permutasi dan kombinasi.
+3. Menghitung Permutasi dan Kombinasi:
+- Permutasi dihitung dengan membagi faktorial dari a dengan faktorial dari selisih a dan c. Contoh: untuk a = 5 dan c = 3, permutasi dihitung sebagai 5 faktorial dibagi dengan 2 faktorial, yang hasilnya adalah 60.
+- Kombinasi dihitung dengan membagi faktorial dari a dengan hasil kali faktorial dari c dan faktorial dari selisih a dan c.
+4. Menampilkan Hasil:
+- Hasil perhitungan permutasi dan kombinasi dari a terhadap c ditampilkan terlebih dahulu.
+- Kemudian, hasil perhitungan permutasi dan kombinasi dari b terhadap d ditampilkan di baris berikutnya.
 
 ## Referensi 
 [1] A. A. Demailly, "Efficient Function Calls and Modular Programming in Go," Journal of Software Engineering, vol. 34, no. 2, pp. 145-153, 2022.
