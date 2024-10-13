@@ -425,99 +425,249 @@ Keluaran terdiri dari tiga baris. Baris pertama adalah (𝑓𝑜𝑔𝑜ℎ)(�
 #### Source Code
 
 ```go
-//Rangga Pradarrell Fathi
-//2311102200
-//IF-11
+// Aditya Sulistiawan
+// 2311102193
+// 11-05
+
 package main
 
 import (
 	"fmt"
-	"math"
 )
 
-func jarak(a, b, c, d float64) float64 {
-	return math.Sqrt(math.Pow(a-c, 2) + math.Pow(b-d, 2))
+// Fungsi f(x) = x^2
+func f(x int) int {
+	return x * x
 }
 
-func didalam(cx, cy, r, x, y float64) bool {
-	return jarak(cx, cy, x, y) <= r
+// Fungsi g(x) = x - 2
+func g(x int) int {
+	return x - 2
+}
+
+// Fungsi h(x) = x + 1
+func h(x int) int {
+	return x + 1
+}
+
+// Fungsi komposisi f(g(h(x)))
+func fogoh(x int) int {
+	return f(g(h(x)))
+}
+
+// Fungsi komposisi g(h(f(x)))
+func gohof(x int) int {
+	return g(h(f(x)))
+}
+
+// Fungsi komposisi h(f(g(x)))
+func hofog(x int) int {
+	return h(f(g(x)))
 }
 
 func main() {
-	var cx1, cy1, r1, cx2, cy2, r2, x, y float64
+	// Input bilangan a, b, c
+	var a, b, c int
+	fmt.Scan(&a, &b, &c)
 
-	fmt.Println("Masukkan koordinat titik pusat lingkaran 1 (cx, cy) dan radius (r):")
-	fmt.Scanln(&cx1, &cy1, &r1)
+	// Menghitung hasil komposisi
+	result1 := fogoh(a)
+	result2 := gohof(b)
+	result3 := hofog(c)
 
-	fmt.Println("Masukkan koordinat titik pusat lingkaran 2 (cx, cy) dan radius (r):")
-	fmt.Scanln(&cx2, &cy2, &r2)
-
-	fmt.Println("Masukkan koordinat titik (x, y):")
-	fmt.Scanln(&x, &y)
-
-	if didalam(cx1, cy1, r1, x, y) && didalam(cx2, cy2, r2, x, y) {
-		fmt.Println("Titik di dalam lingkaran 1 dan 2")
-	} else if didalam(cx1, cy1, r1, x, y) {
-		fmt.Println("Titik di dalam lingkaran 1")
-	} else if didalam(cx2, cy2, r2, x, y) {
-		fmt.Println("Titik di dalam lingkaran 2")
-	} else {
-		fmt.Println("Titik di luar lingkaran ")
-	}
+	// Output hasil komposisi
+	fmt.Println(result1) // (f o g o h)(a)
+	fmt.Println(result2) // (g o h o f)(b)
+	fmt.Println(result3) // (h o f o g)(c)
 }
-
 ```
 
 #### Source Code
-![Unguided 2 carbon](https://github.com/user-attachments/assets/0d6da1f4-765b-4ed8-9b39-8ea7c54ed471)
+![SC](https://github.com/user-attachments/assets/91254b4f-7e72-4f5e-a9b0-a47b70051d61)
 
 
 #### Output
-![Screenshot 2024-10-10 103140](https://github.com/user-attachments/assets/aec71ebf-875f-4da0-a222-d807c009230f)
-![Screenshot 2024-10-10 103122](https://github.com/user-attachments/assets/278399f3-b9b3-4640-888e-78c7c4231f85)
-![Screenshot 2024-10-10 103059](https://github.com/user-attachments/assets/1013be5a-cb61-41a8-a5e5-f4830014c5d1)
-![Screenshot 2024-10-10 103348](https://github.com/user-attachments/assets/ac9380b6-b184-4d51-8ea6-0c00934e206f)
+![Ungui2](https://github.com/user-attachments/assets/399bf6d3-7b7a-4001-957b-1fb3b04156a3)
 
 
 #### Deskripsi Program : 
-Program ini adalah aplikasi Go yang menentukan posisi sebuah titik relatif terhadap dua buah lingkaran. Program meminta input koordinat pusat dan radius untuk dua lingkaran, serta koordinat sebuah titik, kemudian menentukan apakah titik tersebut berada di dalam salah satu, kedua, atau di luar kedua lingkaran.
+Program ini ditulis dalam bahasa pemrograman Go (Golang) dan berfungsi untuk melakukan komposisi fungsi matematika. Terdapat tiga fungsi dasar yang didefinisikan: `f(x)`, `g(x)`, dan `h(x)`, masing-masing dengan rumus tertentu. Program ini kemudian menghitung hasil dari tiga komposisi fungsi yang berbeda menggunakan input dari pengguna. Hasil dari setiap komposisi akan ditampilkan di konsol.
+
+#### Algoritma
+1. **Inisialisasi**:
+   - Import paket `fmt` untuk input/output.
+
+2. **Definisi Fungsi**:
+   - `f(x int) int`: Menghitung nilai $$ x^2 $$.
+   - `g(x int) int`: Menghitung nilai $$ x - 2 $$.
+   - `h(x int) int`: Menghitung nilai $$ x + 1 $$.
+   - `fogoh(x int) int`: Menghitung komposisi $$ f(g(h(x))) $$.
+   - `gohof(x int) int`: Menghitung komposisi $$ g(h(f(x))) $$.
+   - `hofog(x int) int`: Menghitung komposisi $$ h(f(g(x))) $$.
+
+3. **Fungsi `main`**:
+   - Deklarasi variabel `a`, `b`, dan `c` untuk menyimpan input pengguna.
+   - Membaca nilai dari pengguna untuk variabel `a`, `b`, dan `c`.
+   - Menghitung hasil dari setiap komposisi fungsi.
+   - Mencetak hasil ke layar.
+
+#### Cara Kerja
+1. **Input Pengguna**:
+   - Program meminta pengguna untuk memasukkan tiga bilangan bulat: `a`, `b`, dan `c`.
+
+2. **Perhitungan Komposisi Fungsi**:
+   - Setelah menerima input, program menghitung hasil dari tiga komposisi fungsi:
+     - **Komposisi Pertama**: 
+       - Memanggil fungsi `fogoh(a)` untuk menghitung $$ f(g(h(a))) $$.
+     - **Komposisi Kedua**: 
+       - Memanggil fungsi `gohof(b)` untuk menghitung $$ g(h(f(b))) $$.
+     - **Komposisi Ketiga**: 
+       - Memanggil fungsi `hofog(c)` untuk menghitung $$ h(f(g(c))) $$.
+
+3. **Output Hasil**:
+   - Program menampilkan hasil dari setiap komposisi ke layar dengan format yang jelas.
+
+### Contoh Eksekusi
+
+Jika pengguna memasukkan nilai:
+-  a = 3 
+-  b = 5 
+-  c = 1 
+
+Program akan menghitung:
+-  f(g(h(3))) = f(g(4)) = f(2) = 4 
+-  g(h(f(5))) = g(h(25)) = g(26) = 24 
+-  h(f(g(1))) = h(f(-1)) = h(1) = 2 
+
+Hasil yang ditampilkan akan menjadi:
+```
+4
+24
+2
+```
+
+Dengan cara ini, program memberikan cara yang efisien dan terstruktur untuk mengeksplorasi komposisi fungsi matematika menggunakan input dinamis dari pengguna.
+
+### <h2> UNGUIDED 3 </h2>
+
+#### Study Case
+Minggu Ini, mahasiswa Fakultas Informatika mendapatkan tugas dari mata kullah matematika diskett untuk mempelajari kombinasi dan permutasi. Jonas salah seorang mahasiswa, Iseng untuk mengimplementasikannya ke dalam suatu program. Oleh karena itu bersediakah kallan membantu Jonas? (tidak tentunya ya :p)
+
+#### Source Code
+
+```go
+// Aditya Sulistiawan
+// 2311102193
+// 11-05
+
+package main
+
+import "fmt"
+
+func main() {
+	var a, b, c, d int
+5
+	// fungsi untuk menginput bilangan a, b, c, dan d
+	fmt.Print("Bilangan a: ")
+	fmt.Scan(&a)
+
+	fmt.Print("Bilangan b: ")
+	fmt.Scan(&b)
+
+	fmt.Print("Bilangan c: ")
+	fmt.Scan(&c)
+
+	fmt.Print("Bilangan d: ")
+	fmt.Scan(&d)
+
+	// Untuk menjelaskan syarat bahwa a>= c dan b>=d
+	if a >= c && b >= d {
+		// Untuk menampilkan hasil permutasi dan kombinasi dari bilangan a dan c
+		fmt.Printf("\nPermutasi (a, c): %d\n", permutasi(a, c))
+		fmt.Printf("Kombinasi (a, c): %d\n", kombinasi(a, c))
+
+		// Untuk menampilkan hasil permutasi dan kombinasi dari bilangan b dan d
+		fmt.Printf("\nPermutasi (b, d): %d\n", permutasi(b, d))
+		fmt.Printf("Kombinasi (b, d): %d\n", kombinasi(b, d))
+	} else {
+		// Untuk yang tidak memenuhi syarat
+		fmt.Println("Input tidak sesuai dengan syarat yang ada")
+	}
+}
+
+// Fungsi untuk menghitung faktorial
+func faktorial(n int) int {
+	var hasil int = 1
+	for i := 1; i <= n; i++ {
+		hasil *= i
+	}
+	return hasil
+}
+
+// Fungsi untuk menghitung permutasi
+func permutasi(n, r int) int {
+	return faktorial(n) / faktorial(n-r)
+}
+
+// Fungsi untuk menghitung kombinasi
+func kombinasi(n, r int) int {
+	return faktorial(n) / (faktorial(r) * faktorial(n-r))
+}
+```
+
+#### Source Code
+![SC](https://github.com/user-attachments/assets/31374b8d-770c-4190-bfa5-231d1488d8ae)
+
+
+#### Output
+![Ungui1](https://github.com/user-attachments/assets/d202d887-911b-4643-adf0-b761ef7962db)
+
+
+
+#### Deskripsi Program : 
+Program ini ditulis dalam bahasa pemrograman Go (Golang) dan bertujuan untuk menghitung permutasi dan kombinasi dari dua pasang bilangan bulat, yaitu `a` dan `c`, serta `b` dan `d`. Program ini juga memeriksa syarat bahwa `a` harus lebih besar atau sama dengan `c`, dan `b` harus lebih besar atau sama dengan `d`. Jika syarat tersebut tidak terpenuhi, program akan memberikan pesan kesalahan
 
 #### Algoritma dan Cara Kerja Program
-*Algoritma*
-1. Input Data
+1. **Inisialisasi**:
+   - Import paket `fmt` untuk input/output.
+   
+2. **Deklarasi Variabel**:
+   - Deklarasikan empat variabel bertipe `int`: `a`, `b`, `c`, dan `d`.
 
-Minta dan simpan koordinat pusat dan radius lingkaran 1
-Minta dan simpan koordinat pusat dan radius lingkaran 2
-Minta dan simpan koordinat titik yang akan dicek
+3. **Input Pengguna**:
+   - Minta pengguna untuk memasukkan nilai untuk bilangan `a`, `b`, `c`, dan `d`.
 
+4. **Pemeriksaan Syarat**:
+   - Periksa apakah `a >= c` dan `b >= d`.
+     - Jika syarat terpenuhi:
+       - Hitung dan tampilkan permutasi dan kombinasi untuk pasangan `(a, c)` dan `(b, d)`.
+     - Jika syarat tidak terpenuhi:
+       - Tampilkan pesan kesalahan.
 
-2. Proses Pengecekan
-
-Cek apakah titik berada di dalam lingkaran 1
-Cek apakah titik berada di dalam lingkaran 2
-Tentukan output berdasarkan hasil pengecekan
-
-
-3. Output
-
-Tampilkan hasil pengecekan sesuai kondisi yang terpenuhi
-
-*Cara Kerja*
-1. Perhitungan Jarak
-
-- Program menggunakan teorema Pythagoras untuk menghitung jarak
-- Implementasi dalam fungsi jarak() menggunakan math.Sqrt dan math.Pow
+5. **Fungsi Pendukung**:
+   - **Fungsi `faktorial(n int) int`**: Menghitung faktorial dari bilangan `n`.
+   - **Fungsi `permutasi(n, r int) int`**: Menghitung permutasi menggunakan rumus $$ P(n, r) = \frac{n!}{(n-r)!} $$.
+   - **Fungsi `kombinasi(n, r int) int`**: Menghitung kombinasi menggunakan rumus $$ C(n, r) = \frac{n!}{r!(n-r)!} $$.
 
 
-2. Penentuan Posisi Titik
+#### Cara Kerja
+1. **Input Pengguna**:
+   - Program meminta pengguna untuk memasukkan empat bilangan bulat: `a`, `b`, `c`, dan `d`.
 
-- Titik dianggap di dalam lingkaran jika jaraknya ke pusat ≤ radius
-- Fungsi didalam() mengembalikan true jika kondisi ini terpenuhi
+2. **Pemeriksaan Syarat**:
+   - Setelah menerima input, program memeriksa apakah nilai-nilai yang dimasukkan memenuhi syarat (`a >= c` dan `b >= d`).
+   - Jika syarat tidak terpenuhi, program akan mencetak pesan kesalahan.
 
+3. **Perhitungan Permutasi dan Kombinasi**:
+   - Jika syarat terpenuhi, program akan menghitung permutasi dan kombinasi untuk kedua pasangan bilangan:
+     - Untuk pasangan `(a, c)`:
+       - Memanggil fungsi `permutasi(a, c)` untuk menghitung permutasi.
+       - Memanggil fungsi `kombinasi(a, c)` untuk menghitung kombinasi.
+     - Untuk pasangan `(b, d)`:
+       - Memanggil fungsi `permutasi(b, d)` untuk menghitung permutasi.
+       - Memanggil fungsi `kombinasi(b, d)` untuk menghitung kombinasi.
 
-3. Logika Pengecekan. Program memeriksa 4 kemungkinan:
+4. **Output Hasil**:
+   - Program menampilkan hasil perhitungan permutasi dan kombinasi ke layar dengan format yang jelas.
 
-- Titik di dalam kedua lingkaran
-- Titik hanya di dalam lingkaran 1
-- Titik hanya di dalam lingkaran 2
-- Titik di luar kedua lingkaran
+Dengan struktur yang terorganisir dengan baik, program ini menyediakan cara yang efektif untuk melakukan perhitungan kombinatorial dasar dengan memanfaatkan fungsi-fungsi pendukung untuk faktorial, permutasi, dan kombinasi.
