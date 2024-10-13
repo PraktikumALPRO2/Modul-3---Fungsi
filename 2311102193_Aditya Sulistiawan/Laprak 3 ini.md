@@ -567,110 +567,110 @@ package main
 
 import "fmt"
 
+func hitungKuadratJarak(x1, y1, x2, y2 int) int {
+	return (x2-x1)*(x2-x1) + (y2-y1)*(y2-y1)
+}
+
+func dalamLingkaran(cx, cy, r, x, y int) bool {
+	return hitungKuadratJarak(cx, cy, x, y) <= r*r
+}
+
 func main() {
-	var a, b, c, d int
-5
-	// fungsi untuk menginput bilangan a, b, c, dan d
-	fmt.Print("Bilangan a: ")
-	fmt.Scan(&a)
 
-	fmt.Print("Bilangan b: ")
-	fmt.Scan(&b)
+	var cx1, cy1, r1 int
+	fmt.Print("Koordinat pusat dan radius pada lingkaran 1 ")
+	fmt.Println()
+	fmt.Print("Koordinat pusat x: ")
+	fmt.Scan(&cx1)
+	fmt.Print("Koordinat pusat y: ")
+	fmt.Scan(&cy1)
+	fmt.Print("Radius lingkaran 1: ")
+	fmt.Scan(&r1)
 
-	fmt.Print("Bilangan c: ")
-	fmt.Scan(&c)
+	var cx2, cy2, r2 int
+	fmt.Print("Koordinat pusat dan radius pada lingkaran 2 ")
+	fmt.Println()
+	fmt.Print("Koordinat pusat x: ")
+	fmt.Scan(&cx2)
+	fmt.Print("Koordinat pusat y: ")
+	fmt.Scan(&cy2)
+	fmt.Print("Radius lingkaran 2: ")
+	fmt.Scan(&r2)
 
-	fmt.Print("Bilangan d: ")
-	fmt.Scan(&d)
+	var x, y int
+	fmt.Print("Koordinat titik sembarang (x, y)")
+	fmt.Println()
+	fmt.Print("titik x: ")
+	fmt.Scan(&x)
+	fmt.Print("titik y: ")
+	fmt.Scan(&y)
 
-	// Untuk menjelaskan syarat bahwa a>= c dan b>=d
-	if a >= c && b >= d {
-		// Untuk menampilkan hasil permutasi dan kombinasi dari bilangan a dan c
-		fmt.Printf("\nPermutasi (a, c): %d\n", permutasi(a, c))
-		fmt.Printf("Kombinasi (a, c): %d\n", kombinasi(a, c))
+	diLingkaran1 := dalamLingkaran(cx1, cy1, r1, x, y)
+	diLingkaran2 := dalamLingkaran(cx2, cy2, r2, x, y)
 
-		// Untuk menampilkan hasil permutasi dan kombinasi dari bilangan b dan d
-		fmt.Printf("\nPermutasi (b, d): %d\n", permutasi(b, d))
-		fmt.Printf("Kombinasi (b, d): %d\n", kombinasi(b, d))
+	fmt.Print("\nPosisi titik: ")
+	if diLingkaran1 && diLingkaran2 {
+		fmt.Println("Titik di dalam lingkaran 1 dan 2")
+	} else if diLingkaran1 {
+		fmt.Println("Titik di dalam lingkaran 1")
+	} else if diLingkaran2 {
+		fmt.Println("Titik di dalam lingkaran 2")
 	} else {
-		// Untuk yang tidak memenuhi syarat
-		fmt.Println("Input tidak sesuai dengan syarat yang ada")
+		fmt.Println("Titik tidak berada di dalam lingkaran 1 dan 2")
 	}
-}
-
-// Fungsi untuk menghitung faktorial
-func faktorial(n int) int {
-	var hasil int = 1
-	for i := 1; i <= n; i++ {
-		hasil *= i
-	}
-	return hasil
-}
-
-// Fungsi untuk menghitung permutasi
-func permutasi(n, r int) int {
-	return faktorial(n) / faktorial(n-r)
-}
-
-// Fungsi untuk menghitung kombinasi
-func kombinasi(n, r int) int {
-	return faktorial(n) / (faktorial(r) * faktorial(n-r))
 }
 ```
 
 #### Source Code
-![SC](https://github.com/user-attachments/assets/31374b8d-770c-4190-bfa5-231d1488d8ae)
+![SC](https://github.com/user-attachments/assets/64951558-f8c8-43d5-94f9-ff7933ddf31c)
+
+
 
 
 #### Output
-![Ungui1](https://github.com/user-attachments/assets/d202d887-911b-4643-adf0-b761ef7962db)
+![Ungui3-1](https://github.com/user-attachments/assets/3d097d99-a049-4b95-ab89-8de87b30239b)
+![Ungui3-2](https://github.com/user-attachments/assets/f9f5c139-028c-4307-bcb8-c812b3e58ea9)
+
 
 
 
 #### Deskripsi Program : 
-Program ini ditulis dalam bahasa pemrograman Go (Golang) dan bertujuan untuk menghitung permutasi dan kombinasi dari dua pasang bilangan bulat, yaitu `a` dan `c`, serta `b` dan `d`. Program ini juga memeriksa syarat bahwa `a` harus lebih besar atau sama dengan `c`, dan `b` harus lebih besar atau sama dengan `d`. Jika syarat tersebut tidak terpenuhi, program akan memberikan pesan kesalahan
+Program ini ditulis dalam bahasa pemrograman Go (Golang) dan bertujuan untuk menentukan apakah sebuah titik berada di dalam dua lingkaran yang berbeda. Program ini meminta pengguna untuk memasukkan koordinat pusat dan radius dari dua lingkaran, serta koordinat titik sembarang. Berdasarkan input tersebut, program akan memeriksa posisi titik relatif terhadap kedua lingkaran dan menampilkan hasilnya.
 
 #### Algoritma dan Cara Kerja Program
 1. **Inisialisasi**:
    - Import paket `fmt` untuk input/output.
-   
-2. **Deklarasi Variabel**:
-   - Deklarasikan empat variabel bertipe `int`: `a`, `b`, `c`, dan `d`.
 
-3. **Input Pengguna**:
-   - Minta pengguna untuk memasukkan nilai untuk bilangan `a`, `b`, `c`, dan `d`.
+2. **Definisi Fungsi**:
+   - `hitungKuadratJarak(x1, y1, x2, y2 int) int`: Menghitung kuadrat jarak antara dua titik `(x1, y1)` dan `(x2, y2)` dengan rumus:
+     
+     \text{jarak}^2 = (x2 - x1)^2 + (y2 - y1)^2
+     
+   - `dalamLingkaran(cx, cy, r, x, y int) bool`: Memeriksa apakah titik `(x, y)` berada dalam lingkaran dengan pusat `(cx, cy)` dan radius `r`. Menggunakan fungsi `hitungKuadratJarak` untuk membandingkan jarak kuadrat dengan kuadrat radius.
 
-4. **Pemeriksaan Syarat**:
-   - Periksa apakah `a >= c` dan `b >= d`.
-     - Jika syarat terpenuhi:
-       - Hitung dan tampilkan permutasi dan kombinasi untuk pasangan `(a, c)` dan `(b, d)`.
-     - Jika syarat tidak terpenuhi:
-       - Tampilkan pesan kesalahan.
-
-5. **Fungsi Pendukung**:
-   - **Fungsi `faktorial(n int) int`**: Menghitung faktorial dari bilangan `n`.
-   - **Fungsi `permutasi(n, r int) int`**: Menghitung permutasi menggunakan rumus $$ P(n, r) = \frac{n!}{(n-r)!} $$.
-   - **Fungsi `kombinasi(n, r int) int`**: Menghitung kombinasi menggunakan rumus $$ C(n, r) = \frac{n!}{r!(n-r)!} $$.
-
+3. **Fungsi `main`**:
+   - Deklarasi variabel untuk pusat dan radius dari dua lingkaran (`cx1`, `cy1`, `r1`, `cx2`, `cy2`, `r2`).
+   - Membaca input dari pengguna untuk pusat dan radius kedua lingkaran.
+   - Deklarasi variabel untuk koordinat titik sembarang (`x`, `y`).
+   - Membaca input dari pengguna untuk koordinat titik.
+   - Memanggil fungsi `dalamLingkaran` untuk memeriksa apakah titik berada dalam masing-masing lingkaran.
+   - Menampilkan hasil posisi titik berdasarkan pemeriksaan.
 
 #### Cara Kerja
 1. **Input Pengguna**:
-   - Program meminta pengguna untuk memasukkan empat bilangan bulat: `a`, `b`, `c`, dan `d`.
+   - Program meminta pengguna untuk memasukkan informasi berikut:
+     - Koordinat pusat dan radius dari lingkaran pertama (`cx1`, `cy1`, `r1`).
+     - Koordinat pusat dan radius dari lingkaran kedua (`cx2`, `cy2`, `r2`).
+     - Koordinat titik sembarang (`x`, `y`).
 
-2. **Pemeriksaan Syarat**:
-   - Setelah menerima input, program memeriksa apakah nilai-nilai yang dimasukkan memenuhi syarat (`a >= c` dan `b >= d`).
-   - Jika syarat tidak terpenuhi, program akan mencetak pesan kesalahan.
+2. **Perhitungan Jarak**:
+   - Program menggunakan fungsi `hitungKuadratJarak` untuk menghitung jarak kuadrat antara pusat lingkaran dan titik yang diberikan.
 
-3. **Perhitungan Permutasi dan Kombinasi**:
-   - Jika syarat terpenuhi, program akan menghitung permutasi dan kombinasi untuk kedua pasangan bilangan:
-     - Untuk pasangan `(a, c)`:
-       - Memanggil fungsi `permutasi(a, c)` untuk menghitung permutasi.
-       - Memanggil fungsi `kombinasi(a, c)` untuk menghitung kombinasi.
-     - Untuk pasangan `(b, d)`:
-       - Memanggil fungsi `permutasi(b, d)` untuk menghitung permutasi.
-       - Memanggil fungsi `kombinasi(b, d)` untuk menghitung kombinasi.
+3. **Pemeriksaan Posisi Titik**:
+   - Fungsi `dalamLingkaran` memeriksa apakah jarak kuadrat dari pusat lingkaran ke titik lebih kecil atau sama dengan kuadrat radius. Ini dilakukan untuk kedua lingkaran.
 
 4. **Output Hasil**:
-   - Program menampilkan hasil perhitungan permutasi dan kombinasi ke layar dengan format yang jelas.
-
-Dengan struktur yang terorganisir dengan baik, program ini menyediakan cara yang efektif untuk melakukan perhitungan kombinatorial dasar dengan memanfaatkan fungsi-fungsi pendukung untuk faktorial, permutasi, dan kombinasi.
+   - Program mencetak posisi titik berdasarkan hasil pemeriksaan:
+     - Jika titik berada di dalam kedua lingkaran.
+     - Jika titik hanya berada di dalam salah satu lingkaran.
+     - Jika titik tidak berada di dalam kedua lingkaran.
