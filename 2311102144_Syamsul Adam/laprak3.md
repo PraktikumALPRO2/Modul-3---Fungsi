@@ -26,10 +26,17 @@ Maka fungsi digunakan jika suatu nilai biasanya diperlukan, seperti:
 -Assignment nilai ke suatu variabel.
 -Bagian dari ekspresi
 -Bagian dari argumen suatu subprogram, dsb.
+
 II. Deklasari Function
+
+![374825537-f271b999-f8f6-4f2d-91ce-e89412adf4cc](https://github.com/user-attachments/assets/4efe8828-e2dd-43e1-9d3e-89c5c0d26838)
+
 
 
 Pada bagian deklarasi fungsi, setelah parameter, terdapat tipe data dari nilai yang dikembalikan. Sedangkan pada bagian badan fungsi, terdapat kata kunci return diikuti dengan nilai yang akan dikembalikan. Berikut adalah contoh fungsi untuk menghitung volume tabung apabila jari-jari alas dan tinggi tabung diketahui:
+
+
+![375183567-103a6f1a-62b9-43e6-ad8c-fabea3b2df8b](https://github.com/user-attachments/assets/248f05eb-4ecc-4d94-bb5c-7ba8c8fc979a)
 
 
 III. Contoh Program dengan Function
@@ -49,7 +56,6 @@ func printMessage(message string, arr []string) {
     fmt.Println(message, nameString)
 }
 ```
-https://github.com/PraktikumALPRO2/Modul-3---Fungsi/blob/main/2311102144_Syamsul%20Adam/Screenshot%202024-10-13%20165349.png
 Pada kode di atas, sebuah fungsi baru dibuat dengan nama printMessage() memiliki 2 buah parameter yaitu string message dan slice string arr.
 
 Fungsi tersebut dipanggil dalam main(), dalam pemanggilannya disisipkan dua buah argument parameter.
@@ -89,6 +95,7 @@ func permutasi(n, r int) int {
 }
 ```
 ## Output: 
+![Screenshot 2024-10-13 165349](https://github.com/user-attachments/assets/f57af4d3-9a9f-4fb9-a364-1d9af2c316f3)
 
 Program ini adalah program yang menghitung nilai permutasi dari dua bilangan bulat yang diinput oleh pengguna. Program ini menggunakan fungsi rekursif untuk menghitung nilai faktorial dan kemudian menghitung nilai permutasi menggunakan rumus permutasi. Hasil permutasi kemudian dicetak ke output.
 
@@ -105,7 +112,8 @@ func hitungLuas(sisi float64) float64 {
 }
 
 // Fungsi untuk menghitung keliling persegi
-func hitungKeliling(sisi float64) float64 {
+func hitungKeliling(sis![Screenshot 2024-10-13 165349](https://github.com/user-attachments/assets/26af0b58-f66c-4f18-b86c-3a9b94f98a91)
+i float64) float64 {
     return 4 * sisi
 }
 
@@ -123,6 +131,7 @@ func main() {
 }
 ```
 ### Output: 
+![Screenshot 2024-10-13 165522](https://github.com/user-attachments/assets/cc808768-fb89-42d9-95cd-dd372f1ea965)
 
 
 Program ini adalah program yang menghitung luas dan keliling persegi berdasarkan panjang sisi yang diinput oleh pengguna. Program ini menggunakan dua fungsi, hitungLuas dan hitungKeliling, untuk menghitung nilai luas dan keliling persegi, kemudian mencetak hasilnya ke output.
@@ -131,6 +140,8 @@ Program ini adalah program yang menghitung luas dan keliling persegi berdasarkan
 ### UNGUIDED ###
 
 ### 1. Minggu ini, mahasiswa Fakultas Informatika mendapatkan tugas dari mata kuliah matematika diskrit untuk mempelajari kombinasi dan permutasi. Jonas, salah seorang mahasiswa, iseng untuk mengimplementasikannya ke dalam suatu program. Oleh karena itu bersediakah kalian membantu Jonas? (tidak tentunya ya :p) Masukan terdiri dari empat buah bilangan asli a, b, c, dan d yang dipisahkan oleh spasi, dengan syarat a ≥ c dan b ≥ d. Keluaran terdiri dari dua baris. Baris pertama adalah hasil permutasi dan kombinasi a terhadap c, sedangkan baris kedua adalah hasil permutasi dan kombinasi b terhadap d. Catatan: permutasi (P) dan kombinasi (C) dari n terhadap r (n ≥ r) dapat dihitung dengan menggunakan persamaan berikut!
+![374170775-c5b20217-7f5f-4d3a-bdcc-09dcfe46b89f (1)](https://github.com/user-attachments/assets/1d9a0a53-32fe-422b-b284-1b55c96050d0)
+
 
 ```go
 package main
@@ -180,6 +191,7 @@ func main() {
 
 ```
 ### Output: 
+![Screenshot 2024-10-13 165818](https://github.com/user-attachments/assets/e3be432d-8f83-4471-ab9d-0098abd7a533)
 
 
 Program Go ini menghitung dan menampilkan permutasi dan kombinasi dua set angka. Program ini mengambil empat masukan bilangan bulat dari pengguna dan menghitung permutasi dan kombinasi dua angka pertama terhadap dua angka terakhir. Hasilnya kemudian dicetak ke konsol.
@@ -192,6 +204,8 @@ Menghitung permutasi dan kombinasi dua set angka
 Mencetak hasil ke konsol
 
 ### 2. Diberikan tiga buah fungsi matematika yaitu f(x) = x², g(x) = x - 2 dan h(x) = x + 1. Fungsi komposisi (fogoh)(x) artinya adalah f(g(h(x))). Tuliskan f(x), g(x) dan h(x) dalam bentuk function. Masukan terdiri dari sebuah bilangan bulat a, b dan c yang dipisahkan oleh spasi. Keluaran terdiri dari tiga baris. Baris pertama adalah (fogoh)(a), baris kedua (gohof)(b), dan baris ketiga adalah (hofog)(c)! Contoh
+
+![374174678-ceaf99df-bba0-4106-85d4-84f072ad8c99](https://github.com/user-attachments/assets/31f70fc6-f8ad-4e27-807c-9d0113bd8371)
 
 
 
@@ -237,6 +251,7 @@ func main() {
 ```
 ## Output:
 
+![Screenshot 2024-10-13 170004](https://github.com/user-attachments/assets/0590c0ef-2ebb-4ec6-8066-afd0e9fb4a5b)
 
 
 Program ini adalah program Go yang mengimplementasikan tiga fungsi matematika f(x) = x², g(x) = x - 2, dan h(x) = x + 1, serta tiga fungsi komposisi (fogoh)(x), (gohof)(x), dan (hofog)(x). Program ini membaca tiga bilangan bulat a, b, dan c sebagai input dan kemudian mencetak hasil dari masing-masing fungsi komposisi ke output.
@@ -248,7 +263,16 @@ Menghitung hasil dari tiga fungsi komposisi (fogoh)(a), (gohof)(b), dan (hofog)(
 Mencetak hasil ke output dalam tiga baris
 
 
-### 3. Fungsi untuk menghitung jarak titik (a, b) dan (c, d) dimana rumus jarak adalah: jarak = √(a - c)² + (b - d)² dan juga fungsi untuk menentukan posisi sebuah titik sembarang berada di dalam suatu lingkaran atau tidak.
+### 3. Lingkaran] Suatu lingkaran didefinisikan dengan koordinat titik pusat (cx, cy) dengan radius r. Apabila diberikan dua buah lingkaran, maka tentukan posisi sebuah titik sembarang (x, y) berdasarkan dua lingkaran tersebut.
+Masukan terdiri dari beberapa tiga baris. Baris pertama dan kedua adalah koordinat titik pusat dan radius dari lingkaran 1 dan lingkaran 2, sedangkan baris ketiga adalah koordinat titik sembarang. Asumsi sumbu x dan y dari semua titik dan juga radius direpresentasikan dengan bilangan bulat.
+Keluaran berupa string yang menyatakan posisi titik "Titik di dalam lingkaran 1 dan 2", "Titik di dalam lingkaran 1", "Titik di dalam lingkaran 2", atau "Titik di luar lingkaran 1 dan 2".
+Contoh
+![374227396-e131d1dc-24f9-45a3-9638-b5e739e78b4b](https://github.com/user-attachments/assets/e921e0b6-68c7-4075-839c-bb0d136e0b16)
+
+![374227589-274a0809-2122-4c21-9867-ca8e5a134723](https://github.com/user-attachments/assets/9a6b92d2-e371-442d-a4f3-f0331d1e7067)
+
+
+Fungsi untuk menghitung jarak titik (a, b) dan (c, d) dimana rumus jarak adalah: jarak = √(a - c)² + (b - d)² dan juga fungsi untuk menentukan posisi sebuah titik sembarang berada di dalam suatu lingkaran atau tidak.
 
 ```go
 package main
@@ -315,6 +339,7 @@ func main() {
 }
 ```
 ### Output: 
+![Screenshot 2024-10-13 170103](https://github.com/user-attachments/assets/3db09925-a35f-45b6-b128-be6c73ba2848)
 
 Program ini menghitung posisi titik sembarang terhadap dua lingkaran.
 
