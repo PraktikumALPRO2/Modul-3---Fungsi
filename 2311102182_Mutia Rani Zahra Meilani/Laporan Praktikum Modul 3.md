@@ -278,7 +278,7 @@ Program ini bertujuan untuk menghitung permutasi dan kombinasi dari angka yang d
 
 #### Study Case
 
-Diberikan tiga buah fungsi matematika yaitu $ f (x) = x^2, g (x) = x - 2 $  dan $ h (x) = x + 1 $.
+Diberikan tiga buah fungsi matematika yaitu $f (x) = x^2, g (x) = x - 2$  dan $h (x) = x + 1$
 Fungsi komposisi $(fogoh)(x)$ artinya adalah $f(g(h(x)))$. Tuliskan $f(x), g(x)$ dan $h(x)$ dalam bentuk function.
 
 **Masukan** terdiri dari sebuah bilangan bulat a, b dan c yang dipisahkan oleh spasi.
