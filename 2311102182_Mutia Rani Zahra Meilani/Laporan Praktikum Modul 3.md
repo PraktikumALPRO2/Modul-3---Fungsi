@@ -61,8 +61,8 @@ Fungsi dalam Go (Golang) adalah blok kode yang dapat dipanggil berulang kali unt
 
 **Fungsi Biasa**
 
-
 Fungsi standar adalah fungsi yang menerima sejumlah parameter dan mengembalikan nilai. Ini adalah fungsi paling umum yang digunakan untuk melakukan tugas tertentu.
+
 Contoh Penggunaan :
 ```go
 func greet(name string) string {
@@ -72,8 +72,8 @@ func greet(name string) string {
 
 **Fungsi dengan Multiple Return**
 
-
 Golang memungkinkan fungsi mengembalikan lebih dari satu nilai. Ini berguna untuk mengembalikan hasil dan error secara bersamaan.
+
 Contoh Penggunaan :
 ```go
 func divide(a, b int) (int, error) {
@@ -86,8 +86,8 @@ func divide(a, b int) (int, error) {
 
 **Fungsi tanpa Nama**
 
-
 Anonymous function adalah fungsi yang tidak memiliki nama. Fungsi ini sering digunakan sebagai callback atau untuk deklarasi inline.
+
 Contoh Penggunaan :
 ```go
 func main() {
@@ -99,8 +99,8 @@ func main() {
 
 **Variadic Function**
 
-
 Fungsi variadic memungkinkan untuk mengirim sejumlah parameter yang tidak terbatas dari tipe data yang sama. Tipe ini sangat berguna ketika jumlah argumennya tidak pasti.
+
 Contoh Penggunaan :
 ```go
 func sum(numbers ...int) int {
@@ -115,8 +115,8 @@ func sum(numbers ...int) int {
 
 **Method Function**
 
-
 Method Function yaitu fungsi yang terkait dengan tipe struct. Ini memungkinkan untuk menambahkan perilaku pada tipe data custom (struct).
+
 Contoh Penggunaan :
 ```go
 type Rectangle struct {
@@ -131,8 +131,8 @@ func (r Rectangle) Area() float64 {
 
 **Defer Function**
 
+Fungsi defer digunakan untuk menunda eksekusi suatu fungsi hingga fungsi induk selesai. Biasanya digunakan untuk memastikan pembersihan atau pelepasan sumber daya.
 
-dFungsi defer digunakan untuk menunda eksekusi suatu fungsi hingga fungsi induk selesai. Biasanya digunakan untuk memastikan pembersihan atau pelepasan sumber daya.
 Contoh Penggunaan :
 ```go
 func main() {
