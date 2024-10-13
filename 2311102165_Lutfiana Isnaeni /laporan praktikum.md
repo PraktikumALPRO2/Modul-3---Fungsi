@@ -378,23 +378,23 @@ func main() {
 	2. g(h(f(b))) 
 	3. h(f(g(c)))
 	Fungsi-fungsi yang digunakan dalam program adalah:
-	- **f(x)**: menghitung f(x) = x^2 
-	- **g(x)**: menghitung g(x) = x - 2 
-	- **h(x)**: menghitung h(x) = x + 1
+	- f(x): menghitung f(x) = x^2 
+	- g(x): menghitung g(x) = x - 2 
+	- h(x): menghitung h(x) = x + 1
 ### Algoritma Program:
-	1. Deklarasi tiga fungsi matematika: `f(x)`, `g(x)`, dan `h(x)`.
- 	  - ```f(x)``` menghitung kuadrat dari nilai `x`.
- 	  - `g(x)` mengurangi 2 dari nilai `x`.
- 	  - `h(x)` menambahkan 1 ke nilai `x`.
+	1. Deklarasi tiga fungsi matematika: f(x), g(x), dan h(x).
+ 	  - f(x) menghitung kuadrat dari nilai x.
+ 	  - g(x) mengurangi 2 dari nilai x.
+ 	  - h(x) menambahkan 1 ke nilai x.
 	2. Terdapat tiga fungsi komposisi yang memanggil fungsi-fungsi di atas:
-	   - `fogoh(x)` menghitung komposisi f(g(h(x))).
-	   - `gohof(x)` menghitung komposisi g(h(f(x))).
- 	   - `hofog(x)` menghitung komposisi h(f(g(x))).
-	3. Pada fungsi `main`, program meminta input tiga nilai `a`, `b`, dan `c` dari pengguna.
+	   - fogoh(x) menghitung komposisi f(g(h(x))).
+	   - gohof(x) menghitung komposisi g(h(f(x))).
+ 	   - hofog(x) menghitung komposisi h(f(g(x))).
+	3. Pada fungsi main, program meminta input tiga nilai a, b, dan c dari pengguna.
 	4. Program kemudian menampilkan hasil dari komposisi fungsi-fungsi:
- 	  - `fogoh (a)` menghitung f(g(h(a))) dan menampilkan hasilnya.
-  	  - `gohof (b)` menghitung g(h(f(b))) dan menampilkan hasilnya.
-  	  - `hofog (c)` menghitung h(f(g(c))) dan menampilkan hasilnya.
+ 	  - fogoh (a) menghitung f(g(h(a))) dan menampilkan hasilnya.
+  	  - gohof (b) menghitung g(h(f(b))) dan menampilkan hasilnya.
+  	  - hofog (c) menghitung h(f(g(c))) dan menampilkan hasilnya.
      
 ### Cara Kerja Program:
 	1. Input: Pengguna diminta untuk memasukkan tiga nilai bilangan bulat a, b, dan c.
@@ -489,28 +489,28 @@ func main() {
 	2. Fungsi diDalam(cx, cy, r, x, y) digunakan untuk menentukan apakah suatu titik (x,y) berada di dalam lingkaran dengan pusat
  	(cx,cy) dan radius r.Jika jarak antara pusat lingkaran dan titik lebih kecil atau sama dengan radius lingkaran, titik dianggap berada di dalam lingkaran.
 	3. Dalam fungsi main:
-	• Program menerima input dari pengguna berupa:
-	• cx1, cy1, r1: koordinat pusat dan radius lingkaran pertama.
-	• cx2, cy2, r2: koordinat pusat dan radius lingkaran kedua.
-	• x, y koordinat titik sembarang yang ingin diuji.
+	   • Program menerima input dari pengguna berupa:
+	   • cx1, cy1, r1: koordinat pusat dan radius lingkaran pertama.
+	   • cx2, cy2, r2: koordinat pusat dan radius lingkaran kedua.
+	   • x, y koordinat titik sembarang yang ingin diuji.
 	4. Program mengecek apakah titik (x,y) berada di dalam lingkaran 1 atau lingkaran 2:
-	• Menggunakan fungsi di dalam untuk mengecek apakah titik berada di dalam lingkaran pertama dan kedua.
+	   • Menggunakan fungsi di dalam untuk mengecek apakah titik berada di dalam lingkaran pertama dan kedua.
 	5. Berdasarkan hasil pengecekan, program menampilkan salah satu dari empat kemungkinan:
-	• "Titik di dalam lingkaran 1 dan 2" jika titik berada di dalam kedua lingkaran.
-	• "Titik di dalam lingkaran 1" jika titik hanya berada di dalam lingkaran pertama.
-	• "Titik di dalam lingkaran 2" jika titik hanya berada di dalam lingkaran kedua.
-	• "Titik di luar lingkaran 1 dan 2" jika titik berada di luar kedua lingkaran
+	   • "Titik di dalam lingkaran 1 dan 2" jika titik berada di dalam kedua lingkaran.
+	   • "Titik di dalam lingkaran 1" jika titik hanya berada di dalam lingkaran pertama.
+	   • "Titik di dalam lingkaran 2" jika titik hanya berada di dalam lingkaran kedua.
+	   • "Titik di luar lingkaran 1 dan 2" jika titik berada di luar kedua lingkaran
 
 ### Cara Kerja Program:
 	1. Input:
-	• Pengguna memasukkan koordinat pusat dan radius untuk dua lingkaran, serta koordinat titik sembarang yang ingin diperiksa.
+	   • Pengguna memasukkan koordinat pusat dan radius untuk dua lingkaran, serta koordinat titik sembarang yang ingin diperiksa.
 	2. Pemrosesan:
-	• Program menghitung jarak antara titik sembarang dengan pusat lingkaran pertama menggunakan fungsi jarak,
- 	kemudian membandingkan jarak tersebut dengan radius lingkaran pertama untuk menentukan apakah titik berada di dalam lingkaran.
-	• Langkah yang sama dilakukan untuk lingkaran kedua.
+	   • Program menghitung jarak antara titik sembarang dengan pusat lingkaran pertama menggunakan fungsi jarak,
+ 	     kemudian membandingkan jarak tersebut dengan radius lingkaran pertama untuk menentukan apakah titik berada di dalam lingkaran.
+	   • Langkah yang sama dilakukan untuk lingkaran kedua.
 	3. Output:
-	• Program menampilkan hasil sesuai dengan posisi titik terhadap kedua lingkaran, 
- 	apakah di dalam kedua lingkaran, di salah satu lingkaran, atau di luar keduanya.
+	   • Program menampilkan hasil sesuai dengan posisi titik terhadap kedua lingkaran, 
+ 	     apakah di dalam kedua lingkaran, di salah satu lingkaran, atau di luar keduanya.
 
 
 
