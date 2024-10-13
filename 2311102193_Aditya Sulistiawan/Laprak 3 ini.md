@@ -676,5 +676,6 @@ Program ini ditulis dalam bahasa pemrograman Go (Golang) dan bertujuan untuk men
      - Jika titik tidak berada di dalam kedua lingkaran.
 
 ## Referensi
-[1] Noval Agung Prayogo, *Dasar Pemrograman Golang*. 2024
-[2] https://dasarpemrogramangolang.novalagung.com/A-hello-world.html
+[1] Noval Agung Prayogo, *Dasar Pemrograman Golang*. 2024.
+
+[2] https://dasarpemrogramangolang.novalagung.com/A-hello-world.html.
