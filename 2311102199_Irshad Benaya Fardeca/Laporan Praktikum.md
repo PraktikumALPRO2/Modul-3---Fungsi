@@ -25,11 +25,21 @@ Fungsi main() sendiri merupakan fungsi utama pada program Go, yang akan diekseku
 
 Selain parameter, fungsi bisa memiliki attribute return value atau nilai balik. Fungsi yang memiliki return value, saat deklarasinya harus ditentukan terlebih dahulu tipe data dari nilai baliknya
 
+
 <br></br>
 
 
 #### II. GUIDED
 ##### 1. Soal
+##### Source code
+```go
+
+```
+##### Screenshoot Output
+
+##### Deskripsi Program
+
+##### 2. Soal
 ##### Source code
 ```go
 
@@ -51,6 +61,23 @@ Selain parameter, fungsi bisa memiliki attribute return value atau nilai balik. 
 ##### Screenshoot Output
 
 ##### Deskripsi Program
+
+##### 2. soal
+```go
+
+```
+##### Screenshoot Output
+
+##### Deskripsi Program
+
+##### 3. soal
+```go
+
+```
+##### Screenshoot Output
+
+##### Deskripsi Program
+
 
 
 ### Referensi
