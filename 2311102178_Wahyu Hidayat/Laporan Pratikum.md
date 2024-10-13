@@ -4,7 +4,7 @@
 <br>
 
 <h2 align="center"><strong>MODUL III</strong></h2>
-<h2 align="center"><strong> REVIEW STRUKTUR KONTROL </strong></h2>
+<h2 align="center"><strong> FUNGSI </strong></h2>
 
 <br>
 
