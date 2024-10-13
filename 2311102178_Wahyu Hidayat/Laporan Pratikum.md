@@ -327,6 +327,205 @@ Program ini dibuat untuk menghitung nilai permutasi dan kombinasi dari empat bil
 - Hasil perhitungan permutasi dan kombinasi dari a terhadap c ditampilkan terlebih dahulu.
 - Kemudian, hasil perhitungan permutasi dan kombinasi dari b terhadap d ditampilkan di baris berikutnya.
 
+
+
+
+
+## 2. Program Komposisi Tiga Fungsi Matematika
+
+#### Source Code
+```go
+package main
+
+import (
+	"fmt"
+)
+
+// Function f(x) = x^2
+func f(x int) int {
+	return x * x
+}
+
+// Function g(x) = x - 2
+func g(x int) int {
+	return x - 2
+}
+
+// Function h(x) = x + 1
+func h(x int) int {
+	return x + 1
+}
+
+// Main function to read input and calculate the compositions
+func main() {
+	var a, b, c int
+	fmt.Println("Masukkan nilai a, b, c dipisahkan oleh spasi:")
+	fmt.Scanf("%d %d %d", &a, &b, &c)
+
+	// Calculate f(g(h(a)))
+	result1 := f(g(h(a)))
+	// Calculate g(h(f(b)))
+	result2 := g(h(f(b)))
+	// Calculate h(f(g(c)))
+	result3 := h(f(g(c)))
+
+	// Output the results
+	fmt.Println(result1)
+	fmt.Println(result2)
+	fmt.Println(result3)
+}
+
+
+```
+#### Screenshoot Source Code
+![Screenshot 2024-10-13 173415](https://github.com/user-attachments/assets/793a8c82-e2eb-4fd9-82c7-71dc324bad83)
+
+
+
+
+
+#### Screenshoot Output
+![Screenshot 2024-10-13 173421](https://github.com/user-attachments/assets/4a00b51d-322e-4730-b265-fa9f703621b1)
+
+
+
+
+#### Deskripsi Program
+Program ini mengimplementasikan tiga fungsi matematika sederhana: fungsi kuadrat, fungsi pengurangan, dan fungsi penambahan. Program kemudian menerima tiga input dari pengguna, menghitung komposisi dari ketiga fungsi tersebut, dan menampilkan hasilnya. Komposisi yang dihitung adalah:
+1. Fungsi f(g(h(a)))
+2. Fungsi g(h(f(b)))
+3. Fungsi h(f(g(c)))
+
+#### Algoritma Program
+1. Definisikan tiga fungsi:
+- Fungsi f(x) yang mengembalikan hasil kuadrat dari input.
+- Fungsi g(x) yang mengurangi 2 dari input.
+- Fungsi h(x) yang menambah 1 pada input.
+2. Baca tiga nilai input dari pengguna (a, b, c).
+3. Hitung hasil komposisi fungsi untuk setiap input:
+- Komposisi f(g(h(a))):
+  - Pertama, hitung h(a) (nilai a ditambah 1).
+  - Kedua, hitung g(h(a)) (hasil dari h(a) dikurangi 2).
+  - Ketiga, hitung f(g(h(a))) (kuadratkan hasil dari g(h(a))).
+- Komposisi g(h(f(b))):
+  - Pertama, hitung f(b) (kuadratkan nilai b).
+  - Kedua, hitung h(f(b)) (hasil dari f(b) ditambah 1).
+  - Ketiga, hitung g(h(f(b))) (kurangi hasil dari h(f(b)) dengan 2).
+- Komposisi h(f(g(c))):
+  - Pertama, hitung g(c) (nilai c dikurangi 2).
+  - Kedua, hitung f(g(c)) (kuadratkan hasil dari g(c)).
+  - Ketiga, hitung h(f(g(c))) (tambahkan 1 pada hasil dari f(g(c))).
+4. Tampilkan hasil dari setiap komposisi di layar.
+
+
+#### Cara Kerja
+1. Pengguna memasukkan tiga angka a, b, dan c yang dipisahkan oleh spasi.
+2. Program membaca angka tersebut dan menghitung tiga hasil komposisi fungsi berdasarkan urutan berikut:
+- Untuk angka pertama a, program akan menghitung fungsi f(g(h(a))).
+- Untuk angka kedua b, program menghitung g(h(f(b))).
+- Untuk angka ketiga c, program menghitung h(f(g(c))).
+3. Setelah ketiga hasil diperoleh, program akan menampilkan setiap hasil di layar, masing-masing pada baris yang berbeda.
+
+
+
+
+
+
+## 3. Program Penghitung Permutasi dan Kombinasi
+
+#### Source Code
+```go
+package main
+
+import (
+	"fmt"
+)
+
+// Fungsi untuk menghitung faktorial
+func factorial(n int) int {
+	if n == 0 {
+		return 1
+	}
+	result := 1
+	for i := 1; i <= n; i++ {
+		result *= i
+	}
+	return result
+}
+
+// Fungsi untuk menghitung permutasi P(n, r)
+func permutation(n, r int) int {
+	return factorial(n) / factorial(n-r)
+}
+
+// Fungsi untuk menghitung kombinasi C(n, r)
+func combination(n, r int) int {
+	return factorial(n) / (factorial(r) * factorial(n-r))
+}
+
+func main() {
+	// Input
+	var a, b, c, d int
+	fmt.Print("Masukkan 4 bilangan a, b, c, d: ")
+	fmt.Scanf("%d %d %d %d", &a, &b, &c, &d)
+
+	// Hasil permutasi dan kombinasi untuk a dan c
+	p_ac := permutation(a, c)
+	c_ac := combination(a, c)
+
+	// Hasil permutasi dan kombinasi untuk b dan d
+	p_bd := permutation(b, d)
+	c_bd := combination(b, d)
+
+	// Output
+	fmt.Printf("%d %d\n", p_ac, c_ac)
+	fmt.Printf("%d %d\n", p_bd, c_bd)
+}
+
+```
+#### Screenshoot Source Code
+![Screenshot 2024-10-13 171753](https://github.com/user-attachments/assets/e441a9a2-e5b2-4917-ad79-d6393e5d4edb)
+
+
+
+
+#### Screenshoot Output
+![Screenshot 2024-10-13 171736](https://github.com/user-attachments/assets/7fe92782-099e-4ef4-9175-93d7548731c7)
+
+
+
+
+
+#### Deskripsi Program
+Program ini dibuat untuk menghitung nilai permutasi dan kombinasi dari empat bilangan bulat yang diberikan sebagai input. Pengguna akan memasukkan empat bilangan bulat, yaitu a, b, c, dan d. Program ini kemudian menghitung hasil permutasi dan kombinasi dari a terhadap c, serta b terhadap d, dan menampilkan hasilnya dalam dua baris. Baris pertama menunjukkan hasil perhitungan permutasi dan kombinasi dari a terhadap c, dan baris kedua menunjukkan hasil perhitungan permutasi dan kombinasi dari b terhadap d.
+
+#### Algoritma Program
+1. Input:
+- Program menerima empat bilangan bulat a, b, c, dan d.
+2. Proses:
+- Untuk menghitung permutasi dan kombinasi, terlebih dahulu dilakukan perhitungan faktorial dari bilangan-bilangan yang dibutuhkan.
+- Rumus yang digunakan:
+  - Permutasi dihitung dengan membagi faktorial n dengan faktorial dari selisih n dan r.
+  - Kombinasi dihitung dengan membagi faktorial n dengan hasil perkalian faktorial r dan faktorial dari selisih n dan r.
+- Permutasi dan kombinasi dihitung untuk pasangan a terhadap c, serta b terhadap d.
+3. Output:
+- Hasil permutasi dan kombinasi dari a terhadap c ditampilkan di baris pertama.
+- Hasil permutasi dan kombinasi dari b terhadap d ditampilkan di baris kedua.
+
+#### Cara Kerja
+1. Input Data:
+- Program meminta pengguna memasukkan empat bilangan bulat. Sebagai contoh, jika pengguna memasukkan "5 10 3 10", maka a adalah 5, b adalah 10, c adalah 3, dan d adalah 10.
+2. Menghitung Faktorial:
+- Faktorial adalah hasil perkalian berurutan dari suatu bilangan dengan bilangan yang lebih kecil hingga satu. Misalnya, faktorial dari 5 adalah 5 x 4 x 3 x 2 x 1 = 120.
+- Faktorial dihitung untuk bilangan-bilangan yang relevan dalam menghitung permutasi dan kombinasi.
+3. Menghitung Permutasi dan Kombinasi:
+- Permutasi dihitung dengan membagi faktorial dari a dengan faktorial dari selisih a dan c. Contoh: untuk a = 5 dan c = 3, permutasi dihitung sebagai 5 faktorial dibagi dengan 2 faktorial, yang hasilnya adalah 60.
+- Kombinasi dihitung dengan membagi faktorial dari a dengan hasil kali faktorial dari c dan faktorial dari selisih a dan c.
+4. Menampilkan Hasil:
+- Hasil perhitungan permutasi dan kombinasi dari a terhadap c ditampilkan terlebih dahulu.
+- Kemudian, hasil perhitungan permutasi dan kombinasi dari b terhadap d ditampilkan di baris berikutnya.
+
+
 ## Referensi 
 [1] A. A. Demailly, "Efficient Function Calls and Modular Programming in Go," Journal of Software Engineering, vol. 34, no. 2, pp. 145-153, 2022.
 [2] R. C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship, Pearson Education, 2009.
