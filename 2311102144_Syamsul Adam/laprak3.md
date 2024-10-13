@@ -49,6 +49,7 @@ func printMessage(message string, arr []string) {
     fmt.Println(message, nameString)
 }
 ```
+https://github.com/PraktikumALPRO2/Modul-3---Fungsi/blob/main/2311102144_Syamsul%20Adam/Screenshot%202024-10-13%20165349.png
 Pada kode di atas, sebuah fungsi baru dibuat dengan nama printMessage() memiliki 2 buah parameter yaitu string message dan slice string arr.
 
 Fungsi tersebut dipanggil dalam main(), dalam pemanggilannya disisipkan dua buah argument parameter.
